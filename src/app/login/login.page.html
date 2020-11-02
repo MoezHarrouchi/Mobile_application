@@ -1,19 +1,25 @@
-<ion-header>
-  <ion-toolbar>
-    <ion-title>login</ion-title>
-  </ion-toolbar>
-</ion-header>
-
 <ion-content>
-  <ion-item>
-    <ion-label position="floating">Login</ion-label>
-    <ion-input type ="text" [(ngModel)]="User.email" ></ion-input>
-  </ion-item>
-  <ion-item>
-    <ion-label position="floating">Password</ion-label>
-    <ion-input type="password" [(ngModel)]="User.password"></ion-input>
-  </ion-item>
-  <ion-button color="dark" (click)="LogIn()">Sign in</ion-button>
-    <ion-button color="dark">Sign up</ion-button>
-
+  <div class="login">
+    <div class="login-container">
+      <div>
+        Welcome
+        <p>This is my first app mobile.</p>
+      </div>
+      <ion-item>
+        <ion-label color ="light" position="stacked">Login</ion-label>
+        <ion-input type ="text" [(ngModel)]="User.email"></ion-input>
+      </ion-item>
+      <ion-item>
+        <ion-label color ="light" position="stacked">Password</ion-label>
+        <ion-input type="password" [(ngModel)]="User.password"></ion-input>
+      </ion-item>
+      <br/>
+      <div class="login-button">
+        <ion-button color="clear" (click)="LogIn()">Sign in</ion-button>
+        <br/>
+      </div>
+      <br/>
+      <span>Password | Sign up</span>
+    </div>
+  </div>  
 </ion-content>
