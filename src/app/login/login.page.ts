@@ -8,6 +8,7 @@ import { AngularFireAuth } from '@angular/fire/auth'
   styleUrls: ['./login.page.scss'],
 })
 export class LoginPage implements OnInit {
+  loading=true;
   User ={
     email:"",
     password:""
@@ -18,13 +19,18 @@ export class LoginPage implements OnInit {
   ngOnInit() {
   }
   async LogIn(){
-    const user= await this.ngfireauth.signInWithEmailAndPassword(this.User.email,this.User.password)
-    if (user.user.email){
-      this.Router.navigate(['/home']);
-    }
-    else{
-      alert(' Failed !')
-    }
+    try{
+      this.loading=false;
+      const user= await this.ngfireauth.signInWithEmailAndPassword(this.User.email,this.User.password);
+      if (user.user.email){
+        this.Router.navigate(['/home']);
+        this.loading = true;
+      }
+    }catch (error){
+      console.log(error);
+      document.getElementById('email-error').innerHTML='* ' + error.message;
+      this.loading = true;
+    } 
 
   }
 

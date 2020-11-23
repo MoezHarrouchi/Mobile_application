@@ -9,11 +9,12 @@
         <ion-label color ="light" position="stacked">Login</ion-label>
         <ion-input type ="text" [(ngModel)]="User.email"></ion-input>
       </ion-item>
+      <ion-spinner name="lines" position="stacked" *ngIf="loading == false"></ion-spinner>
       <ion-item>
         <ion-label color ="light" position="stacked">Password</ion-label>
         <ion-input type="password" [(ngModel)]="User.password"></ion-input>
       </ion-item>
-      <br/>
+      <span id="email-error"></span>
       <div class="login-button">
         <ion-button color="clear" (click)="LogIn()">Sign in</ion-button>
         <br/>
