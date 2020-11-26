@@ -11,9 +11,10 @@ import { AppRoutingModule } from './app-routing.module';
 import { environment } from '../environments/environment'
 import { AngularFireModule } from '@angular/fire';
 import { AngularFireAuthModule } from '@angular/fire/auth'
+import { MenuPage } from './menu/menu.page'
 
 @NgModule({
-  declarations: [AppComponent],
+  declarations: [AppComponent,MenuPage],
   entryComponents: [],
   imports: [BrowserModule, IonicModule.forRoot(), AppRoutingModule,
   AngularFireModule.initializeApp(environment.firebase),

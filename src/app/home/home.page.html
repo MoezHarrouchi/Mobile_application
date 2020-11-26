@@ -1,13 +1,15 @@
 <app-header></app-header>
 <ion-content [fullscreen]="true">
-  <ion-card>
+  <ion-card *ngFor="let cours of courses">
+    <img src={{cours.image}} alt= "swimming lessons"/>
     <ion-item>
-      <img src="assets\swimming.jpg" alt= "swimming lessons"/>
-      <ion-label>swimming lessons</ion-label>
+      <ion-icon name="pin" slot="start"></ion-icon>
+      <ion-label>{{cours.title}}</ion-label>
+      <ion-button fill="outline" slot="end">Subscribe</ion-button>
     </ion-item>
-  
     <ion-card-content>
-      This is a swimming lessons.
+      {{cours.content}}
+      <ion-badge slot="end">{{cours.hour}}</ion-badge>
     </ion-card-content>
   </ion-card>
 </ion-content>
