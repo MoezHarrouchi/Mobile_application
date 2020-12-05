@@ -11,6 +11,7 @@ import { AppRoutingModule } from './app-routing.module';
 import { environment } from '../environments/environment'
 import { AngularFireModule } from '@angular/fire';
 import { AngularFireAuthModule } from '@angular/fire/auth';
+import { HttpClientModule } from '@angular/common/http';
 
 import { MenuPage } from './menu/menu.page';
 
@@ -19,7 +20,9 @@ import { MenuPage } from './menu/menu.page';
   entryComponents: [],
   imports: [BrowserModule, IonicModule.forRoot(), AppRoutingModule,
   AngularFireModule.initializeApp(environment.firebase),
-  AngularFireAuthModule],
+  AngularFireAuthModule,
+  HttpClientModule
+],
   providers: [
     StatusBar,
     SplashScreen,

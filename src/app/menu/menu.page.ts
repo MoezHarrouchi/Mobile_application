@@ -1,5 +1,4 @@
 import { Component, OnInit } from '@angular/core';
-import { Icon } from 'ionic-angular';
 
 @Component({
   selector: 'app-menu',
@@ -124,6 +123,7 @@ export class MenuPage implements OnInit {
               title: 'Zum Wasserplan',
               icon  : 'book-outline',
               url   : '/contacts',
+              subChildren:[]
             }
 
         ] 
