@@ -21,6 +21,14 @@ const routes: Routes = [
   },  {
     path: 'menu',
     loadChildren: () => import('./menu/menu.module').then( m => m.MenuPageModule)
+  },
+  {
+    path: 'cours',
+    loadChildren: () => import('./cours/cours.module').then( m => m.CoursPageModule)
+  },
+  {
+    path: 'footer',
+    loadChildren: () => import('./footer/footer.module').then( m => m.FooterPageModule)
   }
 
 ];

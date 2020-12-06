@@ -24,3 +24,13 @@
 @import "~@ionic/angular/css/text-alignment.css";
 @import "~@ionic/angular/css/text-transformation.css";
 @import "~@ionic/angular/css/flex-utils.css";
+
+@font-face{
+    font-family: 'ShadowsIntoLight-Regular';
+    font-style: normal;
+    font-weight: normal;
+    src: url('./assets/fonts/ShadowsIntoLight-Regular.ttf')
+}
+p{
+    font-size: 80%;
+}

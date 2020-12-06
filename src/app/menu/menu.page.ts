@@ -32,7 +32,7 @@ export class MenuPage implements OnInit {
                 {
                   title:'Personal Training',
                   icon:'',
-                  url:'/test'
+                  url:'/cours'
                 },
                 {
                   title:'Anfängerschwimmen',
