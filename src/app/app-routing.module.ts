@@ -1,5 +1,6 @@
 import { NgModule } from '@angular/core';
 import { PreloadAllModules, RouterModule, Routes } from '@angular/router';
+import { ConfigurationResolverService } from './resolver/configuration-resolver.service'
 
 const routes: Routes = [
   {
@@ -18,12 +19,16 @@ const routes: Routes = [
   {
     path: 'header',
     loadChildren: () => import('./header/header.module').then( m => m.HeaderPageModule)
-  },  {
+  },
+  {
     path: 'menu',
     loadChildren: () => import('./menu/menu.module').then( m => m.MenuPageModule)
   },
   {
-    path: 'cours',
+    path: 'cours/:title',
+    resolve: {
+      special: ConfigurationResolverService
+    },
     loadChildren: () => import('./cours/cours.module').then( m => m.CoursPageModule)
   },
   {

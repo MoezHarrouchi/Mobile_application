@@ -9,44 +9,77 @@
       <img class="logo-section__logo" src="./assets/images/logo.png" />
       <h3 class="logo-section__title">"Water school"</h3>
     </div>
-</div>
+  </div>
   <ion-content>
-    <div  *ngFor="let page of navigate">
+    <div *ngFor="let page of navigate">
       <ion-menu-toggle>
-        <ion-item [routerLink]="page.url" routerDirection="root" routerLinkActive="active" *ngIf="page.children?.length==null">
+        <ion-item
+          [routerLink]="page.url"
+          routerDirection="root"
+          routerLinkActive="active"
+          *ngIf="page.children?.length==null"
+        >
           <ion-icon [name]="page.icon" slot="start"></ion-icon>
           <ion-label>{{page.title}}</ion-label>
         </ion-item>
       </ion-menu-toggle>
-      <ion-item button *ngIf="page.children?.length>0" (click)="page.open=!page.open" [class.active-parent]="page.open" detail="false">
-        <ion-icon name="arrow-forward" slot="start" *ngIf="!page.open"></ion-icon>
+      <ion-item
+        button
+        *ngIf="page.children?.length>0"
+        (click)="page.open=!page.open"
+        [class.active-parent]="page.open"
+        detail="false"
+      >
+        <ion-icon
+          name="arrow-forward"
+          slot="start"
+          *ngIf="!page.open"
+        ></ion-icon>
         <ion-icon name="arrow-down" slot="start" *ngIf="page.open"></ion-icon>
         <ion-label>{{page.title}}</ion-label>
       </ion-item>
       <ion-list class="sub-item" *ngIf="page.open">
-       <div *ngFor="let child of page.children">
-            <ion-item  [routerLink]="child.url" routerDirection="root" routerLinkActive="active" *ngIf="child.subChildren?.length==null">
-              <ion-icon [name]="child.icon" slot="start">
-              </ion-icon>
-              <ion-label>
-                {{child.title}}
-              </ion-label>
-            </ion-item>
-          <ion-item button *ngIf="child.subChildren?.length>0" (click)="child.open=!child.open" [class.active-parent]="child.open" detail="false" >
-            <ion-icon name="arrow-forward" slot="start" *ngIf="!child.open"></ion-icon>
-            <ion-icon name="arrow-down" slot="start" *ngIf="child.open"></ion-icon>
+        <div *ngFor="let child of page.children">
+          <ion-item
+            [routerLink]="child.url"
+            routerDirection="root"
+            routerLinkActive="active"
+            *ngIf="child.subChildren?.length==null"
+          >
+            <ion-icon [name]="child.icon" slot="start"> </ion-icon>
+            <ion-label> {{child.title}} </ion-label>
+          </ion-item>
+          <ion-item
+            button
+            *ngIf="child.subChildren?.length>0"
+            (click)="child.open=!child.open"
+            [class.active-parent]="child.open"
+            detail="false"
+          >
+            <ion-icon
+              name="arrow-forward"
+              slot="start"
+              *ngIf="!child.open"
+            ></ion-icon>
+            <ion-icon
+              name="arrow-down"
+              slot="start"
+              *ngIf="child.open"
+            ></ion-icon>
             <ion-label>{{child.title}}</ion-label>
           </ion-item>
           <ion-list class="sub-item" *ngIf="child.open">
-            <ion-item *ngFor="let subChild of child.subChildren" [routerLink]="subChild.url" routerDirection="root" routerLinkActive="active" >
-              <ion-icon [name]="subChild.icon" slot="start">
-              </ion-icon>
-              <ion-label>
-                {{subChild.title}}
-              </ion-label>
+            <ion-item
+              *ngFor="let subChild of child.subChildren"
+              (click)="onSelectCours(subChild)"
+              routerDirection="root"
+              routerLinkActive="active"
+            >
+              <ion-icon [name]="subChild.icon" slot="start"> </ion-icon>
+              <ion-label> {{subChild.title}} </ion-label>
             </ion-item>
           </ion-list>
-      </div>    
+        </div>
       </ion-list>
     </div>
   </ion-content>

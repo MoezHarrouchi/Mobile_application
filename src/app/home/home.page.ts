@@ -23,12 +23,9 @@ export class HomePage implements OnInit {
   async getData() {
     await this.wordpress.getAPIData()
     .subscribe(res=>{
-      console.log(res);
       this.slides = res.filter(item=>item.name.includes('slide'));
       this.shops = res.filter(item=>item.name.includes('shope'));
-      console.log(this.postData);
     },error=>{
-      console.log(error)
     })
   }
 }

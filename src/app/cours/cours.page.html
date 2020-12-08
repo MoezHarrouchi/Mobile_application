@@ -1,56 +1,32 @@
 <app-header></app-header>
 
-<ion-content>
+<ion-content *ngIf="contentCours">
   <div class="cours-header-content">
     <div class="cours-title-principal-container">
-      <h1 class="cours-principal-title">PERSONAL TRAINING</h1>
+      <h1 class="cours-principal-title">{{contentCours.title}}</h1>
     </div>
   </div>
-
   <ion-grid>
     <ion-row>
-      <h2>Personal Training</h2>
+      <h2>{{contentCours.title}}</h2>
     </ion-row>
     <ion-row>
       <ion-col>
-        <ion-img src="../../assets/images/danielareichel.png"> </ion-img>
+        <ion-img src="{{contentCours.image_url}}"> </ion-img>
       </ion-col>
     </ion-row>
     <ion-row>
       <ion-col>
-        <h2 class="sub-title">Personal Training im Wasser</h2>
+        <h2 class="sub-title">{{contentCours.desc_title_cours}}</h2>
       </ion-col>
     </ion-row>
-    <ion-row>
-      <ion-col>
-        <p>
-          Sie möchten gerne Ihren Schwimmstil, Ihre Technik verbessern,
-          schneller werden oder haben eine andere Zielsetzung? Dann sind Sie bei
-          mir richtig ! Als Personal Trainerin und Ex- olympianominierte
-          Schwimmerin biete ich Ihnen im Vorfeld ein Gespräch über Ihre Wünsche
-          an.
-        </p>
-      </ion-col>
-    </ion-row>
-    <ion-row
-      ><ion-col>
-        <p>
-          Im Wasser werden Ihnen viele Übungen und Tricks gezeigt, und mit der
-          Zeit bekommen Sie dann das Gefühl es auch umzusetzen. Schwimmen wie
-          ein Profi !
-        </p>
-      </ion-col></ion-row
-    >
-    <ion-row>
-      <ion-col>
-        <p>
-          60 Min Einzeltraining nur durch telefonische Anmeldung ! Mitzubringen
-          sind Flossen – evtl. haben wir auch ihre Größe da. Fragen Sie bitte im
-          Büro nach: 09131/9703864 Preis: 75 Euro Nur in Barzahlung möglich Im
-          Büro der Wasserschule vor Stundenbeginn
-        </p>
-      </ion-col>
-    </ion-row>
+    <div *ngFor="let parag of contentCours.paragraphs">
+      <ion-row>
+        <ion-col>
+          <p>{{parag}}</p>
+        </ion-col>
+      </ion-row>
+    </div>
   </ion-grid>
   <app-footer></app-footer>
 </ion-content>
