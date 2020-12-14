@@ -9,8 +9,9 @@ export class ConfigurationResolverService implements Resolve<any> {
 
   constructor( private configurationService : ConfigurationService) { }
   resolve(route:ActivatedRouteSnapshot){
-    let title = route.paramMap.get('title');
-    return this.configurationService.getContentCoursByTitle(title);
+    let parent = route.paramMap.get('parent');
+    let child = route.paramMap.get('child');
+    return this.configurationService.getContentCoursByTitle(parent,child);
 
   }
 }

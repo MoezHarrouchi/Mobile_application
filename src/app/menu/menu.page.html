@@ -71,7 +71,7 @@
           <ion-list class="sub-item" *ngIf="child.open">
             <ion-item
               *ngFor="let subChild of child.subChildren"
-              (click)="onSelectCours(subChild)"
+              (click)="onSelectCours(child.title,subChild.title)"
               routerDirection="root"
               routerLinkActive="active"
             >

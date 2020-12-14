@@ -25,9 +25,9 @@ const routes: Routes = [
     loadChildren: () => import('./menu/menu.module').then( m => m.MenuPageModule)
   },
   {
-    path: 'cours/:title',
+    path: 'cours/:parent/:child',
     resolve: {
-      special: ConfigurationResolverService
+      contentCourse: ConfigurationResolverService
     },
     loadChildren: () => import('./cours/cours.module').then( m => m.CoursPageModule)
   },

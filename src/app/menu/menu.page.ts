@@ -21,9 +21,9 @@ export class MenuPage implements OnInit {
   sideMenu() {  
     this.navigate = this.dataFromJson;  
   }
-  onSelectCours(titleMenu){  
+  onSelectCours(parent,child){  
     this.configurationService.setListMenu(this.dataFromJson)
-    this.router.navigateByUrl('/cours/'+titleMenu.title);
+    this.router.navigateByUrl('/cours/'+parent+'/'+child);
 
   }
 

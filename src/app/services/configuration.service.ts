@@ -8,7 +8,7 @@ export class ConfigurationService {
 
   constructor() { }
 
-  getContentCoursByTitle(title:any){
+  getContentCoursByTitle(parent:any,child:any){
     let courses=[];
     if(this.listMenu){
       for(let i in this.listMenu){
@@ -16,18 +16,18 @@ export class ConfigurationService {
           for(let j in this.listMenu[i].children){
             if(this.listMenu[i].children[j].subChildren){
                 for (let k in this.listMenu[i].children[j].subChildren){
-                  if(this.listMenu[i].children[j].subChildren[k].content && this.listMenu[i].children[j].subChildren[k].content.title === title ){
+                  if(this.listMenu[i].children[j].subChildren[k].content && this.listMenu[i].children[j].subChildren[k].content.title === child && this.listMenu[i].children[j].title === parent){
                     courses.push(this.listMenu[i].children[j].subChildren[k].content); 
                   } 
                 }
             }else {
-              if(this.listMenu[i].children[j].content && this.listMenu[i].children[j].content.title === title){
+              if(this.listMenu[i].children[j].content && this.listMenu[i].children[j].content.title === child && this.listMenu[i].children[j].title === parent){
                 courses.push(this.listMenu[i].children[j].content);
               }
             }
           }
         }else{
-          if(this.listMenu[i].content && this.listMenu[i].content.title === title){
+          if(this.listMenu[i].content && this.listMenu[i].content.title === child){
             courses.push(this.listMenu[i].content);
           }
         }
