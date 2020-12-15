@@ -6,7 +6,7 @@
   "scripts": {
     "ng": "ng",
     "start": "ionic serve",
-    "build": "ng build",
+    "build": "ionic build && ionic cap add android",
     "test": "ng test",
     "lint": "ng lint",
     "e2e": "ng e2e"
@@ -55,5 +55,5 @@
     "tslint": "~6.1.0",
     "typescript": "~3.9.5"
   },
-  "description": "An Ionic project"
+  "description": "An for school"
 }

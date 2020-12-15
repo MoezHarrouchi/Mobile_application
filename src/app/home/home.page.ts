@@ -11,10 +11,11 @@ export class HomePage implements OnInit {
   slideOpts = {
     initialSlide: 0,
     slidesPerView: 1,
-    autoplay: true,
+    autoplay: false,
   };
   slides= null;
-  shops = null
+  shops = null;
+  coursDisponible =null;
   constructor( private wordpress:WordpressService) {}
 
   ngOnInit(){
@@ -26,6 +27,6 @@ export class HomePage implements OnInit {
       this.slides = res.filter(item=>item.name.includes('slide'));
       this.shops = res.filter(item=>item.name.includes('shope'));
     },error=>{
-    })
-  }
+    });
+}
 }

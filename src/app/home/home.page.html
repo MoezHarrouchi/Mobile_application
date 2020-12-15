@@ -2,7 +2,9 @@
 <ion-content [fullscreen]="true">
   <ion-slides pager="true" [options]="slideOpts">
     <ion-slide *ngFor="let slide of slides;">
-      <ion-img src="{{slide.url}}"></ion-img>
+      <ion-img
+        src="{{slide.url.replace('localhost','192.168.1.173')}}"
+      ></ion-img>
     </ion-slide>
   </ion-slides>
   <div style="background-color: #d6d6d6">
@@ -19,7 +21,9 @@
       <div *ngFor="let shop of shops;">
         <ion-row>
           <ion-col>
-            <ion-img src="{{shop.url}}"></ion-img>
+            <ion-img
+              src="{{shop.url.replace('localhost','192.168.1.173')}}"
+            ></ion-img>
           </ion-col>
         </ion-row>
       </div>

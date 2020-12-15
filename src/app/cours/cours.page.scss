@@ -29,4 +29,39 @@ ion-content  {
     p{
         text-align: justify;
     }
+    .coursesList{
+        color: rgb(19, 18, 18);
+        margin-bottom: 5%;     
+        .title-cours{
+            background-color: #0a5173 !important;
+            color: white;
+        }
+        ion-col{
+            border-bottom: 0.5px solid white ;
+        }
+        ion-button{
+            --background:#0a5173;
+
+        }
+        
+    }
+    .pdfButton{
+        display: flex;
+        justify-content: center;
+        ion-button {
+            --background:#0071a1;
+        }
+    }
+    p,li{
+        font-size: 80%;
+    }
+
+    p ion-img{
+        width: 80%;
+        height: 80%;
+    }
+}
+.image-container{
+    display: flex;
+    justify-content: center;
 }

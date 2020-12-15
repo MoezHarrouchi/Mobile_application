@@ -20,10 +20,16 @@
 							"title": "Personal Training",
 							"desc_title_cours": "Personal Training im Wasser",
 							"image_url": "../../assets/images/danielareichel.png",
-							"paragraphs": [
-								" Sie möchten gerne Ihren Schwimmstil, Ihre Technik verbessern, schneller werden oder haben eine andere Zielsetzung? Dann sind Sie bei mir richtig ! Als Personal Trainerin und Ex- olympianominierte Schwimmerin biete ich Ihnen im Vorfeld ein Gespräch über Ihre Wünsche an.",
-								" Im Wasser werden Ihnen viele Übungen und Tricks gezeigt, und mit der Zeit bekommen Sie dann das Gefühl es auch umzusetzen. Schwimmen wie ein Profi !",
-								" 60 Min Einzeltraining nur durch telefonische Anmeldung ! Mitzubringen sind Flossen – evtl. haben wir auch ihre Größe da. Fragen Sie bitte im Büro nach: 09131/9703864 Preis: 75 Euro Nur in Barzahlung möglich Im Büro der Wasserschule vor Stundenbeginn"
+							"paragraphs": [{
+								"blocks":[" Sie möchten gerne Ihren Schwimmstil, Ihre Technik verbessern, schneller werden oder haben eine andere Zielsetzung? Dann sind Sie bei mir richtig ! Als Personal Trainerin und Ex- olympianominierte Schwimmerin biete ich Ihnen im Vorfeld ein Gespräch über Ihre Wünsche an.",
+								" Im Wasser werden Ihnen viele Übungen und Tricks gezeigt, und mit der Zeit bekommen Sie dann das Gefühl es auch umzusetzen. Schwimmen wie ein Profi !"],
+								"words":["60 Min",
+									"Einzeltraining nur durch telefonische Anmeldung !",
+									"Mitzubringen sind Flossen – evtl. haben wir auch ihre Größe da. Fragen Sie bitte im Büro nach: 09131/9703864",
+									"Preis: 75 Euro ",
+									"Nur in Barzahlung möglich",
+									"Im Büro der Wasserschule vor Stundenbeginn"]
+							}
 							]
 						}
 					},
@@ -33,12 +39,30 @@
 						"url": "/login",
 						"content": {
 							"title": "Anfängerschwimmen",
-							"desc_title_cours": "Personal Training im Wasser",
-							"image_url": "../../assets/images/danielareichel.png",
+							"desc_title_cours": "Für Erwachsene – Nur Mut !",
 							"paragraphs": [
-								" Sie möchten gerne Ihren Schwimmstil, Ihre Technik verbessern, schneller werden oder haben eine andere Zielsetzung? Dann sind Sie bei mir richtig ! Als Personal Trainerin und Ex- olympianominierte Schwimmerin biete ich Ihnen im Vorfeld ein Gespräch über Ihre Wünsche an.",
-								" Im Wasser werden Ihnen viele Übungen und Tricks gezeigt, und mit der Zeit bekommen Sie dann das Gefühl es auch umzusetzen. Schwimmen wie ein Profi !",
-								" 60 Min Einzeltraining nur durch telefonische Anmeldung ! Mitzubringen sind Flossen – evtl. haben wir auch ihre Größe da. Fragen Sie bitte im Büro nach: 09131/9703864 Preis: 75 Euro Nur in Barzahlung möglich Im Büro der Wasserschule vor Stundenbeginn"
+								{
+									"blocks":["Sie hatten nie Zeit damit anzufangen, aber jetzt haben Sie den Mut gefasst. Anfänger-Schwimmenlernen in kürzester Zeit. Durch unsere geschulten Trainer entwickeln Sie Sicherheit im Wasser. Mit viel Vertrauen gehen Sie an den Bruststil heran und bald werden Sie springen, tauchen, gleiten und haben dabei Spaß ihre Bahnen zu ziehen."]
+								}
+							],
+							"list":[
+								"einmal wöchentlich",
+								"45 Minuten",
+								"10 Teilnehmer"
+							],
+							"image":"../../assets/images/anfaengerschwimmen.jpg",
+							"goalPrice":[
+								{
+									"title":"Ziele",
+									"paragOfTitle":["Schwimmen lernen"]
+								},
+								{
+									"title":"Preis:",
+									"paragOfTitle":["Teilnahmegebühr: abhängig von der Kursdauer","Bezahlbar per EC Cash im Büro der Wasserschule zu Kursbeginn oder per Überweisung an:"]
+								},
+								{
+									"paragOfTitle":["Bankverbindung: Wasserschule","Sparkasse Erlangen","IBAN: DE08 7635 0000 0060 0564 34","BIC: BYLADEM1ERH"]
+								}
 							]
 						}
 					},
@@ -48,89 +72,377 @@
 						"url": "",
 						"content": {
 							"title": "Freistil",
-							"desc_title_cours": "Personal Training im Wasser",
-							"image_url": "../../assets/images/danielareichel.png",
+							"desc_title_cours": "Freistil – Technik lernen leicht gemacht!",
 							"paragraphs": [
-								" Sie möchten gerne Ihren Schwimmstil, Ihre Technik verbessern, schneller werden oder haben eine andere Zielsetzung? Dann sind Sie bei mir richtig ! Als Personal Trainerin und Ex- olympianominierte Schwimmerin biete ich Ihnen im Vorfeld ein Gespräch über Ihre Wünsche an.",
-								" Im Wasser werden Ihnen viele Übungen und Tricks gezeigt, und mit der Zeit bekommen Sie dann das Gefühl es auch umzusetzen. Schwimmen wie ein Profi !",
-								" 60 Min Einzeltraining nur durch telefonische Anmeldung ! Mitzubringen sind Flossen – evtl. haben wir auch ihre Größe da. Fragen Sie bitte im Büro nach: 09131/9703864 Preis: 75 Euro Nur in Barzahlung möglich Im Büro der Wasserschule vor Stundenbeginn"
+								{
+									"blocks":["Sie hatten nie Zeit damit anzufangen, aber jetzt haben Sie den Mut gefasst. Anfänger-Schwimmenlernen in kürzester Zeit. Durch unsere geschulten Trainer entwickeln Sie Sicherheit im Wasser. Mit viel Vertrauen gehen Sie an den Bruststil heran und bald werden Sie springen, tauchen, gleiten und haben dabei Spaß ihre Bahnen zu ziehen."]
+								}
+							],
+							"list":[
+								"Schwimmen wie ein Profi!",
+								"einmal wöchentlich",
+								"60 Minuten",
+								"7 Teilnehmer"
+							],
+
+							"image":"../../assets/images/freistil.jpg",
+							"titeOfImage":"Mitzubringen sind Flossen!",
+							"goalPrice":[
+								{
+									"title":"Ziele",
+									"paragOfTitle":["Technik lernen als Erwachsener – einfache Basic Übungen zum Erlernen der Technik – individuelle Korrekturen – systematische und aufbauende Übungen – Trainingstipps"]
+								},
+								{
+									"title":"Preis:",
+									"paragOfTitle":["Teilnahmegebühr: abhängig von der Kursdauer","Bezahlbar per EC Cash im Büro der Wasserschule zu Kursbeginn oder per Überweisung an:"]
+								},
+								{
+									"paragOfTitle":["Bankverbindung: Wasserschule","Sparkasse Erlangen","IBAN: DE08 7635 0000 0060 0564 34","BIC: BYLADEM1ERH"]
+								}
 							]
 						}
 					},
 					{
-						"title": "Open water",
+						"title": "Open Water",
 						"icon": "",
 						"url": "",
 						"content": {
-							"title": "Open water",
-							"desc_title_cours": "Personal Training im Wasser",
-							"image_url": "../../assets/images/danielareichel.png",
+							"title": "Open Water",
+							"desc_title_cours": "Open Water !",
 							"paragraphs": [
-								" Sie möchten gerne Ihren Schwimmstil, Ihre Technik verbessern, schneller werden oder haben eine andere Zielsetzung? Dann sind Sie bei mir richtig ! Als Personal Trainerin und Ex- olympianominierte Schwimmerin biete ich Ihnen im Vorfeld ein Gespräch über Ihre Wünsche an.",
-								" Im Wasser werden Ihnen viele Übungen und Tricks gezeigt, und mit der Zeit bekommen Sie dann das Gefühl es auch umzusetzen. Schwimmen wie ein Profi !",
-								" 60 Min Einzeltraining nur durch telefonische Anmeldung ! Mitzubringen sind Flossen – evtl. haben wir auch ihre Größe da. Fragen Sie bitte im Büro nach: 09131/9703864 Preis: 75 Euro Nur in Barzahlung möglich Im Büro der Wasserschule vor Stundenbeginn"
+								{
+									"blocks":["Die Badezeit ist vor allem für unsere Teilnehmer gedacht & reserviert, die nur Schwimmen möchten. Es ist keine Anmeldung über den Wasserplan erforderlich, bringt einfach eure Karte mit und schwimmt los.","Bitte erfragen Sie die tägliche Badezeit telefonisch oder vor Ort im Büro. (Montag bis Freitag) bzw. hier ist der aktuelle Plan hinterlegt:"],
+									"button":"Aktueller Plan"
+								}
+							],
+							"image":"../../assets/images/openwater.jpg",
+							"goalPrice":[
+								{
+									"title":"Ziele",
+									"paragOfTitle":["Schwimmen, schwimmen, schwimmen"]
+								},
+								{
+									"title":"Preis:",
+									"paragOfTitle":["Teilnahmegebühr: 10er Karte für 60 EUR","Bezahlbar per EC Cash im Büro der Wasserschule zu Kursbeginn oder per Überweisung an:"]
+								},
+								{
+									"paragOfTitle":["Bankverbindung: Wasserschule","Sparkasse Erlangen","IBAN: DE08 7635 0000 0060 0564 34","BIC: BYLADEM1ERH"]
+								}
 							]
 						}
 					},
 					{
 						"title": "Aquazirkel",
-						"icon": "",
-						"url": "",
 						"content": {
 							"title": "Aquazirkel",
-							"desc_title_cours": "Personal Training im Wasser",
-							"image_url": "../../assets/images/danielareichel.png",
+							"desc_title_cours": "Aquazirkel – ab in den Widerstand !",
 							"paragraphs": [
-								" Sie möchten gerne Ihren Schwimmstil, Ihre Technik verbessern, schneller werden oder haben eine andere Zielsetzung? Dann sind Sie bei mir richtig ! Als Personal Trainerin und Ex- olympianominierte Schwimmerin biete ich Ihnen im Vorfeld ein Gespräch über Ihre Wünsche an.",
-								" Im Wasser werden Ihnen viele Übungen und Tricks gezeigt, und mit der Zeit bekommen Sie dann das Gefühl es auch umzusetzen. Schwimmen wie ein Profi !",
-								" 60 Min Einzeltraining nur durch telefonische Anmeldung ! Mitzubringen sind Flossen – evtl. haben wir auch ihre Größe da. Fragen Sie bitte im Büro nach: 09131/9703864 Preis: 75 Euro Nur in Barzahlung möglich Im Büro der Wasserschule vor Stundenbeginn"
+								{
+									"blocks":["Während Schwimmer am liebsten im Strom schwimmen, ist es hier genau umgekehrt: Je mehr Wasserwiderstand, desto besser. Zirkeltraining unter Wasser kräftigt die Muskeln, fördert die Durchblutung der Haut, massiert und strafft das Bindegewebe."]
+								}
+							],
+							"list":[
+								"einmal wöchentlich",
+								"60 Minuten",
+								"10 Teilnehmer"
+							],
+							"image":"../../assets/images/aquacircuit.jpg",
+							"goalPrice":[
+								{
+									"title":"Ziele",
+									"paragOfTitle":["Leistungssteigerung, Muskelkräftigung"]
+								},
+								{
+									"title":"Preis:",
+									"paragOfTitle":["Teilnahmegebühr: abhängig von der Kursdauer","Bezahlbar per EC Cash im Büro der Wasserschule zu Kursbeginn oder per Überweisung an:"]
+								},
+								{
+									"paragOfTitle":["Bankverbindung: Wasserschule","Sparkasse Erlangen","IBAN: DE08 7635 0000 0060 0564 34","BIC: BYLADEM1ERH"]
+								}
+							]
+						}
+						
+					},
+					{
+						"title": "Aquacycling",
+						"content": {
+							"title": "Aquacycling",
+							"desc_title_cours": "Aquacycling – in der Tretmühle: Schonender geht es nicht",
+							"paragraphs": [
+								{
+									"blocks":["Mit dem Fahrrad ins Wasser – das ist Totaleinsatz. Du kämpfst mit dem ganzen Körper gegen den Wasserwiderstand. Die Auftriebskraft setzt ungeahnte Energien frei. Musik gibt den Takt an und das Tempo beim Treten vor. Und: Anders als im Fitness-Studio trainiert man nicht nur die Ausdauer, sondern den ganzen Körper."]
+								}
+							],
+							"list":[
+								"Bitte bringt Aquaschuhe mit oder ihr könnt sie direkt bei uns im Büro kaufen!",
+								"einmal wöchentlich",
+								"60 Minuten",
+								"12 Teilnehmer"
+							],
+							"image":"../../assets/images/aquacycling.jpg",
+							"goalPrice":[
+								{
+									"title":"Ziele",
+									"paragOfTitle":["Ausdauer, Kräftigung, kardiovaskuläre Verbesserung, Herz-Kreislaufstärkung"]
+								},
+								{
+									"title":"Preis:",
+									"paragOfTitle":["Teilnahmegebühr: abhängig von der Kursdauer","Bezahlbar per EC Cash im Büro der Wasserschule zu Kursbeginn oder per Überweisung an:"]
+								},
+								{
+									"paragOfTitle":["Bankverbindung: Wasserschule","Sparkasse Erlangen","IBAN: DE08 7635 0000 0060 0564 34","BIC: BYLADEM1ERH"]
+								}
 							]
 						}
 					},
 					{
-						"title": "Aquacycling",
-						"icon": "",
-						"url": ""
-					},
-					{
 						"title": "Aquafitness",
 						"icon": "",
-						"url": ""
+						"url": "",
+						"content": {
+							"title": "Aquafitness",
+							"desc_title_cours": "Aquafitness – Im Wasser unterstützt der Auftrieb alle Bewegungen.",
+							"paragraphs": [
+								{
+									"blocks":["Bewegungswiderstand, hydrostatischer Druck und Wärmeleitfähigkeit des Wassers ermöglichen ein völlig anderes Bewegungsprogramm als im Trockenen. Im Aquafitness mit den verschiedenen Geräten (Step, Fahrrad, Poolnudel, Handschuhe…) werden die positiven Eigenschaften des Wassers mit vielfältigen Ausdauer- und Kräftigungsübungen verknüpft. So erhalten Sie gesundheitsorientiertes Training und ein optimal schonenden Muskelaufbau und -kräftigungsprogramm bei maximaler Gelenkschonung. Der Wasserwiderstand wirkt zugleich wie eine stetige „Dauermassage“ für Haut und Bindegewebe"]
+								}
+							],
+							"list":[
+								"einmal wöchentlich",
+								"60 Minuten",
+								"10 Teilnehmer"
+							],
+							"image":"../../assets/images/aquafitness.jpg",
+							"goalPrice":[
+								{
+									"title":"Ziele",
+									"paragOfTitle":["Ausdauer, Kräftigung, kardiovaskuläre Verbesserung, Herz-und Kreislauftraining, Gelenkschonung."]
+								},
+								{
+									"title":"Preis:",
+									"paragOfTitle":["Teilnahmegebühr: abhängig von der Kursdauer","Bezahlbar per EC Cash im Büro der Wasserschule zu Kursbeginn oder per Überweisung an:"]
+								},
+								{
+									"paragOfTitle":["Bankverbindung: Wasserschule","Sparkasse Erlangen","IBAN: DE08 7635 0000 0060 0564 34","BIC: BYLADEM1ERH"]
+								}
+							]
+						}
 					},
 					{
 						"title": "Aquafitness für Schwangere",
-						"icon": "",
-						"url": ""
+						"content": {
+							"title": "Aquafitness für Schwangere",
+							"desc_title_cours": "Aquafitness für Schwangere – Für Sie und Ihr Ungeborenes",
+							"paragraphs": [
+								{
+									"blocks":["Der Kurs bietet für Sie und ihr Ungeborenes ein wunderbares Wassererlebnis mit Entlastungs-, Schwebe- und Dehnungsübungen."]
+								}
+							],
+							"list":[
+								"einmal wöchentlich",
+								"60 Minuten",
+								"10 Schwangere"
+							],
+							"image":"../../assets/images/aquafitness_schwangere.jpg",
+							"goalPrice":[
+								{
+									"title":"Ziele",
+									"paragOfTitle":["Die Entspannungs – Übungen heben Ihr Wohlbefinden. Ein positiver Nebeneffekt ist die Möglichkeit, sich mit anderen werdenden Müttern auszutauschen und wichtige Themen dabei zu besprechen. Bitte bringen Sie ein großes Handtuch, Badeschuhe, Mutterpass und ihre Unbedenklichkeitsbescheinigung vom Arzt mit."]
+								},
+								{
+									"title":"Preis:",
+									"paragOfTitle":["Teilnahmegebühr: abhängig von der Kursdauer","Bezahlbar per EC Cash im Büro der Wasserschule zu Kursbeginn oder per Überweisung an:"]
+								},
+								{
+									"paragOfTitle":["Bankverbindung: Wasserschule","Sparkasse Erlangen","IBAN: DE08 7635 0000 0060 0564 34","BIC: BYLADEM1ERH"]
+								}
+							]
+						}
 					},
 					{
 						"title": "Early Morning",
-						"icon": "",
-						"url": ""
+						"content": {
+							"title": "Early Morning",
+							"desc_title_cours": "Aquafitness am frühen Morgen",
+							"paragraphs": [
+								{
+									"blocks":["Gehen Sie fit in die Arbeit. Wir bieten ihnen ein Power Programm, was Sie richtig in den Morgen starten läßt.","Schwitzen im Wasser – ja, das geht! Hochintensive Trainings im Wasser versprechen eine 3 mal höhere Intensität als an Land. Es schützt vor Überlastung und es können Profis als auch Anfänger gleichzeitig gut trainieren. Wie das geht? Verschiedene Aquasportarten wie Cycling, Aquafitness, Aquazirkel….bieten eine neue Reizsetzung, die unterschiedlicher nicht sein können und damit gewinnbringend für den jeweiligen Leistungsstandard sind. Jedes Leistungsniveau kann angepasst werden, denn ihr entscheidet, wie ihr Euch belasten wollt."]
+								}
+							],
+							"list":[
+								"einmal wöchentlich",
+								"60 Minuten",
+								"10 Teilnehmer"
+							],
+							"image":"../../assets/images/earlymorning.jpg",
+							"goalPrice":[
+								{
+									"title":"Ziele",
+									"paragOfTitle":["Ausdauer, Kräftigung, kardiovaskuläre Verbesserung, Herz-Kreislauftraining"]
+								},
+								{
+									"title":"Preis:",
+									"paragOfTitle":["Teilnahmegebühr: abhängig von der Kursdauer","Bezahlbar per EC Cash im Büro der Wasserschule zu Kursbeginn oder per Überweisung an:"]
+								},
+								{
+									"paragOfTitle":["Bankverbindung: Wasserschule","Sparkasse Erlangen","IBAN: DE08 7635 0000 0060 0564 34","BIC: BYLADEM1ERH"]
+								}
+							]
+						}
+						
 					},
 					{
 						"title": "Aquastep",
-						"icon": "",
-						"url": ""
+						"content": {
+							"title": "Aquastep",
+							"desc_title_cours": "Aquastep – Schritt für Schritt ins Wasser",
+							"paragraphs": [
+								{
+									"blocks":["Im Wasser machen die vielen Übungsmöglichkeiten auf dem STEP noch viel mehr Spaß! Wir kräftigen dabei unsere Muskulatur und straffen sie, wir verbessern unsere Ausdauer und Koordination. Dabei begleitet uns rhythmische Musik. Dehnung und Entspannungsübungen sind noch wichtige Elemente der Kursstunde."]
+								}
+							],
+							"list":[
+								"einmal wöchentlich",
+								"60 Minuten",
+								"10 Teilnehmer"
+							],
+							"image":"../../assets/images/aquastep.jpg",
+							"goalPrice":[
+								{
+									"title":"Ziele",
+									"paragOfTitle":["Ausdauer, Kräftigung, kardiovaskuläre Verbesserung, Herz-Kreislauftraining"]
+								},
+								{
+									"title":"Preis:",
+									"paragOfTitle":["Teilnahmegebühr: abhängig von der Kursdauer","Bezahlbar per EC Cash im Büro der Wasserschule zu Kursbeginn oder per Überweisung an:"]
+								},
+								{
+									"paragOfTitle":["Bankverbindung: Wasserschule","Sparkasse Erlangen","IBAN: DE08 7635 0000 0060 0564 34","BIC: BYLADEM1ERH"]
+								}
+							]
+						}
 					},
 					{
 						"title": "Aquamix",
-						"icon": "",
-						"url": ""
+						"content": {
+							"title": "Aquamix",
+							"desc_title_cours": "Aquamix – Cross-Training",
+							"paragraphs": [
+								{
+									"blocks":["Aquamix ist eine Cross-Training-Klasse für alle Fitness-Level im Wasser. Sie wurde entwickelt, um ihre Körperform, den Muskeltonus und ihre Fitness zu verbessern. Aqua Mix ist ein effektives Ganzkörper-Workout, ist motivierend und mit guter Musik macht es nochmal soviel Spaß."]
+								}
+							],
+							"list":[
+								"einmal wöchentlich",
+								"60 Minuten",
+								"10 Teilnehmer"
+							],
+							"image":"../../assets/images/aquamix.jpg",
+							"goalPrice":[
+								{
+									"title":"Ziele",
+									"paragOfTitle":["Leistungssteigerung, Muskelkräftigung, Entspannung"]
+								},
+								{
+									"title":"Preis:",
+									"paragOfTitle":["Teilnahmegebühr: abhängig von der Kursdauer","Bezahlbar per EC Cash im Büro der Wasserschule zu Kursbeginn oder per Überweisung an:"]
+								},
+								{
+									"paragOfTitle":["Bankverbindung: Wasserschule","Sparkasse Erlangen","IBAN: DE08 7635 0000 0060 0564 34","BIC: BYLADEM1ERH"]
+								}
+							]
+						}
+						
 					},
 					{
 						"title": "Adiaqua",
-						"icon": "",
-						"url": ""
+						"content": {
+							"title": "Adiaqua",
+							"desc_title_cours": "Adiaqua",
+							"paragraphs": [
+								{
+									"blocks":["Ein Kurs für alle, die glauben, „ein paar Pfunde“ zu viel zu haben. Bei diesem Kurs benutzen wir alle Geräte die wir zur Verfügung haben. Speziell ausgebildete Aquafitnessinstruktoren kümmern sich um Ihr Wohlbefinden, aber die sportliche Bewegungsausführung bleibt im Vordergrund."]
+								}
+							],
+							"list":[
+								"einmal wöchentlich",
+								"60 Minuten",
+								"10 Teilnehmer"
+							],
+							"image":"../../assets/images/adiaqua.jpg",
+							"goalPrice":[
+								{
+									"title":"Ziele",
+									"paragOfTitle":["Wünschen Sie eine Beratung im Ernährungsbereich? Wenden Sie sich bitte an unser Büro."]
+								},
+								{
+									"title":"Preis:",
+									"paragOfTitle":["Teilnahmegebühr: abhängig von der Kursdauer","Bezahlbar per EC Cash im Büro der Wasserschule zu Kursbeginn oder per Überweisung an:"]
+								},
+								{
+									"paragOfTitle":["Bankverbindung: Wasserschule","Sparkasse Erlangen","IBAN: DE08 7635 0000 0060 0564 34","BIC: BYLADEM1ERH"]
+								}
+							]
+						}
 					},
 					{
 						"title": "Aquasana",
-						"icon": "",
-						"url": ""
+						"content": {
+							"title": "Aquasana",
+							"desc_title_cours": "Aquasana – ein Wassertraining ab 50+",
+							"paragraphs": [
+								{
+									"blocks":["Dieses abwechslungsreiche, schonende und effiziente Workout für viele Muskelgruppen ist für unsere ab 50+ Teilnehmer entwickelt worden. Das Herz-Kreislauf-System wird gestärkt sowie die Rumpf-und Gesäßmuskulatur. Mit guter Musik macht das Training umso mehr Spaß."]
+								}
+							],
+							"list":[
+								"einmal wöchentlich",
+								"60 Minuten",
+								"10 Teilnehmer"
+							],
+							"image":"../../assets/images/aquasana.jpg",
+							"goalPrice":[
+								{
+									"title":"Ziele",
+									"paragOfTitle":["Hier werdet ihr bewegt!"]
+								},
+								{
+									"title":"Preis:",
+									"paragOfTitle":["Teilnahmegebühr: abhängig von der Kursdauer","Bezahlbar per EC Cash im Büro der Wasserschule zu Kursbeginn oder per Überweisung an:"]
+								},
+								{
+									"paragOfTitle":["Bankverbindung: Wasserschule","Sparkasse Erlangen","IBAN: DE08 7635 0000 0060 0564 34","BIC: BYLADEM1ERH"]
+								}
+							]
+						}
 					},
 					{
 						"title": "Aquafun",
-						"icon": "",
-						"url": ""
+						"content": {
+							"title": "Aquafun",
+							"desc_title_cours": "Move ya – Aquafun",
+							"paragraphs": [
+								{
+									"blocks":["Dieses schöne Aqua-Cardio-Programm lässt die Bewegungen im Wasser noch effektiver werden. Die Choreografien sind einfach und Sie werden trotzdem gefordert. Dann wäre das ihre Kursstunde zum Buchen!","Lasst Euch überraschen!"]
+								}
+							],
+							
+							
+							"image":"../../assets/images/sup.png",
+							"goalPrice":[
+								{
+									"title":"Ziele",
+									"paragOfTitle":["Es fördert Balance & Konzentration, verbessert die Flexibilität & Koordination, dadurch entsteht ein Ganzkörper-Training. Wir erfahren eine sensomotorische Stärkung, desweiteren wird die stabilisierende Muskulatur/Tiefenmuskulatur gestärkt und es macht außerdem viel Spaß!"]
+								},
+								{
+									"title":"Preis:",
+									"paragOfTitle":["Teilnahmegebühr: abhängig von der Kursdauer Bezahlbar per EC Cash im Büro der Wasserschule zu Kursbeginn oder per Überweisung an:"]
+								},
+								{
+									"paragOfTitle":["Bankverbindung: Wasserschule","Sparkasse Erlangen","IBAN: DE08 7635 0000 0060 0564 34","BIC: BYLADEM1ERH"]
+								}
+							]
+						}
 					}
 				]
 			},
@@ -140,13 +452,69 @@
 				"subChildren": [
 					{
 						"title": "SUP",
-						"icon": "",
-						"url": ""
+						"content": {
+							"title": "SUP",
+							"desc_title_cours": "SUP",
+							"paragraphs": [
+								{
+									"blocks":["Auf dem SUP board (stand up paddling) zu stehen ist schon mal ein großer Spaß. Das Training enthält Elemente des klassischen Trainings an Land (Fitness-und Krafttraining) und bildet daher eine Ganzheitlichkeit auf den Körper. Denn ihr Körper muß ca. 140 mal gegensteuern , durch die Übertragungen des Wassers. Das nennt man Gleichgewichtstraining vom Feinsten !"]
+								}
+							],
+							"list":[
+								"einmal wöchentlich",
+								"75 Minuten mit Aufbau",
+								"9 Teilnehmer"
+							],
+						
+							
+							"image":"../../assets/images/sup.png",
+							"goalPrice":[
+								{
+									"title":"Ziele",
+									"paragOfTitle":["Es fördert Balance & Konzentration, verbessert die Flexibilität & Koordination, dadurch entsteht ein Ganzkörper-Training. Wir erfahren eine sensomotorische Stärkung, desweiteren wird die stabilisierende Muskulatur/Tiefenmuskulatur gestärkt und es macht außerdem viel Spaß!!"]
+								},
+								{
+									"title":"Preis:",
+									"paragOfTitle":["Teilnahmegebühr: abhängig von der Kursdauer Bezahlbar per EC Cash im Büro der Wasserschule zu Kursbeginn oder per Überweisung an:"]
+								},
+								{
+									"paragOfTitle":["Bankverbindung: Wasserschule","Sparkasse Erlangen","IBAN: DE08 7635 0000 0060 0564 34","BIC: BYLADEM1ERH"]
+								}
+							]
+						}
 					},
 					{
 						"title": "SUP SANA",
-						"icon": "",
-						"url": ""
+						"content": {
+							"title": "SUP SANA",
+							"desc_title_cours": "SUP SANA",
+							"paragraphs": [
+								{
+									"blocks":["Auf dem SUP board (stand up paddling) werden verschiedene, neue Übungen erlernt. Das hat den Vorteil, dass neue Muskelreize gesetzt werden und durch das effiziente Training das Gleichgewicht trainiert wird. Somit sind Sie leistungsfähiger und für ihren Alltag bestens gerüstet. Für jeden Anfänger , ob Jung oder Alt , geeignet! "]
+								}
+							],
+							"list":[
+								"einmal wöchentlich",
+								"75 Minuten mit Aufbau",
+								"9 Teilnehmer"
+							],
+						
+							
+							"image":"../../assets/images/sup-sana.png",
+							"goalPrice":[
+								{
+									"title":"Ziele",
+									"paragOfTitle":["Es fördert Balance & Konzentration, verbessert die Flexibilität & Koordination, dadurch entsteht ein Ganzkörper-Training. Wir erfahren eine sensomotorische Stärkung, desweiteren wird die stabilisierende Muskulatur/Tiefenmuskulatur gestärkt und es macht außerdem viel Spaß !"]
+								},
+								{
+									"title":"Preis:",
+									"paragOfTitle":["Teilnahmegebühr: abhängig von der Kursdauer bezahlbar per EC Cash im Büro der Wasserschule zu Kursbeginn oder per Überweisung an:"]
+								},
+								{
+									"paragOfTitle":["Bankverbindung: Wasserschule","Sparkasse Erlangen","IBAN: DE08 7635 0000 0060 0564 34","BIC: BYLADEM1ERH"]
+								}
+							]
+						}
 					}
 				]
 			},
@@ -168,35 +536,311 @@
 				"subChildren": [
 					{
 						"title": "Mamba mini",
-						"url": ""
+						"content": {
+							"title": "Mamba mini",
+							"desc_title_cours": "Mamba mini – Mama oder Papa & Baby In harmonischer Zweisamkeit im Wasser",
+							"paragraphs": [
+								{
+									"blocks":["Durch das Wasserschulen entwickelte Konzept optimieren wir die Wasserfrüherziehung Ihres Babys im Wasser. Wir gehen damit speziell auf die Entwicklung des Kindes ein und setzen durch bestimmte Reize die intensive Förderung im Wasser fort. Die Übungen sind so konzipiert, dass Sie nach Kursende in der Lage sind, mit ihrem Kind weiter das Erlernte selbständig im Wasser durchzuführen."]
+								}
+								],
+							"beforeList" :[
+								{
+									"title":"Alter:",
+									"paragraph":"10. LW – 5. Monat"
+								}
+							],
+							"list":[
+								"einmal wöchentlich",
+								"60 Minuten",
+								"10 Schwangere"
+							],
+							"image":"../../assets/images/mamba_mini.jpg",
+							"span":"Kennen Sie schon unseren Fotoservice?",
+							"button":"Fotoservice",
+							"goalPrice":[
+								{
+									"title":"Ziele",
+									"paragOfTitle":["Vertrautheit mit dem Element Wasser, Bewegungen an Land und Wasser zu vergleichen, vielfältige Körper-Erfahrungen spüren lernen. Spaß am nassen Element – eine umfassende und strukturierte Ausprägung aller nervalen Prozesse. – wiederstandsfähiger gegen Infektionskrankheiten werden, da ihr Immunsystem frühzeitig trainiert wird."]
+								},
+								{
+									"title":"Preis:",
+									"paragOfTitle":["Teilnahmegebühr: je nach Dauer des Kurses","Bezahlbar per EC Cash im Büro der Wasserschule zu Kursbeginn oder per Überweisung an:"]
+								},
+								{
+									"paragOfTitle":["Bankverbindung: Wasserschule","Sparkasse Erlangen","IBAN: DE08 7635 0000 0060 0564 34","BIC: BYLADEM1ERH"]
+								}
+							]
+						}
 					},
 					{
 						"title": "Ma&Pa mini",
-						"url": ""
+						"content": {
+							"title": "Ma&Pa mini",
+							"desc_title_cours": "Mama & Papa mini – Mama & Papa & Baby",
+							"paragraphs": [
+								{
+									"blocks":["Mama, Papa und das Baby – alle Drei zusammen im Wasser! Das ist ein Spaß. Dieser Kurs ist speziell für die kleine Familie, die wunderbaren Partnerübungen mit ihrem Baby genießen möchten."]
+								}
+								],
+							"beforeList" :[
+								{
+									"title":"Alter:",
+									"paragraph":"10. LW – 5. Monat"
+								}
+							],
+							"list":[
+								"einmal wöchentlich",
+								"45 Minuten",
+								"10 Mamas & Papas & Ihr Baby"
+							],
+							"image":"../../assets/images/mapa_mini.png",
+							"span":"Kennen Sie schon unseren Fotoservice?",
+							"button":"Fotoservice",
+							"goalPrice":[
+								{
+									"title":"Ziele",
+									"paragOfTitle":["Vertrautheit mit dem Element Wasser, Bewegungen an Land und Wasser zu vergleichen, vielfältige Körper-Erfahrungen spüren lernen. Spaß am nassen Element – eine umfassende und strukturierte Ausprägung aller nervalen Prozesse. – widerstandsfähiger gegen Infektionskrankheiten werden, da ihr Immunsystem frühzeitig trainiert wird."]
+								},
+								{
+									"title":"Preis:",
+									"paragOfTitle":["Teilnahmegebühr: je nach Dauer des Kurses","Bezahlbar per EC Cash im Büro der Wasserschule zu Kursbeginn oder per Überweisung an:"]
+								},
+								{
+									"paragOfTitle":["Bankverbindung: Wasserschule","Sparkasse Erlangen","IBAN: DE08 7635 0000 0060 0564 34","BIC: BYLADEM1ERH"]
+								}
+							]
+						}
 					},
 					{
 						"title": "Mamba minimax",
-						"url": ""
+						"content": {
+							"title": "Mamba minimax",
+							"desc_title_cours": "Mamba minimax – Mama oder Papa und Baby",
+							"beforeList" :[
+								{
+									"title":"In harmonischer Zweisamkeit im Wasser",
+									"paragraph":"Durch das Wasserschulen entwickelte Konzept optimieren wir die Wasserfrüherziehung Ihres Babys im Wasser. Wir gehen damit speziell auf die Entwicklung des Kindes ein, setzen durch bestimmte Reize die intensive Förderung im Wasser fort. Die Übungen sind so konzipiert, dass Sie nach Kursende in der Lage sind, mit ihrem Kind weiter das Erlernte selbständig im Wasser durchzuführen. Zur Unterstützung und Förderung des Gelernten können Sie bei uns auch eine Baby-Schwimm-DVD (35 Min.) erwerben. Alle Übungen aus dem Kursgeschehen werden gezeigt und variable Möglichkeiten. Auch eine tolle Geschenkidee!"
+								},
+								{
+									"title":"Alter:",
+									"paragraph":"5. Monat – 8. Monat"
+								}
+							],
+							"list":[
+								"einmal wöchentlich",
+								"45 Minuten",
+								"10 Mamas & Papas & Ihr Baby"
+							],
+							"image":"../../assets/images/mamba_minimax.jpg",
+							"span":"Kennen Sie schon unseren Fotoservice?",
+							"button":"Fotoservice",
+							"goalPrice":[
+								{
+									"title":"Ziele",
+									"paragOfTitle":["Die muskuläre Entwicklung durch verschiedene Reizsetzungen fördern, Wassergriffe die auch an Land verwendet werden können und passives Bewegen wird Aktives. (Krabbelalter). Mit unseren Kursinhalten erlernt Ihr Kind wie es sich selbständig mit Hilfe des Wassers fortbewegen und tauchen kann . Lassen Sie sich überraschen und inspirieren."]
+								},
+								{
+									"title":"Preis:",
+									"paragOfTitle":["Teilnahmegebühr: je nach Dauer des Kurses","Bezahlbar per EC Cash im Büro der Wasserschule zu Kursbeginn oder per Überweisung an:"]
+								},
+								{
+									"paragOfTitle":["Bankverbindung: Wasserschule","Sparkasse Erlangen","IBAN: DE08 7635 0000 0060 0564 34","BIC: BYLADEM1ERH"]
+								}
+							]
+						}
 					},
 					{
 						"title": "Ma&Pa minimax",
-						"url": ""
+						"content": {
+							"title": "Ma&Pa minimax",
+							"beforeList" :[
+								{
+									"title":"Ma & Pa minimax – Mama & Papa & Baby",
+									"paragraph":"Mama, Papa und das Baby – alle Drei zusammen im Wasser! Das ist ein Spaß. Dieser Kurs ist speziell für die kleine Familie, die wunderbaren Partnerübungen mit ihrem Baby genießen möchten."
+								},
+								{
+									"title":"Alter:",
+									"paragraph":"5. Monat – 8. Monat"
+								}
+							],
+							"list":[
+								"45 Minuten",
+								"einmal wöchentlich",
+								"10 Mamas und Papas & Ihr Baby"
+							],
+							"image":"../../assets/images/mapa_minimax.jpg",
+							"span":"Kennen Sie schon unseren Fotoservice?",
+							"button":"Fotoservice",
+							"goalPrice":[
+								{
+									"title":"Ziele",
+									"paragOfTitle":["Die muskuläre Entwicklung durch verschiedene Reizsetzungen fördern, Wassergriffe die auch an Land verwendet werden können und passives Bewegen wird Aktives. (Krabbelalter). Mit unseren Kursinhalten erlernt Ihr Kind wie es sich selbständig mit Hilfe des Wassers fortbewegen und tauchen kann . Lassen Sie sich überraschen und inspirieren."]
+								},
+								{
+									"title":"Preis:",
+									"paragOfTitle":["Teilnahmegebühr: je nach Dauer des Kurses","Bezahlbar per EC Cash im Büro der Wasserschule zu Kursbeginn oder per Überweisung an:"]
+								},
+								{
+									"paragOfTitle":["Bankverbindung: Wasserschule","Sparkasse Erlangen","IBAN: DE08 7635 0000 0060 0564 34","BIC: BYLADEM1ERH"]
+								}
+							]
+						}
 					},
 					{
 						"title": "Mamba maxi",
-						"url": ""
+						"content": {
+							"title": "Mamba maxi",
+							"desc_title_cours": "Mamba maxi – Mama oder Papa & Baby",
+
+							"beforeList" :[
+								{
+									"title":"In harmonischer Zweisamkeit im Wasser",
+									"paragraph":"Das von der Wasserschule entwickeltes Konzept optimieren wir die Wasserfrüherziehung Ihres Babys im Wasser. Wir gehen damit speziell auf die Entwicklung des Kindes ein, setzen durch bestimmte Reize die intensive Förderung im Wasser fort. Die Übungen sind so konzipiert, dass Sie nach Kursende in der Lage sind, mit ihrem Kind weiter das Erlernte selbständig im Wasser durchzuführen."
+								},
+								{
+									"title":"Alter:",
+									"paragraph":"8. Monat – 12. Monat"
+								}
+							],
+							"list":[
+								"45 Minuten",
+								"einmal wöchentlich",
+								"10 Mamas und Papas & Ihr Baby"
+							],
+							"image":"../../assets/images/mamba_maxi.jpg",
+							"span":"Kennen Sie schon unseren Fotoservice?",
+							"button":"Fotoservice",
+							"goalPrice":[
+								{
+									"title":"Ziele",
+									"paragOfTitle":["Die muskuläre Entwicklung durch verschiedene Reizsetzungen fördern, Wassergriffe die auch an Land verwendet werden können und passives Bewegen wird Aktives. (Krabbelalter). Mit unseren Kursinhalten erlernt Ihr Kind wie es sich selbständig mit Hilfe des Wassers fortbewegen und tauchen kann . Lassen Sie sich überraschen und inspirieren."]
+								},
+								{
+									"title":"Preis:",
+									"paragOfTitle":["Teilnahmegebühr: je nach Dauer des Kurses","Bezahlbar per EC Cash im Büro der Wasserschule zu Kursbeginn oder per Überweisung an:"]
+								},
+								{
+									"paragOfTitle":["Bankverbindung: Wasserschule","Sparkasse Erlangen","IBAN: DE08 7635 0000 0060 0564 34","BIC: BYLADEM1ERH"]
+								}
+							]
+						}
 					},
 					{
 						"title": "Ma&Pa maxi",
-						"url": ""
+						"content": {
+							"title": "Ma&Pa maxi",
+
+							"beforeList" :[
+								{
+									"title":"Ma & Pa maxi – Mama & Papa & Baby",
+									"paragraph":"Alle Drei zusammen im Wasser! Das ist ein Spaß. Dieser Kurs ist speziell für die kleine Familie, die wunderbare Partnerübungen mit ihrem Baby genießen möchten."
+								},
+								{
+									"title":"Alter:",
+									"paragraph":"8. Monat – 12. Monat"
+								}
+							],
+							"list":[
+								"45 Minuten",
+								"einmal wöchentlich",
+								"10 Mamas & Papas & Ihr Baby"
+
+
+							],
+							"image":"../../assets/images/mapa_maxi.jpg",
+							"span":"Kennen Sie schon unseren Fotoservice?",
+							"button":"Fotoservice",
+							"goalPrice":[
+								{
+									"title":"Ziele",
+									"paragOfTitle":["Die muskuläre Entwicklung durch verschiedene Reizsetzungen fördern, Wassergriffe die auch an Land verwendet werden können und passives Bewegen wird Aktives. (Krabbelalter). Mit unseren Kursinhalten erlernt Ihr Kind wie es sich selbständig mit Hilfe des Wassers fortbewegen und tauchen kann . Lassen Sie sich überraschen und inspirieren."]
+								},
+								{
+									"title":"Preis:",
+									"paragOfTitle":["Teilnahmegebühr: je nach Dauer des Kurses","Bezahlbar per EC Cash im Büro der Wasserschule zu Kursbeginn oder per Überweisung an:"]
+								},
+								{
+									"paragOfTitle":["Bankverbindung: Wasserschule","Sparkasse Erlangen","IBAN: DE08 7635 0000 0060 0564 34","BIC: BYLADEM1ERH"]
+								}
+							]
+						}
 					},
 					{
 						"title": "Ma&Pa family",
-						"url": ""
+						"content": {
+							"title": "Ma&Pa family",
+							"beforeList" :[
+								{
+									"title":"Ma & Pa family – Mama & Papa & Baby & Geschwisterkind",
+									"paragraph":"Alle Vier zusammen im Wasser! Das ist ein Spaß. Dieser Kurs ist speziell für die kleine Familie, die wunderbare Partnerübungen mit ihren Kindern genießen möchten."
+								},
+								{
+									"title":"Alter:",
+									"paragraph":"ab dem 3. Monat und das Geschwisterkind bis 10 Jahre."
+								}
+							],
+							"list":[
+								"45 Minuten",
+								"einmal wöchentlich",
+								"5 Familienplätze"
+
+
+							],
+							"image":"../../assets/images/mapa_family.jpg",
+							"span":"Kennen Sie schon unseren Fotoservice?",
+							"button":"Fotoservice",
+							"goalPrice":[
+								{
+									"title":"Ziele",
+									"paragOfTitle":["Die muskuläre Entwicklung durch verschiedene Reizsetzungen fördern, Wassergriffe die auch an Land verwendet werden können und passives Bewegen wird Aktives. (Krabbelalter). Mit unseren Kursinhalten erlernt Ihr Kind wie es sich selbständig mit Hilfe des Wassers fortbewegen und tauchen kann . Lassen Sie sich überraschen und inspirieren."]
+								},
+								{
+									"title":"Preis:",
+									"paragOfTitle":["Teilnahmegebühr: je nach Dauer des Kurses","Bezahlbar per EC Cash im Büro der Wasserschule zu Kursbeginn oder per Überweisung an:"]
+								},
+								{
+									"paragOfTitle":["Bankverbindung: Wasserschule","Sparkasse Erlangen","IBAN: DE08 7635 0000 0060 0564 34","BIC: BYLADEM1ERH"]
+								}
+							]
+						}
 					},
 					{
 						"title": "Anne&Floh",
-						"url": ""
+						"content": {
+							"title": "Anne&Floh",
+							"beforeList" :[
+								{
+									"title":"Anne & Floh – Aquafitness für Mama & Baby",
+									"paragraph":"Mami & Baby im Wasser ! Sie wollen etwas für ihre Fitness tun mit dem Baby? Wir haben Übungen konzipiert, die Sie straffer und noch viel schöner machen 🙂 Das Baby genießt Übungen aus dem Aquajogi, Babyschwimmen und erfährt kleine Singlieder. Was gibt es Schöneres als das in ungestörter Atmosphäre zu genießen?"
+								},
+								{
+									"title":"Alter:",
+									"paragraph":"5 Monate – 12 Monate"
+								}
+							],
+							"list":[
+								"45 Minuten",
+								"einmal wöchentlich",
+								"10 Mamas & Ihr Baby"
+							],
+							"image":"../../assets/images/anne_floh.jpg",
+							"span":"Kennen Sie schon unseren Fotoservice?",
+							"button":"Fotoservice",
+							"goalPrice":[
+								{
+									"title":"Ziele",
+									"paragOfTitle":["Lassen Sie sich überraschen und inspirieren."]
+								},
+								{
+									"title":"Preis:",
+									"paragOfTitle":["Teilnahmegebühr: je nach Dauer des Kurses","Bezahlbar per EC Cash im Büro der Wasserschule zu Kursbeginn oder per Überweisung an:"]
+								},
+								{
+									"paragOfTitle":["Bankverbindung: Wasserschule","Sparkasse Erlangen","IBAN: DE08 7635 0000 0060 0564 34","BIC: BYLADEM1ERH"]
+								}
+							]
+						}
 					}
 				]
 			},
@@ -206,28 +850,191 @@
 				"subChildren": [
 					{
 						"title": "aquakids",
-						"url": ""
+						"content": {
+							"title": "aquakids",
+							"beforeList" :[
+								{
+									"title":"Aquakids – Mit Ihrem kleinen Kind im Wasser",
+									"paragraph":"Der Bewegungsspielraum ist schon groß. Die Fremdelphase beginnt, so daß wir dem hier eine besondere Bedeutung zukommen lassen.Im Kurs wird das Vertrauen in die eigenen körperlichen Möglichkeiten und Fähigkeiten gestärkt, sowie die Eltern-Kind Beziehung gefestigt."
+								},
+								{
+									"title":"Alter:",
+									"paragraph":"1 – 2 jährige"
+								}
+							],
+							"list":[
+								"45 Minuten",
+								"einmal wöchentlich",
+								"10 Mamas oder Papas & Ihr Kleinkind"
+							],
+							"image":"../../assets/images/aquakids.jpg",
+							"span":"Kennen Sie schon unseren Fotoservice?",
+							"button":"Fotoservice",
+							"goalPrice":[
+								{
+									"title":"Ziele",
+									"paragOfTitle":["Das Loslassen von der Mutter/dem Vater. Das Selbstbewußtsein des Kindes im Wasser stärken.","Mit viel Spaß und Spiel geben wir den Kindern Sicherheit. Lassen Sie sich überraschen und inspirieren."]
+								},
+								{
+									"title":"Preis:",
+									"paragOfTitle":["Teilnahmegebühr: je nach Dauer des Kurses","Bezahlbar per EC Cash im Büro der Wasserschule zu Kursbeginn oder per Überweisung an:"]
+								},
+								{
+									"paragOfTitle":["Bankverbindung: Wasserschule","Sparkasse Erlangen","IBAN: DE08 7635 0000 0060 0564 34","BIC: BYLADEM1ERH"]
+								}
+							]
+						}
 					},
 					{
 						"title": "Ma&Pa Aquakids",
-						"url": ""
+						"content": {
+							"title": "Ma&Pa Aquakids",
+							"beforeList" :[
+								{
+									"title":"Ma & Pa Aquakids – Die kleine Familie im Wasser",
+									"paragraph":"Der Bewegungsspielraum ist schon groß. Die Fremdelphase beginnt, so dass wir dem hier eine besondere Bedeutung zukommen lassen. Im Kurs wird das Vertrauen in die eigenen körperlichen Möglichkeiten und Fähigkeiten gestärkt, sowie die Eltern-Kind Beziehung gefestigt. Wo haben wir mehr Körperkontakt zu unseren Kindern, als im Wasser?"
+								},
+								{
+									"title":"Alter:",
+									"paragraph":"1 – 2 jährige"
+								}
+							],
+							"list":[
+								"45 Minuten",
+								"einmal wöchentlich",
+								"10 Mamas oder Papas & Ihr Kleinkind"
+							],
+							"image":"../../assets/images/mapa_aquakids.png",
+							"span":"Kennen Sie schon unseren Fotoservice?",
+							"button":"Fotoservice",
+							"goalPrice":[
+								{
+									"title":"Ziele",
+									"paragOfTitle":["Das Loslassen von der Mutter/dem Vater. Das Selbstbewußtsein des Kindes im Wasser stärken. Lassen Sie sich überraschen."]
+								},
+								{
+									"title":"Preis:",
+									"paragOfTitle":["Teilnahmegebühr: je nach Dauer des Kurses","Bezahlbar per EC Cash im Büro der Wasserschule zu Kursbeginn oder per Überweisung an:"]
+								},
+								{
+									"paragOfTitle":["Bankverbindung: Wasserschule","Sparkasse Erlangen","IBAN: DE08 7635 0000 0060 0564 34","BIC: BYLADEM1ERH"]
+								}
+							]
+						}
 					},
 					{
 						"title": "2+",
-						"url": ""
+						"content": {
+							"title": "2+",
+							"beforeList" :[
+								{
+									"title":"2+ – Mama oder Papa & ihr kleines Kind im Wasser",
+									"paragraph":"Spaß spielt hier die wichtigste Rolle. Über Wiederholungen finden unsere Kleinkinder Sicherheit im Wasser. Abgerundet werden die Stunden mit Bewegungsliedern, Spielen, Bewegungsaufgaben, Springen, Tauchen und Paddeln."
+								},
+								{
+									"title":"Alter:",
+									"paragraph":"2 – 3 jährige"
+								}
+							],
+							"list":[
+								"45 Minuten",
+								"einmal wöchentlich",
+								"10 Mamas oder Papas & Ihr Kleinkind"
+							],
+							"image":"../../assets/images/twoplus.jpg",
+							"span":"Kennen Sie schon unseren Fotoservice?",
+							"button":"Fotoservice",
+							"goalPrice":[
+								{
+									"title":"Ziele",
+									"paragOfTitle":["Das Loslassen wird vertieft und Sicherheit im Wasser. Wir unterstützen die Atemmuskulatur und erlernen besser den eigenen Körper zu kontrollieren. Lassen Sie sich überraschen."]
+								},
+								{
+									"title":"Preis:",
+									"paragOfTitle":["Teilnahmegebühr: je nach Dauer des Kurses","Bezahlbar per EC Cash im Büro der Wasserschule zu Kursbeginn oder per Überweisung an:"]
+								},
+								{
+									"paragOfTitle":["Bankverbindung: Wasserschule","Sparkasse Erlangen","IBAN: DE08 7635 0000 0060 0564 34","BIC: BYLADEM1ERH"]
+								}
+							]
+						}
 					},
 					{
 						"title": "Ma&Pa 2+",
-						"url": ""
+						"content": {
+							"title": "Ma&Pa 2+",
+							"beforeList" :[
+								{
+									"title":"Ma&Pa 2+",
+									"paragraph":"Spaß spielt hier die wichtigste Rolle. Über Wiederholungen finden unsere Kleinkinder Sicherheit im Wasser. Abgerundet werden die Stunden mit Bewegungsliedern, Spielen, Bewegungsaufgaben, Springen, Tauchen und Paddeln."
+								},
+								{
+									"title":"Alter:",
+									"paragraph":"2 – 3 jährige"
+								}
+							],
+							"list":[
+								"45 Minuten",
+								"einmal wöchentlich",
+								"8 Kinder mit Mama oder Papa"
+							],
+							"image":"../../assets/images/ma_pa_twoplus.jpg",
+							"span":"Kennen Sie schon unseren Fotoservice?",
+							"button":"Fotoservice",
+							"goalPrice":[
+								{
+									"title":"Ziele",
+									"paragOfTitle":["Das Loslassen wird vertieft und Sicherheit im Wasser erlernt. Kräftigung der Atemmuskulaturuskulatur und die Körperkontrolle werden hier erlernt. Lassen Sie sich überraschen und inspirieren."]
+								},
+								{
+									"title":"Preis:",
+									"paragOfTitle":["Teilnahmegebühr: je nach Dauer des Kurses","Bezahlbar per EC Cash im Büro der Wasserschule zu Kursbeginn oder per Überweisung an:"]
+								},
+								{
+									"paragOfTitle":["Bankverbindung: Wasserschule","Sparkasse Erlangen","IBAN: DE08 7635 0000 0060 0564 34","BIC: BYLADEM1ERH"]
+								}
+							]
+						}
 					},
 					{
 						"title": "Aquamaxis",
-						"url": ""
-					},
-					{
-						"title": "Aquamaxis",
-						"url": ""
+						"url": "",
+						"content": {
+							"title": "Aquamaxis",
+							"beforeList" :[
+								{
+									"title":"Aquamaxis – Spielerische Übungen",
+									"paragraph":"Wir führen mit ihnen zusammen Übungen durch die als Vorstufe zum Schwimmenlernen notwendig sind. Mama oder Papa und ihr Kleinkind sind im Wasser und führen sie gemeinsam mit den Schwimmlehrern durch zahlreiche spielerische Übungen an die Wasserratten minis, ab 4 Jahren ! heran."
+								},
+								{
+									"title":"Alter:",
+									"paragraph":"3 – 4 jährige"
+								}
+							],
+							"list":[
+								"45 Minuten",
+								"einmal wöchentlich",
+								"10 Kinder mit Mama oder Papa"
+							],
+							"image":"../../assets/images/aquamaxis.jpg",
+							"span":"Kennen Sie schon unseren Fotoservice?",
+							"button":"Fotoservice",
+							"goalPrice":[
+								{
+									"title":"Ziele",
+									"paragOfTitle":["Das Selbstbewußtsein ihres Kindes im Wasser zu stärken. Neue Reizsetzungen werden durch verschiedene neue Übungen gezielt eingesetzt .Der Kurs dient als Heranführung an die Wasserrattenkurse/Minis. Dabei geben wir den Kindern viel Wasserspielraum, um angstfrei und mit viel Spaß alleine zu den Wasserratten bald gehören zu dürfen. Lassen Sie sich überraschen."]
+								},
+								{
+									"title":"Preis:",
+									"paragOfTitle":["Teilnahmegebühr: je nach Dauer des Kurses","Bezahlbar per EC Cash im Büro der Wasserschule zu Kursbeginn oder per Überweisung an:"]
+								},
+								{
+									"paragOfTitle":["Bankverbindung: Wasserschule","Sparkasse Erlangen","IBAN: DE08 7635 0000 0060 0564 34","BIC: BYLADEM1ERH"]
+								}
+							]
+						}
 					}
+					
 				]
 			},
 			{
@@ -236,39 +1043,412 @@
 				"subChildren": [
 					{
 						"title": "Wasserratten",
-						"url": ""
+						"content": {
+							"title": "Wasserratten",
+							"beforeList" :[
+								{
+									"title":"Wasserratten",
+									"paragraph":"Auf die Startblöcke, fertig, los!"
+								},
+								{
+									"paragraph":"Ein Ziel vor Augen, ein Dauerkurs und ein Trainer für die ganze Strecke an eurer Seite – um das Seepferdchen zu erreichen"
+								},
+								{
+									"title":"Alter:",
+									"paragraph":"4 – 7 jährige"
+								}
+							],
+							"list":[
+								"60 Minuten",
+								"einmal wöchentlich",
+								"8 Kinder maximal ohne Mama oder Papa"
+							],
+							"image":"../../assets/images/Wasserratten_neu.jpg",
+							"span":"Kennen Sie schon unseren Fotoservice?",
+							"button":"Fotoservice",
+							"goalPrice":[
+								{
+									"title":"Ziele",
+									"paragOfTitle":["Vom Anfänger zum Seepferdchen!"]
+								},
+								{
+									"title":"NEU!:",
+									"paragOfTitle":["Zum Erwerb des Seepferdchens ist es seit 01.01.2020 von der DRLG gefordert, neben den bekannten praktischen Prüfungsleistungen, theoretische Kenntnis der 10 wichtigsten Baderegeln zu haben! Dazu sollte man in der Wasserschule ein Malbuch erwerben in dem die Schwimmschüler, Ihre dazu spielerisch erlernten Kenntnisse, noch vertiefen können."],
+									"image":"../../assets/images/badeheft.jpg"
+								},
+								{
+									"title":"Preis: einmalig 5 €",
+									"paragOfTitle":["beinhaltet dann auch  – nach erfolgreicher Prüfung – das Seepferdchen Abzeichen, das Zeugnis , ein Zertifikat und ein Päckchen Gummibärchen  ( von der Wasserschule ) :-)."]
+								},
+								{
+									"title":"Preis",
+									"paragOfTitle":["Teilnahmegebühr: je nach Dauer des Kurses","Bezahlbar per EC Cash im Büro der Wasserschule zu Kursbeginn oder per Überweisung an:"]
+								},
+								{
+									"paragOfTitle":["Bankverbindung: Wasserschule","Sparkasse Erlangen","IBAN: DE08 7635 0000 0060 0564 34","BIC: BYLADEM1ERH"]
+								}
+							]
+						}
 					},
 					{
 						"title": "Wasserratten mini",
-						"url": ""
+						"content": {
+							"title": "Wasserratten mini",
+							"beforeList" :[
+								{
+									"title":"Wasserratten mini – unsere kleinen Anfänger",
+									"paragraph":"Das sind unsere absoluten Anfänger ! Hier bauen wir spielerisch die Angst ab und vertiefen die Grundbewegungsformen, um dann bald zu den Wasserratten minimax zu gehören."
+								},
+								
+								{
+									"title":"Alter:",
+									"paragraph":"4 – 7 jährige"
+								}
+							],
+							"list":[
+								"einmal wöchentlich",
+								"45 Minuten",
+								"8 Kinder maximal ohne Mama oder Papa"
+							],
+							"image":"../../assets/images/wasserratten.jpg",
+							"span":"Kennen Sie schon unseren Fotoservice?",
+							"button":"Fotoservice",
+							"goalPrice":[
+								{
+									"title":"Ziele",
+									"paragOfTitle":["1. Stufe : Gleiten, Springen , Tauchen.","Lassen Sie sich von den Fortschritten ihres Kindes überraschen!"]
+								},
+								{
+									"title":"NEU!:",
+									"paragOfTitle":["Zum Erwerb des Seepferdchens ist es seit 01.01.2020 von der DRLG gefordert, neben den bekannten praktischen Prüfungsleistungen, theoretische Kenntnis der 10 wichtigsten Baderegeln zu haben! Dazu sollte man in der Wasserschule ein Malbuch erwerben in dem die Schwimmschüler, Ihre dazu spielerisch erlernten Kenntnisse, noch vertiefen können."],
+									"image":"../../assets/images/badeheft.jpg"
+								},
+								{
+									"title":"Preis: einmalig 5 €",
+									"paragOfTitle":["beinhaltet dann auch  – nach erfolgreicher Prüfung – das Seepferdchen Abzeichen, das Zeugnis , ein Zertifikat und ein Päckchen Gummibärchen  ( von der Wasserschule ) :-)."]
+								},
+								{
+									"title":"Preis",
+									"paragOfTitle":["Teilnahmegebühr: je nach Dauer des Kurses","Bezahlbar per EC Cash im Büro der Wasserschule zu Kursbeginn oder per Überweisung an:"]
+								},
+								{
+									"paragOfTitle":["Bankverbindung: Wasserschule","Sparkasse Erlangen","IBAN: DE08 7635 0000 0060 0564 34","BIC: BYLADEM1ERH"]
+								}
+							]
+						}
 					},
 					{
 						"title": "Wasserratten minimax",
-						"url": ""
+						"content": {
+							"title": "Wasserratten minimax",
+							"beforeList" :[
+								{
+									"title":"Wasserratten minimax – Koordination der Bewegungen",
+									"paragraph":"Die Schwerpunkte liegen bei den ersten Arm-und Bein-Bewegungen (Koordination) und den ersten Schwimmzügen, so dass der Sprung zu den Wasserratten maxis nicht mehr weit ist."
+								},
+								
+								{
+									"title":"Alter:",
+									"paragraph":"4 – 7 jährige"
+								}
+							],
+							"list":[
+								"einmal wöchentlich",
+								"45 Minuten",
+								"8 Kinder maximal ohne Mama oder Papa"
+							],
+							"image":"../../assets/images/wasserratten_minimax.jpg",
+							"span":"Kennen Sie schon unseren Fotoservice?",
+							"button":"Fotoservice",
+							"goalPrice":[
+								{
+									"title":"Ziele",
+									"paragOfTitle":["2. Stufe : Gleiten, Tauchen, Atmung. Lassen Sie sich von den Fortschritten ihres Kindes überraschen!"]
+								},
+								{
+									"title":"NEU!:",
+									"paragOfTitle":["Zum Erwerb des Seepferdchens ist es seit 01.01.2020 von der DRLG gefordert, neben den bekannten praktischen Prüfungsleistungen, theoretische Kenntnis der 10 wichtigsten Baderegeln zu haben! Dazu sollte man in der Wasserschule ein Malbuch erwerben in dem die Schwimmschüler, Ihre dazu spielerisch erlernten Kenntnisse, noch vertiefen können."],
+									"image":"../../assets/images/badeheft.jpg"
+								},
+								{
+									"title":"Preis: einmalig 5 €",
+									"paragOfTitle":["beinhaltet dann auch  – nach erfolgreicher Prüfung – das Seepferdchen Abzeichen, das Zeugnis , ein Zertifikat und ein Päckchen Gummibärchen  ( von der Wasserschule ) :-)."]
+								},
+								{
+									"title":"Preis",
+									"paragOfTitle":["Teilnahmegebühr: je nach Dauer des Kurses","Bezahlbar per EC Cash im Büro der Wasserschule zu Kursbeginn oder per Überweisung an:"]
+								},
+								{
+									"paragOfTitle":["Bankverbindung: Wasserschule","Sparkasse Erlangen","IBAN: DE08 7635 0000 0060 0564 34","BIC: BYLADEM1ERH"]
+								}
+							]
+						}
 					},
 					{
 						"title": "Wasserratten maxi",
-						"url": ""
+						"content": {
+							"title": "Wasserratten maxi",
+							"beforeList" :[
+								{
+									"title":"Wasserratten maxi – unsere angehenden Seepferdchen",
+									"paragraph":"Hier lernen Kinder, die bereits ihre ersten freien Schwimmzüge machen können, das Schwimmen."
+								},
+								{
+									"paragraph":"In der Mitte des Kurses wird das Seepferdchen – Abzeichen abgenommen: Pädagogisch wertvoll und ohne Leistungsdruck."
+								},
+								
+								{
+									"title":"Alter:",
+									"paragraph":"4 – 7 jährige"
+								}
+							],
+							"list":[
+								"einmal wöchentlich",
+								"45 Minuten",
+								"8 Kinder maximal ohne Mama oder Papa"
+							],
+							"image":"../../assets/images/wasserratten_maxi.jpg",
+							"span":"Kennen Sie schon unseren Fotoservice?",
+							"button":"Fotoservice",
+							"goalPrice":[
+								{
+									"title":"Ziele",
+									"paragOfTitle":["3. Stufe : Koordination, Atmung. Lassen Sie sich von den Fortschritten ihres Kindes überraschen!"]
+								},
+								{
+									"title":"NEU!:",
+									"paragOfTitle":["Zum Erwerb des Seepferdchens ist es seit 01.01.2020 von der DRLG gefordert, neben den bekannten praktischen Prüfungsleistungen, theoretische Kenntnis der 10 wichtigsten Baderegeln zu haben! Dazu sollte man in der Wasserschule ein Malbuch erwerben in dem die Schwimmschüler, Ihre dazu spielerisch erlernten Kenntnisse, noch vertiefen können."],
+									"image":"../../assets/images/badeheft.jpg"
+								},
+								{
+									"title":"Preis: einmalig 5 €",
+									"paragOfTitle":["beinhaltet dann auch  – nach erfolgreicher Prüfung – das Seepferdchen Abzeichen, das Zeugnis , ein Zertifikat und ein Päckchen Gummibärchen  ( von der Wasserschule ) :-)."]
+								},
+								{
+									"title":"Preis",
+									"paragOfTitle":["Teilnahmegebühr: je nach Dauer des Kurses","Bezahlbar per EC Cash im Büro der Wasserschule zu Kursbeginn oder per Überweisung an:"]
+								},
+								{
+									"paragOfTitle":["Bankverbindung: Wasserschule","Sparkasse Erlangen","IBAN: DE08 7635 0000 0060 0564 34","BIC: BYLADEM1ERH"]
+								}
+							]
+						}
 					},
 					{
 						"title": "Trixi mini",
-						"url": ""
+						"content": {
+							"title": "Trixi mini",
+							"beforeList" :[
+								{
+									"title":"Trixi mini – Stufe1",
+									"paragraph":"Dieser Kurs richtet sich an Kinder, die schon schwimmen können und das Seepferdchen haben . Wir vertiefen das Erlernte und nehmen uns eine zweite Schwimmlage vor (Rücken oder Kraul), tauchen weiter und lernen wie die Wasserballer zu „drippeln“. Am Ende könnt ihr dann in den 2.ten Kurs – den Triximaxikurs gehen, um dann ein neues Abzeichen: „Trixi“ – für die Badehose oder den Badeanzug zu erwerben."
+								},							
+								{
+									"title":"Alter:",
+									"paragraph":"4 – 7 jährige"
+								}
+							],
+							"list":[
+								"einmal wöchentlich",
+								"45 Minuten",
+								"8 Kinder ohne Mama oder Papa"
+							],
+							"image":"../../assets/images/trixi_mini.jpg",
+							"span":"Kennen Sie schon unseren Fotoservice?",
+							"button":"Fotoservice",
+							"goalPrice":[
+								{
+									"title":"Ziele",
+									"paragOfTitle":["Mit unserem neuen Kursinhalten erlernt Ihr Kind auch sich selbst zu retten. Lassen Sie sich überraschen.","Vorbereitung für Stufe 2: Trixi maxi."]
+								},
+							
+								{
+									"title":"Preis",
+									"paragOfTitle":["Teilnahmegebühr: je nach Dauer des Kurses","Bezahlbar per EC Cash im Büro der Wasserschule zu Kursbeginn oder per Überweisung an:"]
+								},
+								{
+									"paragOfTitle":["Bankverbindung: Wasserschule","Sparkasse Erlangen","IBAN: DE08 7635 0000 0060 0564 34","BIC: BYLADEM1ERH"]
+								}
+							]
+						}
 					},
 					{
 						"title": "Trixi Maxi",
-						"url": ""
+							"content": {
+								"title": "Trixi Maxi",
+								"beforeList" :[
+									{
+										"title":"Trixi maxi – Stufe 2",
+										"paragraph":"In diesem 2. Kurs des Trixiabzeichens tauchen wir auf Distanz und vertiefen unseren gewählten Schwimmstil. Am Ende gibt es dann ein neues Abzeichen: „Trixi“ – für die Badehose oder den Badeanzug."
+									},							
+									{
+										"title":"Alter:",
+										"paragraph":"5 – 8 jährige"
+									}
+								],
+								"list":[
+									"einmal wöchentlich",
+									"45 Minuten",
+									"8 Kinder ohne Mama oder Papa"
+								],
+								"image":"../../assets/images/trixi_maxi.jpg",
+								"span":"Kennen Sie schon unseren Fotoservice?",
+								"button":"Fotoservice",
+								"goalPrice":[
+									{
+										"title":"Ziele",
+										"paragOfTitle":["Das Trixiabzeichen. Mit unseren neuen Kursinhalten erlernt Ihr Kind auch sich selbst zu retten . Lassen Sie sich überraschen."]
+									},
+								
+									{
+										"title":"Bitte beachten Sie",
+										"paragOfTitle":["Für das Erlangen des Trixiabzeichens Abzeichens werden folgende Übungen gefordert:"],
+										"lists":[
+											"25m Kraul oder Rückenschwimmen",
+											"1x Rolle unter Wasser",
+											"7m – 10m Tauchen"
+										]
+									},
+									{
+										"paragOfTitle":["Werden diese Übungen zu 100% erfüllt, belohnen wir den Erfolg ihres Kindes mit dem Trixiabzeichen!","Weitere Informationen sind im Büro der Wasserschule oder unter 09133/864 erhältlich."]
+									},
+									{
+										"paragOfTitle":["Bankverbindung: Wasserschule","Sparkasse Erlangen","IBAN: DE08 7635 0000 0060 0564 34","BIC: BYLADEM1ERH"]
+									}
+								]
+							}
 					},
 					{
 						"title": "Freistil",
-						"url": ""
+						"content": {
+							"title": "Freistil",
+							"beforeList" :[
+								{
+									"title":"Freistil",
+									"paragraph":"Hier lernt ihr das Kraulschwimmen! Falls ihr Lust habt, dann in den Verein zu gehen, könnt ihr mit den erlernten Fähigkeiten trainieren."
+								},
+								{
+									"paragraph":"Unsere Kraulschule mit den Themenschwerpunkten: Wasserlage, Gleiten, Atmen & Koordination!"
+								},							
+								{
+									"title":"Alter:",
+									"paragraph":"7 – 11 jährige"
+								}
+							],
+							"list":[
+								"einmal wöchentlich",
+								"45 Minuten",
+								"8 Kinder ohne Mama oder Papa"
+							],
+							"image":"../../assets/images/freistil2.jpg",
+							"goalPrice":[
+								{
+									"title":"Ziele",
+									"paragOfTitle":["Armzug, Beinschlag, Atmung, Koordination, Startsprung, Wende"]
+								},
+							
+								{
+									"title":"Preis:",
+									"paragOfTitle":["Teilnahmegebühr: je nach Dauer des Kurses","Bezahlbar per EC Cash im Büro der Wasserschule zu Kursbeginn oder per Überweisung an:"]
+									
+								},
+								{
+									"paragOfTitle":["Bankverbindung: Wasserschule","Sparkasse Erlangen","IBAN: DE08 7635 0000 0060 0564 34","BIC: BYLADEM1ERH"]
+								}
+							]
+						}
 					},
 					{
-						"title": "Wasserratten Kiga/Kita",
-						"url": ""
+						"title": "Wasserratten Kiga-Kita",
+						"content": {
+							"title": "Wasserratten Kiga-Kita",
+							"beforeList" :[
+								{
+									"title":"Wasserratten Kiga/Kita – Kindergarten und -tagesstätten Kinder aufgepasst !",
+									"paragraph":"Hier lernt ihr mit euren Freunden aus dem Kindergarten/Tagesstätte das Schwimmen. Wenn ihr 7-8 Kinder aus ein- und demselben Kindergarten kommt, so habt ihr die Möglichkeit vergünstigt einen Kurs zu besuchen. Sprechen Sie uns an, wir werden für Sie einen passenden Kurstag finden. Weitere Informationen sind im Büro der Wasserschule erhältlich"
+								},
+															
+								{
+									"title":"Alter:",
+									"paragraph":"4 – 7 jährige"
+								}
+							],
+							"list":[
+								"einmal wöchentlich",
+								"45 Minuten",
+								"8 Kinder ohne Mama oder Papa"
+							],
+							"image":"../../assets/images/wasserratten_kiga_kita.jpg",
+							"goalPrice":[
+								{
+									"title":"Ziele",
+									"paragOfTitle":["Schwimmen lernen! Lassen Sie sich von den Fortschritten ihres Kindes überraschen!"]
+								},
+							
+								{
+									"title":"Preis:",
+									"paragOfTitle":["Je nach Kursdauer. Teilnahmegebühr: je nach Dauer des Kurses","Bezahlbar per EC Cash im Büro der Wasserschule zu Kursbeginn oder per Überweisung an:"]
+									
+								},
+								{
+									"paragOfTitle":["Bankverbindung: Wasserschule","Sparkasse Erlangen","IBAN: DE08 7635 0000 0060 0564 34","BIC: BYLADEM1ERH"]
+								}
+							]
+						}
 					},
 					{
 						"title": "Ferienkurs – Anfänger",
-						"url": ""
+						"content": {
+							"title": "Ferienkurs – Anfänger",						
+							"beforeList" :[
+								{
+									"title":"Ferienkurs – für Wasserratten",
+									"paragraph":"Diese Kurse beginnen gleich zu Anfang der Ferien und sind natürlich für die Wasserratten gedacht, die in einem intensiven, täglichen Ferienkurs (von Montag bis Freitag) das Schwimmen erlernen möchten."
+								},							
+								{	"title":"Bitte beachten Sie",
+									"paragraph":"Für das Erlangen des Seepferdchen Abzeichens werden folgende Übungen gefordert:"
+								}
+						
+							],
+							"list":[
+								"25m Freischwimmen",
+								"1x Gegenstand aus hüfttiefem Wasser ertauchen",
+								"1x Startsprung vom Beckenrand"
+							],
+							"paragraphs": [{
+								"words":["Werden diese Übungen zu 100% erfüllt, belohnen wir den Erfolg ihres Kindes mit dem Seepferdchen Abzeichen!",
+								"Weitere Informationen sind im Büro der Wasserschule oder unter 09133/864 erhältlich."
+								]
+							}
+							],
+							"image":"../../assets/images/ferienkurse.jpg",
+							"span":"Kennen Sie schon unseren Fotoservice?",
+							"button":"Fotoservice",
+							"goalPrice":[
+								{
+									"title":"Alter:",
+									"paragOfTitle":["4 – 7 jährige"]
+								},
+								{
+									"lists":[
+										"Montag bis Freitag – 2 Wochen",
+										"90 Minuten",
+										"8 Kinder ohne Mama oder Papa"
+									]
+								},
+								{
+									"title":"Ziele:",
+									"paragOfTitle":["Erreichen des Seepferdchens"]
+								},
+								{
+									"title":"Preis:",
+									"paragOfTitle":["Kursgebühr: 333,- € für 15 Stunden!","Bezahlbar per EC Cash im Büro der Wasserschule zu Kursbeginn oder per Überweisung an:",
+										"Bankverbindung: Wasserschule","Sparkasse Erlangen","IBAN: DE08 7635 0000 0060 0564 34","BIC: BYLADEM1ERH"
+									]
+								}
+							
+							]
+						}
 					},
 					{
 						"title": "Ferienkurs – Kinderkraul",

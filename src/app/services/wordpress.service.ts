@@ -15,7 +15,9 @@ export class WordpressService {
    httpHeader = {
     headers: new HttpHeaders({'Content-type':'Application/json'})
     }
-   apiUrl ='http://localhost/wasserschule/wp-json/wl/v1/posts';
+   apiForPhoto ='http://192.168.1.173/wasserschule/wp-json/wl/v1/posts';
+   apiforDisponibleCourse = `https://api.allorigins.win/get?url=${encodeURIComponent('https://www.wasserschule.de/kurssoftware/anmeldung-online.php?Anmeldung=weiter&amp;StandortID=29&amp;KursBezID=48')}`;
+
 
    id:any;        
 
@@ -31,11 +33,18 @@ export class WordpressService {
    }
  
    getAPIData(): Observable<any>{
-     return this.http.get(this.apiUrl,this.httpHeader).pipe(
+     return this.http.get(this.apiForPhoto,this.httpHeader).pipe(
        map(this.dataExtract),
        catchError(this.errorHandler)
      );
    }
+
+   getAPICoursesDisponible(): Observable<any>{
+    return this.http.get(this.apiforDisponibleCourse,this.httpHeader).pipe(
+      map(this.dataExtract),
+      catchError(this.errorHandler)
+    );
+  }
  
    private dataExtract( res : Response){
      const body = res;
