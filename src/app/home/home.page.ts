@@ -8,6 +8,7 @@ import { WordpressService } from '../services/wordpress.service'
 })
 export class HomePage implements OnInit {
   postData: any;
+  loading:Boolean = false;
   slideOpts = {
     initialSlide: 0,
     slidesPerView: 1,
@@ -26,6 +27,7 @@ export class HomePage implements OnInit {
     .subscribe(res=>{
       this.slides = res.filter(item=>item.name.includes('slide'));
       this.shops = res.filter(item=>item.name.includes('shope'));
+      this.loading=true;
     },error=>{
     });
 }
