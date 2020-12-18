@@ -45,3 +45,11 @@ p{
 .body-header ion-col{
   text-align: center;
 }
+
+.container-loading{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100%;
+  width: 100%;
+}

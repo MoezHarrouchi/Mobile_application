@@ -1,5 +1,12 @@
 <app-header></app-header>
 <ion-content [fullscreen]="true">
+  <div class="container-loading" *ngIf="loading == false">
+    <ion-spinner
+      name="lines"
+      position="stacked"
+      *ngIf="loading == false"
+    ></ion-spinner>
+  </div>
   <ion-slides pager="true" [options]="slideOpts">
     <ion-slide *ngFor="let slide of slides;">
       <ion-img
