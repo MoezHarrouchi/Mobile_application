@@ -1,41 +1,24 @@
 import { Injectable } from '@angular/core';
+import * as coursDetails from '../../assets/configuration/coursDetails.json';
+import * as urls from '../../assets/configuration/servicesUrl.json'
 
 @Injectable({
   providedIn: 'root'
 })
 export class ConfigurationService {
-  private listMenu:any = [];
+  menuContent:any = (coursDetails as any).default;
+  urls:any=(urls as any).default;
 
-  constructor() { }
+  constructor(){ }
 
-  getContentCoursByTitle(parent:any,child:any){
-    let courses=[];
-    if(this.listMenu){
-      for(let i in this.listMenu){
-        if (this.listMenu[i].children){
-          for(let j in this.listMenu[i].children){
-            if(this.listMenu[i].children[j].subChildren){
-                for (let k in this.listMenu[i].children[j].subChildren){
-                  if(this.listMenu[i].children[j].subChildren[k].content && this.listMenu[i].children[j].subChildren[k].content.title === child && this.listMenu[i].children[j].title === parent){
-                    courses.push(this.listMenu[i].children[j].subChildren[k].content); 
-                  } 
-                }
-            }else {
-              if(this.listMenu[i].children[j].content && this.listMenu[i].children[j].content.title === child && this.listMenu[i].children[j].title === parent){
-                courses.push(this.listMenu[i].children[j].content);
-              }
-            }
-          }
-        }else{
-          if(this.listMenu[i].content && this.listMenu[i].content.title === child){
-            courses.push(this.listMenu[i].content);
-          }
-        }
-      }
-    }
-    return courses;
+  getContentCoursByTitle(parent:any,child:any,listMenu:any){
+    return listMenu.find(el=>el.name.toUppercase().replace(/\s/g, '')=== child.toUppercase().replace(/\s/g, ''));
   }
-  setListMenu(data){
-    this.listMenu = data;
+
+  getMenuContent(){
+    return this.menuContent;
+  }
+  getUrlServices():Object{
+    return this.urls
   }
 }

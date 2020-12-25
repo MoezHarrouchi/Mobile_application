@@ -20,7 +20,7 @@
           *ngIf="page.children?.length==null"
         >
           <ion-icon [name]="page.icon" slot="start"></ion-icon>
-          <ion-label>{{page.title}}</ion-label>
+          <ion-label>{{page.label}}</ion-label>
         </ion-item>
       </ion-menu-toggle>
       <ion-item
@@ -36,18 +36,18 @@
           *ngIf="!page.open"
         ></ion-icon>
         <ion-icon name="arrow-down" slot="start" *ngIf="page.open"></ion-icon>
-        <ion-label>{{page.title}}</ion-label>
+        <ion-label>{{page.label}}</ion-label>
       </ion-item>
       <ion-list class="sub-item" *ngIf="page.open">
         <div *ngFor="let child of page.children">
           <ion-item
-            [routerLink]="child.url"
+            (click)="onSelectCours(page.title,child.title)"
             routerDirection="root"
             routerLinkActive="active"
             *ngIf="child.subChildren?.length==null"
           >
             <ion-icon [name]="child.icon" slot="start"> </ion-icon>
-            <ion-label> {{child.title}} </ion-label>
+            <ion-label> {{child.label}} </ion-label>
           </ion-item>
           <ion-item
             button
@@ -66,7 +66,7 @@
               slot="start"
               *ngIf="child.open"
             ></ion-icon>
-            <ion-label>{{child.title}}</ion-label>
+            <ion-label>{{child.label}}</ion-label>
           </ion-item>
           <ion-list class="sub-item" *ngIf="child.open">
             <ion-item
@@ -76,7 +76,7 @@
               routerLinkActive="active"
             >
               <ion-icon [name]="subChild.icon" slot="start"> </ion-icon>
-              <ion-label> {{subChild.title}} </ion-label>
+              <ion-label> {{subChild.label}} </ion-label>
             </ion-item>
           </ion-list>
         </div>

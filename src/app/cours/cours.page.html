@@ -3,7 +3,7 @@
 <ion-content *ngIf="bodyCours">
   <div class="cours-header-content">
     <div class="cours-title-principal-container">
-      <h1 class="cours-principal-title">{{bodyCours.title}}</h1>
+      <h1 class="cours-principal-title">{{coursTitle}}</h1>
     </div>
   </div>
   <ion-grid>
@@ -15,64 +15,10 @@
         </p>
       </ion-col>
     </ion-row>
-    <ion-row>
-      <ion-col>
-        <h2 class="sub-title" *ngIf="bodyCours.desc_title_cours">
-          {{bodyCours.desc_title_cours}}
-        </h2>
-      </ion-col>
-    </ion-row>
 
     <ion-row>
       <ion-col>
-        <div *ngFor="let parag of bodyCours.paragraphs">
-          <p *ngFor="let block of parag.blocks">{{block}}</p>
-          <div class="pdfButton">
-            <ion-button size="default" shape="round" *ngIf="parag.button"
-              >{{parag.button}}</ion-button
-            >
-          </div>
-        </div>
-        <div *ngFor="let element of bodyCours.beforeList">
-          <h2 class="sub-title">{{element.title}}</h2>
-          <p>{{element.paragraph}}</p>
-        </div>
-        <ul>
-          <li *ngFor="let element of bodyCours.list"><p>{{element}}</p></li>
-        </ul>
-        <div *ngFor="let parag of bodyCours.paragraphs">
-          <p *ngFor="let word of parag.words">{{word}}</p>
-        </div>
-        <h2 class="sub-title">{{bodyCours.titeOfImage}}</h2>
-        <p class="image-container">
-          <ion-img src="{{bodyCours.image}}" *ngIf="bodyCours.image"></ion-img>
-        </p>
-        <p>{{bodyCours.span}}</p>
-
-        <div class="pdfButton">
-          <p>
-            <ion-button size="default" shape="round" *ngIf="bodyCours.button"
-              >{{bodyCours.button}}</ion-button
-            >
-          </p>
-        </div>
-
-        <div *ngFor="let gp of bodyCours.goalPrice">
-          <h2 class="sub-title">{{gp.title}}</h2>
-          <div *ngFor="let paragraph of gp.paragOfTitle">
-            <p>{{paragraph}}</p>
-          </div>
-          <ul>
-            <li *ngFor="let list of gp.lists">{{list}}</li>
-          </ul>
-          <p class="image-container">
-            <ion-img
-              class="image-container"
-              *ngIf="gp.image"
-              src="{{gp.image}}"
-            ></ion-img>
-          </p>
-        </div>
+        <div [innerHtml]="bodyCours"></div>
       </ion-col>
     </ion-row>
 

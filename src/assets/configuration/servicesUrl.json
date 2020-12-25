@@ -1,0 +1,5 @@
+{
+    "mainService":"http://localhost/wasserschuleNew/wp-content/",
+    "imagesService":"http://localhost/wasserschuleNew/wp-json/wl/v1/images",
+    "coursService":"https://www.wasserschule.de/kurssoftware/anmeldung-online.php?Anmeldung=weiter&amp;StandortID=29&amp;KursBezID=48"
+}

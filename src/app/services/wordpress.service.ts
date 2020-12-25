@@ -2,6 +2,7 @@ import { Injectable } from '@angular/core';
 import { HttpClient,HttpErrorResponse,HttpHeaders} from '@angular/common/http'
 import { Observable,of, throwError } from 'rxjs';
 import { catchError  ,map} from 'rxjs/operators';
+import { ConfigurationService } from '../services/configuration.service'
 
 @Injectable({
   providedIn: 'root'
@@ -9,15 +10,12 @@ import { catchError  ,map} from 'rxjs/operators';
 
 export class WordpressService {
 
-  constructor( private http : HttpClient ) { }
+  constructor( private http : HttpClient , private configuration : ConfigurationService) { }
 
 
    httpHeader = {
     headers: new HttpHeaders({'Content-type':'Application/json'})
     }
-   apiForPhoto ='http://192.168.1.173/wasserschule/wp-json/wl/v1/posts';
-   apiforDisponibleCourse = `https://api.allorigins.win/get?url=${encodeURIComponent('https://www.wasserschule.de/kurssoftware/anmeldung-online.php?Anmeldung=weiter&amp;StandortID=29&amp;KursBezID=48')}`;
-
 
    id:any;        
 
@@ -32,18 +30,25 @@ export class WordpressService {
      return throwError('Check The Code and Server response from endpoint');
    }
  
-   getAPIData(): Observable<any>{
-     return this.http.get(this.apiForPhoto,this.httpHeader).pipe(
+   getHomeData(): Observable<any>{
+     return this.http.get(this.configuration.urls.imagesService,this.httpHeader).pipe(
        map(this.dataExtract),
        catchError(this.errorHandler)
      );
    }
 
    getAPICoursesDisponible(): Observable<any>{
-    return this.http.get(this.apiforDisponibleCourse,this.httpHeader).pipe(
+    let apiforDisponibleCourse = `https://api.allorigins.win/get?url=${encodeURIComponent(this.configuration.urls.coursService)}`;
+    return this.http.get(apiforDisponibleCourse,this.httpHeader).pipe(
       map(this.dataExtract),
       catchError(this.errorHandler)
     );
+  }
+  getAllContentCorses(){
+    return this.http.get("http://localhost/wasserschuleNew/wp-json/wl/v1/courses",this.httpHeader).pipe(
+      map(this.dataExtract),
+      catchError(this.errorHandler)
+    )
   }
  
    private dataExtract( res : Response){

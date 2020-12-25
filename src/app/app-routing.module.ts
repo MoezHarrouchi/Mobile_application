@@ -1,6 +1,6 @@
 import { NgModule } from '@angular/core';
 import { PreloadAllModules, RouterModule, Routes } from '@angular/router';
-import { ConfigurationResolverService } from './resolver/configuration-resolver.service'
+import { WordpressResolverService } from './resolver/wordpress-resolver.service'
 
 const routes: Routes = [
   {
@@ -27,7 +27,7 @@ const routes: Routes = [
   {
     path: 'cours/:parent/:child',
     resolve: {
-      contentCourse: ConfigurationResolverService
+      courses: WordpressResolverService
     },
     loadChildren: () => import('./cours/cours.module').then( m => m.CoursPageModule)
   },

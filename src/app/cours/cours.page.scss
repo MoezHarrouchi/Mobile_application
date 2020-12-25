@@ -21,14 +21,6 @@ ion-content  {
         font-family: 'ShadowsIntoLight-Regular';
         font-weight: 900;
     }
-
-    h2.sub-title{
-        font-weight: 900;
-        font-size: 90%;
-    }
-    p{
-        text-align: justify;
-    }
     .coursesList{
         color: rgb(19, 18, 18);
         margin-bottom: 5%;     
@@ -41,25 +33,9 @@ ion-content  {
         }
         ion-button{
             --background:#0a5173;
-
-        }
-        
+        } 
     }
-    .pdfButton{
-        display: flex;
-        justify-content: center;
-        ion-button {
-            --background:#0071a1;
-        }
-    }
-    p,li{
-        font-size: 80%;
-    }
-
-    p ion-img{
-        width: 80%;
-        height: 80%;
-    }
+  
 }
 .image-container{
     display: flex;
