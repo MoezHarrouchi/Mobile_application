@@ -12,7 +12,7 @@
       <ion-img *ngIf="slide" src="{{slide}}"></ion-img>
     </ion-slide>
   </ion-slides>
-  <div style="background-color: #d6d6d6">
+  <div style="background-color: #d6d6d6" *ngIf="loading == true">
     <ion-grid
       [fixed]="true"
       style="background-color: #d6d6d6"
@@ -75,5 +75,5 @@
       </ion-row>
     </ion-grid>
   </div>
-  <app-footer></app-footer>
+  <app-footer *ngIf="loading == true"></app-footer>
 </ion-content>
