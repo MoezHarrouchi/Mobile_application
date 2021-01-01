@@ -12,6 +12,7 @@ import { environment } from '../environments/environment'
 import { AngularFireModule } from '@angular/fire';
 import { AngularFireAuthModule } from '@angular/fire/auth';
 import { HttpClientModule } from '@angular/common/http';
+import { ReactiveFormsModule } from '@angular/forms'
 
 import { MenuPage } from './menu/menu.page';
 
@@ -21,7 +22,8 @@ import { MenuPage } from './menu/menu.page';
   imports: [BrowserModule, IonicModule.forRoot(), AppRoutingModule,
   AngularFireModule.initializeApp(environment.firebase),
   AngularFireAuthModule,
-  HttpClientModule
+  HttpClientModule,
+  ReactiveFormsModule
 ],
   providers: [
     StatusBar,

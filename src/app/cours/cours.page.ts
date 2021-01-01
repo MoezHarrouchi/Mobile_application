@@ -1,6 +1,8 @@
 import { Component, OnInit } from '@angular/core';
 import { ActivatedRoute,Router } from '@angular/router';
 import { WordpressService } from '../services/wordpress.service';
+import { ModalController } from '@ionic/angular';
+import { ModalPage } from '../modal/modal.page';
 
 @Component({
   selector: 'app-cours',
@@ -14,20 +16,12 @@ export class CoursPage implements OnInit {
   chosenCorse:any;
   coursTitle:any;
 
-  constructor(private router:Router,private route:ActivatedRoute,private wordpress : WordpressService) { 
+  constructor(private route:ActivatedRoute,private wordpress : WordpressService,private modalController:ModalController) { 
   }
 
   ngOnInit() {
-    if(this.route.snapshot.data['courses']){
-       this.route.snapshot.data['courses'].content.subscribe(res=>{
-        this.bodyCours  = res.filter(el=>el.name && el.body)
-        .find(el=>el.name.toUpperCase().replace(/\s/g,'') === this.route.snapshot.data['courses'].name.toUpperCase().replace(/\s/g,'') && el.parent.toUpperCase().replace(/\s/g,'') === this.route.snapshot.data['courses'].parent.toUpperCase().replace(/\s/g,''))
-        .body
-        this.bodyCours = this.bodyCours.split("<figure>[advanced_iframe").map(el=>el.includes("kurssoftware/anmeldung-online.php")? el="" :el).join("");
-      });
-    }
+    this.getContentCourse();
     this.getFreeCourses();  
-
   }
 
   async getFreeCourses(){
@@ -53,8 +47,21 @@ export class CoursPage implements OnInit {
      
     },error=>{});
   }
-  onSubscribe(name){
-    console.log(name);
+  getContentCourse(){
+    if(this.route.snapshot.data['courses']){
+      this.route.snapshot.data['courses'].content.subscribe(res=>{
+       this.bodyCours  = res.filter(el=>el.name && el.body)
+       .find(el=>el.name.toUpperCase().replace(/\s/g,'') === this.route.snapshot.data['courses'].name.toUpperCase().replace(/\s/g,'') && el.parent.toUpperCase().replace(/\s/g,'') === this.route.snapshot.data['courses'].parent.toUpperCase().replace(/\s/g,''))
+       .body
+       this.bodyCours = this.bodyCours.split("<figure>[advanced_iframe").map(el=>el.includes("kurssoftware/anmeldung-online.php")? el="" :el).join("");
+     });
+   }
   }
-
+    async presentModal() {
+      const modal = await this.modalController.create({
+        component: ModalPage,
+        cssClass: 'my-custom-class'
+      });
+      return await modal.present();
+    }
 }
