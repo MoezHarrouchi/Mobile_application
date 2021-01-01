@@ -7,8 +7,8 @@ import { IonicModule } from '@ionic/angular';
 import { CoursPageRoutingModule } from './cours-routing.module';
 
 import { CoursPage } from './cours.page';
-import { HeaderPage } from '../header/header.page';
-import { FooterPage } from '../footer/footer.page'
+import { HeaderPage } from '../../components/header/header.page';
+import { FooterPage } from '../../components/footer/footer.page'
 
 @NgModule({
   imports: [

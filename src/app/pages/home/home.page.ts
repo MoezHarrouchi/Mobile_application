@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
-import { WordpressService } from '../services/wordpress.service'
-import { ConfigurationService } from '../services/configuration.service'
+import { WordpressService } from '../../services/wordpress.service'
+import { ConfigurationService } from '../../services/configuration.service'
 
 @Component({
   selector: 'app-home',

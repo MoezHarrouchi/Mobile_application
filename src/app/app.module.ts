@@ -14,7 +14,7 @@ import { AngularFireAuthModule } from '@angular/fire/auth';
 import { HttpClientModule } from '@angular/common/http';
 import { ReactiveFormsModule } from '@angular/forms'
 
-import { MenuPage } from './menu/menu.page';
+import { MenuPage } from './components/menu/menu.page';
 
 @NgModule({
   declarations: [AppComponent,MenuPage],

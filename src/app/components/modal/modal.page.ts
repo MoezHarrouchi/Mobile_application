@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { Validators,FormGroup,FormBuilder } from '@angular/forms';
-import '../../assets/js/SMTP.js';
+import '../../../assets/js/SMTP.js';
 
 
 declare let Email: any;

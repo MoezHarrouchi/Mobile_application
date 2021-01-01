@@ -1,8 +1,8 @@
 import { Component, OnInit } from '@angular/core';
 import { ActivatedRoute,Router } from '@angular/router';
-import { WordpressService } from '../services/wordpress.service';
+import { WordpressService } from '../../services/wordpress.service';
 import { ModalController } from '@ionic/angular';
-import { ModalPage } from '../modal/modal.page';
+import { ModalPage } from '../../components/modal/modal.page';
 
 @Component({
   selector: 'app-cours',

@@ -5,7 +5,7 @@ import { WordpressResolverService } from './resolver/wordpress-resolver.service'
 const routes: Routes = [
   {
     path: '',
-    loadChildren: () => import('./home/home.module').then( m => m.HomePageModule)
+    loadChildren: () => import('./pages/home/home.module').then( m => m.HomePageModule)
   },
   {
     path: 'login',
@@ -14,30 +14,30 @@ const routes: Routes = [
   },
   {
     path: 'login',
-    loadChildren: () => import('./login/login.module').then( m => m.LoginPageModule)
+    loadChildren: () => import('./pages/login/login.module').then( m => m.LoginPageModule)
   },
   {
     path: 'header',
-    loadChildren: () => import('./header/header.module').then( m => m.HeaderPageModule)
+    loadChildren: () => import('./components/header/header.module').then( m => m.HeaderPageModule)
   },
   {
     path: 'menu',
-    loadChildren: () => import('./menu/menu.module').then( m => m.MenuPageModule)
+    loadChildren: () => import('./components/menu/menu.module').then( m => m.MenuPageModule)
   },
   {
     path: 'cours/:parent/:child',
     resolve: {
       courses: WordpressResolverService
     },
-    loadChildren: () => import('./cours/cours.module').then( m => m.CoursPageModule)
+    loadChildren: () => import('./pages/cours/cours.module').then(m => m.CoursPageModule)
   },
   {
     path: 'footer',
-    loadChildren: () => import('./footer/footer.module').then( m => m.FooterPageModule)
+    loadChildren: () => import('./components/footer/footer.module').then( m => m.FooterPageModule)
   },
   {
     path: 'modal',
-    loadChildren: () => import('./modal/modal.module').then( m => m.ModalPageModule)
+    loadChildren: () => import('./components/modal/modal.module').then( m => m.ModalPageModule)
   }
 
 ];
