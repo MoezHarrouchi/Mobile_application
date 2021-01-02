@@ -8,18 +8,18 @@ import { ConfigurationService } from '../../services/configuration.service';
   styleUrls: ['./menu.page.scss'],
 })
 export class MenuPage implements OnInit {
-  navigate:any;
+  navigate: any;
 
- constructor(private router:Router, private configurationService:ConfigurationService) {
+ constructor(private router: Router, private configurationService: ConfigurationService) {
   }
   ngOnInit() {
     this.sideMenu();
   }
-  sideMenu() {  
-    this.navigate = this.configurationService.getMenuContent(); 
+  sideMenu() {
+    this.navigate = this.configurationService.getMenuContent();
   }
-  onSelectCours(parent,child){  
-    this.router.navigateByUrl('/cours/'+parent+'/'+child);
+  onSelectCours(parent, child){
+    this.router.navigateByUrl('/cours/' + parent + '/' + child);
 
   }
 
