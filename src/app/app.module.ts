@@ -13,6 +13,7 @@ import { AngularFireModule } from '@angular/fire';
 import { AngularFireAuthModule } from '@angular/fire/auth';
 import { HttpClientModule } from '@angular/common/http';
 import { ReactiveFormsModule } from '@angular/forms';
+import { Stripe } from '@ionic-native/stripe/ngx'
 
 import { MenuPage } from './components/menu/menu.page';
 
@@ -28,6 +29,7 @@ import { MenuPage } from './components/menu/menu.page';
   providers: [
     StatusBar,
     SplashScreen,
+    Stripe,
     { provide: RouteReuseStrategy, useClass: IonicRouteStrategy }
   ],
   bootstrap: [AppComponent]

@@ -1,6 +1,9 @@
 <ion-header>
   <ion-toolbar>
     <ion-title>Gib deine Daten ein</ion-title>
+    <ion-button color="clear" size="small" slot="end" (click)="close()">
+      <ion-icon name="close" color="danger"></ion-icon>
+    </ion-button>
   </ion-toolbar>
 </ion-header>
 
@@ -38,7 +41,7 @@
               </ion-radio-group>
             </ion-list>
             <div
-              *ngIf="angForm.controls[input.name].invalid && (angForm.controls[input.name].dirty || angForm.controls[input.name].touched)"
+              *ngIf="angForm.controls[input.name].invalid && (angForm.controls[input.name].dirty || angForm.controls[input.name].touched || angForm.controls[input.name].untouched)"
               class="validation-errors"
             >
               <div

@@ -8,5 +8,12 @@
       </ion-button>
     </ion-buttons>
     <ion-item lines="none">"Wasserschule"</ion-item>
+    <div slot="end" (click)="openCart()" class="parent-notification" #cart>
+      <ion-icon name="cart"></ion-icon>
+
+      <ion-badge color="warning" class="product-count"
+        >{{ cartItemCount | async }}
+      </ion-badge>
+    </div>
   </ion-toolbar>
 </ion-header>

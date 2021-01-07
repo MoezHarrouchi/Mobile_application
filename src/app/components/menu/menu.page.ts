@@ -19,7 +19,7 @@ export class MenuPage implements OnInit {
     this.navigate = this.configurationService.getMenuContent();
   }
   onSelectCours(parent, child){
-    this.router.navigateByUrl('/cours/' + parent + '/' + child);
+    parent ==="Shop" ? this.router.navigateByUrl('/shop'):this.router.navigateByUrl('/cours/' + parent + '/' + child);
 
   }
 

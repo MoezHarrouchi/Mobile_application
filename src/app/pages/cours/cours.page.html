@@ -1,6 +1,13 @@
 <app-header></app-header>
 
 <ion-content *ngIf="bodyCours">
+  <div class="container-loading" *ngIf="loading == false">
+    <ion-spinner
+      name="lines"
+      position="stacked"
+      *ngIf="loading == false"
+    ></ion-spinner>
+  </div>
   <div class="cours-header-content">
     <div class="cours-title-principal-container">
       <h1 class="cours-principal-title">{{coursTitle}}</h1>
@@ -52,5 +59,6 @@
       </ion-row>
     </div>
   </ion-grid>
+
   <app-footer></app-footer>
 </ion-content>

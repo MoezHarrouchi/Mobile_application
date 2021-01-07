@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, ElementRef, OnInit, ViewChild } from '@angular/core';
 import { ActivatedRoute, Router } from '@angular/router';
 import { WordpressService } from '../../services/wordpress.service';
 import { ModalController } from '@ionic/angular';
@@ -14,24 +14,17 @@ export class CoursPage implements OnInit {
   availableCours: any;
   availableCoursJson: any;
   chosenCorse: any;
-  coursTitle: any;
-  products: any;
+  coursTitle: any; 
+  loading:boolean=false;
 
   constructor(private route: ActivatedRoute, private wordpress: WordpressService, private modalController: ModalController) {
   }
 
   ngOnInit() {
-    this.get_products();
 
     this.getContentCourse();
     this.getFreeCourses();
-  }
-  async get_products(){
-    await this.wordpress.getProducts().then(res => {
-      let json = JSON.parse(res.toJSON().body)
-      console.log(json);
-    });
-
+ 
   }
 
   async getFreeCourses(){
@@ -41,8 +34,10 @@ export class CoursPage implements OnInit {
       this.availableCours = res.contents.split('</tr>').map(e => e.split('<td>').map(el => el.replace('</td>', ''))).splice(1).map(el => Object.assign({}, el.splice(1)));
       if ( this.availableCours){
         if (this.availableCours.filter(el => el['1']).find(el => el['1'].toUpperCase() === this.coursTitle.toUpperCase())){
-          this.chosenCorse = this.availableCours.filter(el => el['1']).filter(el => el['1'].toUpperCase() === this.coursTitle.toUpperCase() );
+          this.chosenCorse = this.availableCours.filter(el => el['1'])
+          .filter(el => el['1'].toUpperCase() === this.coursTitle.toUpperCase() );
           console.log(this.availableCours);
+
         }
       }
       if (this.chosenCorse){
@@ -54,6 +49,8 @@ export class CoursPage implements OnInit {
         registration: this.chosenCorse['4']
       };
     }
+    this.loading=true;
+
 
     }, error => {});
   }
@@ -63,8 +60,11 @@ export class CoursPage implements OnInit {
        this.bodyCours  = res.filter(el => el.name && el.body)
        .find(el => el.name.toUpperCase().replace(/\s/g, '') === this.route.snapshot.data.courses.name.toUpperCase().replace(/\s/g, '') && el.parent.toUpperCase().replace(/\s/g, '') === this.route.snapshot.data.courses.parent.toUpperCase().replace(/\s/g, ''))
        .body;
-       this.bodyCours = this.bodyCours.split('<figure>[advanced_iframe').map(el => el.includes('kurssoftware/anmeldung-online.php') ? el = '' : el).join('');
+       this.bodyCours = this.bodyCours.split('<figure>[advanced_iframe')
+       .map(el => el.includes('kurssoftware/anmeldung-online.php') ? el = '' : el).join('');
+
      });
+
    }
   }
     async presentModal() {

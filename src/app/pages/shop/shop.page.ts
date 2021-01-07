@@ -1,25 +1,48 @@
 import { Component,  ElementRef, OnInit, ViewChild  } from '@angular/core';
 import { ModalController } from '@ionic/angular';
 import { BehaviorSubject } from 'rxjs';
+import { CartViewPage } from '../cart-view/cart-view.page';
 import { CartService } from '../../services/cart.service';
 import { WordpressService } from '../../services/wordpress.service';
-import { CartViewPage } from '../../pages/cart-view/cart-view.page';
+
+
 
 
 @Component({
-  selector: 'app-header',
-  templateUrl: './header.page.html',
-  styleUrls: ['./header.page.scss'],
+  selector: 'app-shop',
+  templateUrl: './shop.page.html',
+  styleUrls: ['./shop.page.scss'],
 })
-export class HeaderPage implements OnInit {
-  @ViewChild('cart',{static: false,read:ElementRef}) fab:ElementRef;
-  cartItemCount :BehaviorSubject<any>;
 
-  constructor(private modalController:ModalController,private cartService:CartService) { }
+export class ShopPage implements OnInit {
+  @ViewChild('cart',{static: false,read:ElementRef}) fab:ElementRef;
+
+  cart = [];
+  products = [];
+  cartItemCount :BehaviorSubject<any>;
+  loading:boolean=false;
+
+
+  constructor(private cartService : CartService,private wordpress: WordpressService) { }
 
   ngOnInit() {
+    this.get_products();
+    this.cart = this.cartService.getCart();
     this.cartItemCount = this.cartService.getCartItemCount();
 
+  }
+  async get_products(){
+    await this.wordpress.getProducts().then(res => {
+      console.log(JSON.parse(res.toJSON().body));
+      this.products = JSON.parse(res.toJSON().body);
+      this.products.map(el=>el.qtyCommanded=1);
+      this.loading = true;
+    });
+
+  }
+  addToCart(product){
+    this.cartService.addProduct(product);
+    //this.animateCSS('tada');
   }
   animateCSS(animationNAme,keepAnimated = false){
     const node = this.fab.nativeElement;
@@ -32,18 +55,4 @@ export class HeaderPage implements OnInit {
     }
     node.addEventListener('animationend',handleAnimationEnd);
   }
-  async openCart(){
-    this.animateCSS('bounceOutLeft',true);
-    let modal = await this.modalController.create({
-      component: CartViewPage,
-      cssClass:'cart-modal'
-    });
-    modal.onWillDismiss().then(()=>{
-      this.fab.nativeElement.classList.remove('animated','bounceOutLeft')
-      this.animateCSS('bounceInLeft');
-    });
-    modal.present();
-
-  }
-
 }

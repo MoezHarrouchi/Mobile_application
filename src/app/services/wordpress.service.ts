@@ -62,7 +62,7 @@ export class WordpressService {
     version: 'wc/v3',
     queryStringAuth: true
   });
-    return this.woocommerce.getAsync('products?_fields=id,name,attributes,price,weight');
+    return this.woocommerce.getAsync('products?_fields=id,name,attributes,price,weight,stock_quantity');
   }
 
    private dataExtract( res: Response){

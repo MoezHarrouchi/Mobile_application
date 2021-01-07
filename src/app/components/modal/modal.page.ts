@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { Validators, FormGroup, FormBuilder } from '@angular/forms';
+import { ModalController } from '@ionic/angular';
 import '../../../assets/js/SMTP.js';
 
 
@@ -77,7 +78,7 @@ export class ModalPage implements OnInit {
 
   ];
 
-  constructor(private fb: FormBuilder) {
+  constructor(private fb: FormBuilder,private modalController : ModalController) {
   }
   ngOnInit() {
     this.createForm();
@@ -110,29 +111,29 @@ export class ModalPage implements OnInit {
       hearAboutUs: ['', Validators.required]
     });
   }
- /* onClose(){
-    this.modalControler.dismiss({
+  close(){
+    this.modalController.dismiss({
       dimissed:true
     })
-  }*/
+  }
   onSubmit(){
     let dataUri = 'data:csv/plain;base64,' + btoa(Object.keys(this.angForm.value).
                   map(el => '\'' + el + '\'').join(';') + '\r' + Object.values(this.angForm.value).
                   map(el => '\'' + el + '\'').join(';'));
     Email.send({
       Host : 'smtp.gmail.com',
-      Username : '',
-      Password : '',
+      Username : 'moezharr@gmail.com',
+      Password : '****ZEOM2020****',
       To : 'moez.harrouchi@gmail.com',
       From : 'moezharr@gmail.com' ,
-      Subject : 'test',
+      Subject : 'Just For testing test',
       Attachments : [
         {
           name : 'test.csv',
           data : dataUri
         }],
       Body : `
-      <i>This is sent as a feedback from my resume page.</i>`
+      <i>This is test mail.</i>`
 
       }).then(el => console.log('Success'));
     }
