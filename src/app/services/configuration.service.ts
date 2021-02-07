@@ -18,7 +18,14 @@ export class ConfigurationService {
   getMenuContent(){
     return this.menuContent;
   }
-  getUrlServices(): object{
+  getUrlServices(): urlService{
     return this.urls;
   }
+}
+
+interface urlService{
+  mainService,
+  imagesService,
+  contentCoursesService,
+  freecoursService
 }

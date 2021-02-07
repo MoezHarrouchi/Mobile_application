@@ -14,6 +14,7 @@ export class WordpressResolverService implements Resolve <any>{
     const coursesDetail = {
       parent: route.paramMap.get('parent'),
       name: route.paramMap.get('child'),
+      id : route.paramMap.get('id'),
       content: this.wordpressService.getAllContentCorses()
     };
     return coursesDetail;

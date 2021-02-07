@@ -12,8 +12,6 @@ import { ModalPage } from '../../components/modal/modal.page';
 export class CoursPage implements OnInit {
   bodyCours: any;
   availableCours: any;
-  availableCoursJson: any;
-  chosenCorse: any;
   coursTitle: any; 
   loading:boolean=false;
 
@@ -24,34 +22,15 @@ export class CoursPage implements OnInit {
 
     this.getContentCourse();
     this.getFreeCourses();
- 
-  }
 
+  }
   async getFreeCourses(){
     this.coursTitle = this.route.snapshot.data.courses.name;
-    await this.wordpress.getCoursesDisponible()
-    .subscribe(res => {
-      this.availableCours = res.contents.split('</tr>').map(e => e.split('<td>').map(el => el.replace('</td>', ''))).splice(1).map(el => Object.assign({}, el.splice(1)));
-      if ( this.availableCours){
-        if (this.availableCours.filter(el => el['1']).find(el => el['1'].toUpperCase() === this.coursTitle.toUpperCase())){
-          this.chosenCorse = this.availableCours.filter(el => el['1'])
-          .filter(el => el['1'].toUpperCase() === this.coursTitle.toUpperCase() );
-          console.log(this.availableCours);
-
-        }
-      }
-      if (this.chosenCorse){
-       this.availableCoursJson = {
-        numero: this.chosenCorse['0'],
-        couseName: this.chosenCorse['1'],
-        courseStart: this.chosenCorse['2'],
-        time: this.chosenCorse['3'],
-        registration: this.chosenCorse['4']
-      };
-    }
-    this.loading=true;
-
-
+    let courseId = this.route.snapshot.data.courses.id;
+    await this.wordpress.getCoursesDisponible(courseId)
+    .subscribe(res => {    
+       this.availableCours = res
+      this.loading=true;
     }, error => {});
   }
   getContentCourse(){
@@ -64,7 +43,7 @@ export class CoursPage implements OnInit {
        .map(el => el.includes('kurssoftware/anmeldung-online.php') ? el = '' : el).join('');
 
      });
-
+     this.loading=true;
    }
   }
     async presentModal() {

@@ -19,6 +19,7 @@
 					{
 						"title": "Personal Training",
 						"label":"Personal Training",
+						"id":"noid",
 						"icon": "",
 						"url": "/cours",
 						"content": {
@@ -40,6 +41,7 @@
 					},
 					{
 						"title": "Anfängerschwimmen",
+						"id":"139",
 						"label":"Anfängerschwimmen",
 						"icon": "",
 						"url": "/login",
@@ -74,6 +76,7 @@
 					},
 					{
 						"title": "Freistil",
+						"id":"151",
 						"label":"Freistil",
 						"icon": "",
 						"url": "",
@@ -112,6 +115,7 @@
 					{
 						"title": "OpenWater",
 						"label" : "Open Water",
+						"id":"noid", 
 
 						"icon": "",
 						"url": "",
@@ -142,6 +146,7 @@
 					},
 					{
 						"title": "Aquazirkel",
+						"id":"48",
 						"label" : "Aquazirkel",
 
 						"content": {
@@ -176,6 +181,7 @@
 					},
 					{
 						"title": "Aquacycling",
+						"id":"55",
 						"label" : "Aquacycling",
 
 						"content": {
@@ -209,7 +215,8 @@
 						}
 					},
 					{
-						"title": "Aquafitness",		
+						"title": "Aquafitness",
+						"id":"37",		
 						"label" : "Aquafitness",
 
 						"icon": "",
@@ -245,6 +252,7 @@
 					},
 					{
 						"title": "AquafitnessfürSchwangere",
+						"id":"23",
 						"label" : "Aquafitness für Schwangere",
 
 						"content": {
@@ -278,6 +286,7 @@
 					},
 					{
 						"title": "Early Morning",
+						"id":"223",
 						"label" : "EarlyMorning",
 
 						"content": {
@@ -312,6 +321,7 @@
 					},
 					{
 						"title": "Aquastep",
+						"id":"22",
 						"label" : "Aquastep",
 
 						"content": {
@@ -345,6 +355,7 @@
 					},
 					{
 						"title": "Aquamix",
+						"id":"101",
 						"label" : "Aquamix",
 						"content": {
 							"title": "Aquamix",
@@ -378,6 +389,7 @@
 					},
 					{
 						"title": "Adiaqua",
+						"id":"103",
 						"label" : "Adiaqua",
 
 						"content": {
@@ -411,6 +423,7 @@
 					},
 					{
 						"title": "Aquasana",
+						"id":"133",
 						"label" : "Aquasana",
 
 						"content": {
@@ -444,6 +457,7 @@
 					},
 					{
 						"title": "Aquafun",
+						"id":"298",
 						"label" : "Aquafun",
 
 						"content": {
@@ -483,6 +497,8 @@
 					{
 						"title": "SUP",
 						"label" : "SUP",
+						"id":"277",
+     
 
 						"content": {
 							"title": "SUP",
@@ -518,7 +534,7 @@
 					{
 						"title": "SUPSANA",
 						"label" : "SUP SANA",
-
+                         "id" :"278",
 						"content": {
 							"title": "SUP SANA",
 							"desc_title_cours": "SUP SANA",
@@ -556,6 +572,7 @@
 				"title": "ZumWasserplan",
 				"label" : "Zum Wasserplan",
 				"icon": "book-outline",
+				"id":"noid",
 				"url": "/contacts",
 				"subChildren": []
 			}
@@ -574,6 +591,7 @@
 					{
 						"title": "Mamba mini",
 						"label" : "Mambamini",
+						"id":"7",
 
 						"content": {
 							"title": "Mamba mini",
@@ -614,6 +632,7 @@
 					},
 					{
 						"title": "Ma&Pamini",
+						"id":"5",
 						"label" : "Ma&Pa mini",
 						"content": {
 							"title": "Ma&Pa mini",
@@ -655,6 +674,7 @@
 					{
 						"title": "Mambaminimax",
 						"label" : "Mamba minimax",
+						"id":"21",
 
 						"content": {
 							"title": "Mamba minimax",
@@ -694,6 +714,7 @@
 					},
 					{
 						"title": "Ma&Paminimax",
+						"id":"8",
 						"label" : "Ma&Pa minimax",
 
 						"content": {
@@ -733,6 +754,7 @@
 					},
 					{
 						"title": "Mambamaxi",
+						"id":"2",
 						"label" : "Mamba maxi",
 
 						"content": {
@@ -774,6 +796,7 @@
 					},
 					{
 						"title": "Ma&Pamaxi",
+						"id":"6",
 						"label" : "Ma&Pa maxi",
 
 						"content": {
@@ -816,6 +839,7 @@
 					},
 					{
 						"title": "Ma&Pafamily",
+						"id":"73",
 						"label" : "Ma&Pa family",
 
 						"content": {
@@ -857,6 +881,7 @@
 					},
 					{
 						"title": "Anne&Floh",
+						"id":"140",
 						"label" : "Anne&Floh",
 
 						"content": {
@@ -904,6 +929,7 @@
 				"subChildren": [
 					{
 						"title": "aquakids",
+						"id":"4",
 						"label" : "aquakids",
 
 						"content": {
@@ -943,6 +969,7 @@
 					},
 					{
 						"title": "Ma&PaAquakids",
+						"id":"16",
 						"label" : "Ma&Pa Aquakids",
 
 						"content": {
@@ -982,6 +1009,7 @@
 					},
 					{
 						"title": "2+",
+						"id":"142",
 						"label" : "2+",
 
 						"content": {
@@ -1021,6 +1049,7 @@
 					},
 					{
 						"title": "Ma&Pa2+",
+						"id":"52",
 						"label" : "Ma&Pa 2+",
 						"content": {
 							"title": "Ma&Pa 2+",
@@ -1059,6 +1088,7 @@
 					},
 					{
 						"title": "Aquamaxis",
+						"id":"9",
 						"label" : "Aquamaxis",
 						"url": "",
 						"content": {
@@ -1107,6 +1137,7 @@
 				"subChildren": [
 					{
 						"title": "Wasserratten",
+						"id":"46",
 						"label" : "Wasserratten",
 
 						"content": {
@@ -1158,6 +1189,7 @@
 					},
 					{
 						"title": "Wasserrattenmini",
+						"id":"10",
 						"label" : "Wasserratten mini",
 
 						"content": {
@@ -1207,6 +1239,7 @@
 					},
 					{
 						"title": "Wasserrattenminimax",
+						"id":"11",
 						"label" : "Wasserratten minimax",
 
 						"content": {
@@ -1256,6 +1289,7 @@
 					},
 					{
 						"title": "Wasserrattenmaxi",
+						"id":"12",
 						"label" : "Wasserratten maxi",
 
 						"content": {
@@ -1308,6 +1342,7 @@
 					},
 					{
 						"title": "Triximini",
+						"id":"160",
 						"label" : "Trixi mini",
 
 						"content": {
@@ -1348,6 +1383,7 @@
 					},
 					{
 						"title": "TrixiMaxi",
+						"id":"162",
 						"label" : "Trixi Maxi",
 
 							"content": {
@@ -1396,6 +1432,7 @@
 					},
 					{
 						"title": "Freistil",
+						"id":"129",
 						"label" : "Freistil",
 
 						"content": {
@@ -1438,6 +1475,7 @@
 					},
 					{
 						"title": "WasserrattenKiga/Kita",
+						"id":"0",
 						"label" : "Wasserratten Kiga-Kita",
 
 						"content": {
@@ -1478,6 +1516,7 @@
 					},
 					{
 						"title": "Ferienkurs-Anfänger",
+						"id":"56",
 						"label" : "Ferienkurs – Anfänger",
 
 						"content": {
@@ -1534,12 +1573,14 @@
 					},
 					{
 						"title": "Ferienkurs-Kinderkraul",
+						"id":"282",
 						"label" : "Ferienkurs – Kinderkraul",
 
 						"url": ""
 					},
 					{
 						"title": "Ferienkurs-Trixi",
+						"id":"164",
 						"label" : "Ferienkurs – Trixi",
 
 						"url": ""
@@ -1555,31 +1596,38 @@
 		"children": [
 			{
 				"title": "UnsereingetragenesZeichen",
-				"label": "Unser eingetragenes Zeichen"
+				"label": "Unser eingetragenes Zeichen",
+				"id":"noid"
 			},
 			{
 				"title": "DeineVorteile",
-				"label": "Deine Vorteile"
+				"label": "Deine Vorteile",
+				"id":"noid"
 			},
 			{
 				"title": "Unsere Ausbildungsinhalte",
-				"label": "Unsere Ausbildungsinhalte"
+				"label": "Unsere Ausbildungsinhalte",
+				"id":"noid"
 			},
 			{
 				"title": "Seminarkosten",
-				"label": "Seminarkosten"
+				"label": "Seminarkosten",
+				"id":"noid"
 			},
 			{
 				"title": "UnsereAusbildungstermine",
-				"label": "Unsere Ausbildungstermine"
+				"label": "Unsere Ausbildungstermine",
+				"id":"noid"
 			},
 			{
 				"title": "Bewerbung",
-				"label": "Bewerbung"
+				"label": "Bewerbung",
+				"id":"noid"
 			},
 			{
 				"title": "Ausbildungsbuch",
-				"label": "Ausbildungsbuch"
+				"label": "Ausbildungsbuch",
+				"id":"noid"
 			}
 		]
 	},

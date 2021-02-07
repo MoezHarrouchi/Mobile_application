@@ -1,6 +1,6 @@
 import { Injectable } from '@angular/core';
 import { HttpClient, HttpErrorResponse, HttpHeaders} from '@angular/common/http';
-import { Observable, of, throwError } from 'rxjs';
+import { Observable, empty, throwError } from 'rxjs';
 import { catchError  , map} from 'rxjs/operators';
 import { ConfigurationService } from '../services/configuration.service';
 import * as WC from 'woocommerce-api';
@@ -34,28 +34,31 @@ export class WordpressService {
    }
 
    getHomeData(): Observable<any>{
-     return this.http.get(this.configuration.urls.imagesService, this.httpHeader).pipe(
+     return this.http.get(this.configuration.getUrlServices().imagesService, this.httpHeader).pipe(
        map(this.dataExtract),
        catchError(this.errorHandler)
      );
    }
 
-   getCoursesDisponible(): Observable<any>{
-    const apiforDisponibleCourse = `https://api.allorigins.win/get?url=${encodeURIComponent(this.configuration.urls.coursService)}`;
-    return this.http.get(apiforDisponibleCourse, this.httpHeader).pipe(
-      map(this.dataExtract),
-      catchError(this.errorHandler)
-    );
+   getCoursesDisponible(id): Observable<any>{
+    if(id){
+      return this.http.get(this.configuration.getUrlServices().freecoursService+id+'/29', this.httpHeader).pipe(
+        map(this.dataExtract),
+        catchError(this.errorHandler)
+      );
+    }else{
+      return empty();
+    }
   }
   getAllContentCorses(){
-    return this.http.get('http://localhost/wasserschuleNew/wp-json/wl/v1/courses', this.httpHeader).pipe(
+    return this.http.get(this.configuration.getUrlServices().contentCoursesService, this.httpHeader).pipe(
       map(this.dataExtract),
       catchError(this.errorHandler)
     );
   }
   getProducts(){
   this.woocommerce = WC({
-    url: 'http://localhost/WasserschuleNew/',
+    url: this.configuration.getUrlServices().mainService,
     consumerKey: this.consumerKey,
     consumerSecret: this.consumerSecret,
     wpAPI: true,

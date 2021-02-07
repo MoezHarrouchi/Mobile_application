@@ -8,12 +8,12 @@
       *ngIf="loading == false"
     ></ion-spinner>
   </div>
-  <div class="cours-header-content">
+  <div class="cours-header-content" *ngIf="loading == true">
     <div class="cours-title-principal-container">
       <h1 class="cours-principal-title">{{coursTitle}}</h1>
     </div>
   </div>
-  <ion-grid>
+  <ion-grid *ngIf="loading == true">
     <ion-row>
       <ion-col>
         <p class="image-container">
@@ -28,37 +28,40 @@
         <div [innerHtml]="bodyCours"></div>
       </ion-col>
     </ion-row>
-
-    <div class="coursesList" *ngFor="let cours of chosenCorse">
-      <ion-row>
-        <ion-col class="title-cours">KursNr</ion-col>
-        <ion-col>{{cours['0']}}</ion-col>
-      </ion-row>
-      <ion-row>
-        <ion-col class="title-cours">Kursbezeichnung</ion-col>
-        <ion-col>{{cours['1']}}</ion-col>
-      </ion-row>
-      <ion-row>
-        <ion-col class="title-cours">Kursbeginn</ion-col>
-        <ion-col>{{cours['2']}}</ion-col>
-      </ion-row>
-      <ion-row>
-        <ion-col class="title-cours">Uhrzeit</ion-col>
-        <ion-col>{{cours['3']}}</ion-col>
-      </ion-row>
-      <ion-row>
-        <ion-col class="title-cours">Anmeldestand</ion-col>
-        <ion-col>{{cours['4']}}</ion-col>
-      </ion-row>
-      <ion-row>
-        <ion-col>
-          <ion-button expand="full" (click)="presentModal()"
-            >Kurs buchen</ion-button
-          >
-        </ion-col>
-      </ion-row>
+    <div *ngIf="availableCours">
+      <p>{{availableCours.coursEmplacement}}</p>
+      <div class="coursesList" *ngFor="let cours of availableCours.Courses">
+        <ion-row>
+          <ion-col class="title-cours">KursNr</ion-col>
+          <ion-col>{{cours.KursNr}}</ion-col>
+        </ion-row>
+        <ion-row>
+          <ion-col class="title-cours">Kursbezeichnung</ion-col>
+          <ion-col>{{cours.Kursbezeichnung}}</ion-col>
+        </ion-row>
+        <ion-row>
+          <ion-col class="title-cours">Kursbeginn</ion-col>
+          <ion-col>{{cours.Kursbeginn}}</ion-col>
+        </ion-row>
+        <ion-row>
+          <ion-col class="title-cours">Uhrzeit</ion-col>
+          <ion-col>{{cours.Uhrzeit}}</ion-col>
+        </ion-row>
+        <ion-row>
+          <ion-col class="title-cours">Anmeldestand</ion-col>
+          <ion-col>{{cours.Anmeldestand}}</ion-col>
+        </ion-row>
+        <ion-row>
+          <ion-col>
+            <ion-button expand="full" (click)="presentModal()"
+              >Kurs buchen</ion-button
+            >
+          </ion-col>
+        </ion-row>
+      </div>
+      <p *ngIf="availableCours" [innerHTML]="availableCours.note"></p>
     </div>
   </ion-grid>
 
-  <app-footer></app-footer>
+  <app-footer *ngIf="loading == true"></app-footer>
 </ion-content>

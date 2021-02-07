@@ -25,7 +25,7 @@ const routes: Routes = [
     loadChildren: () => import('./components/menu/menu.module').then( m => m.MenuPageModule)
   },
   {
-    path: 'cours/:parent/:child',
+    path: 'cours/:parent/:child/:id',
     resolve: {
       courses: WordpressResolverService
     },
