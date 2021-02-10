@@ -27,5 +27,7 @@ interface urlService{
   mainService,
   imagesService,
   contentCoursesService,
-  freecoursService
+  freecoursService,
+  subscribeToCours,
+  planningService
 }

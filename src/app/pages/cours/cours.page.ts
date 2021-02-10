@@ -2,7 +2,7 @@ import { Component, ElementRef, OnInit, ViewChild } from '@angular/core';
 import { ActivatedRoute, Router } from '@angular/router';
 import { WordpressService } from '../../services/wordpress.service';
 import { ModalController } from '@ionic/angular';
-import { ModalPage } from '../../components/modal/modal.page';
+import { SlidesComponent } from '../../components/slides/slides.component'
 
 @Component({
   selector: 'app-cours',
@@ -15,7 +15,10 @@ export class CoursPage implements OnInit {
   coursTitle: any; 
   loading:boolean=false;
 
-  constructor(private route: ActivatedRoute, private wordpress: WordpressService, private modalController: ModalController) {
+  constructor(private route: ActivatedRoute, private wordpress: WordpressService, 
+    private modalController: ModalController,
+    private router:Router
+    ) {
   }
 
   ngOnInit() {
@@ -41,16 +44,20 @@ export class CoursPage implements OnInit {
        .body;
        this.bodyCours = this.bodyCours.split('<figure>[advanced_iframe')
        .map(el => el.includes('kurssoftware/anmeldung-online.php') ? el = '' : el).join('');
-
      });
-     this.loading=true;
    }
   }
-    async presentModal() {
-      const modal = await this.modalController.create({
-        component: ModalPage,
-        cssClass: 'my-custom-class'
-      });
-      return await modal.present();
-    }
+
+  async presentSlide(kursNr,KursBezID,action) {
+    const modal = await this.modalController.create({
+      component: SlidesComponent,
+      cssClass: 'my-custom-class',
+      componentProps:{
+        kursNr,
+        KursBezID,
+        action
+      }
+    });
+    return await modal.present();
+  }
 }

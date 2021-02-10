@@ -33,7 +33,6 @@ export class ShopPage implements OnInit {
   }
   async get_products(){
     await this.wordpress.getProducts().then(res => {
-      console.log(JSON.parse(res.toJSON().body));
       this.products = JSON.parse(res.toJSON().body);
       this.products.map(el=>el.qtyCommanded=1);
       this.loading = true;

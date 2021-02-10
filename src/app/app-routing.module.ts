@@ -1,6 +1,8 @@
 import { NgModule } from '@angular/core';
 import { PreloadAllModules, RouterModule, Routes } from '@angular/router';
-import { WordpressResolverService } from './resolver/wordpress-resolver.service';
+import { GetContentCoursesResolverService } from './resolvers/getContentCourses-resolver.service';
+import { SlidesComponent } from './components/slides/slides.component'
+import { GetPlanningResolverService }from './resolvers/get-planning-resolver.service'
 
 const routes: Routes = [
   {
@@ -27,7 +29,7 @@ const routes: Routes = [
   {
     path: 'cours/:parent/:child/:id',
     resolve: {
-      courses: WordpressResolverService
+      courses: GetContentCoursesResolverService
     },
     loadChildren: () => import('./pages/cours/cours.module').then(m => m.CoursPageModule)
   },
@@ -46,8 +48,14 @@ const routes: Routes = [
   {
     path: 'shop',
     loadChildren: () => import('./pages/shop/shop.module').then( m => m.ShopPageModule)
+  },
+  {
+    path:'slide/:kursNr/:kursBezID/:action',
+    component:SlidesComponent,
+    /*resolve:{
+      planning :GetPlanningResolverService
+    }*/
   }
-
 
 
 ];

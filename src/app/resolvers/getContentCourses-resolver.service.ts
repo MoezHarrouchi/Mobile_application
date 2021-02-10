@@ -1,11 +1,12 @@
 import { Injectable } from '@angular/core';
+
 import { Resolve, ActivatedRouteSnapshot } from '@angular/router';
 import { WordpressService } from '../services/wordpress.service';
 
 @Injectable({
   providedIn: 'root'
 })
-export class WordpressResolverService implements Resolve <any>{
+export class GetContentCoursesResolverService implements Resolve <any>{
 
   constructor( private wordpressService: WordpressService) {
 
@@ -15,7 +16,7 @@ export class WordpressResolverService implements Resolve <any>{
       parent: route.paramMap.get('parent'),
       name: route.paramMap.get('child'),
       id : route.paramMap.get('id'),
-      content: this.wordpressService.getAllContentCorses()
+      content: this.wordpressService.getAllContentCourses(),
     };
     return coursesDetail;
   }

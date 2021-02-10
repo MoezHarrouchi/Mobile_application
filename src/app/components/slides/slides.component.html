@@ -1,0 +1,59 @@
+<ion-header *ngIf="loading == true">
+  <ion-toolbar>
+    <ion-title>Gib deine Daten ein</ion-title>
+    <ion-button color="clear" size="small" slot="end" (click)="close()">
+      <ion-icon name="close" color="light"></ion-icon>
+    </ion-button>
+  </ion-toolbar> </ion-header
+><ion-content>
+  <div class="container-loading" *ngIf="loading == false">
+    <ion-spinner
+      name="lines"
+      position="stacked"
+      *ngIf="loading == false"
+    ></ion-spinner>
+  </div>
+  <div *ngIf="loading == true">
+    <div>
+      <ion-grid>
+        <ion-row>
+          <ion-col [innerHtml]="data.coursEmplacement"></ion-col>
+        </ion-row>
+
+        <ion-col>Kurstermine:</ion-col>
+        <ion-row>
+          <ion-grid class="plannigArray">
+            <ion-row class="title-cours">
+              <ion-col size="2">Day</ion-col>
+              <ion-col size="4">Date</ion-col>
+              <ion-col size="6">Time</ion-col>
+            </ion-row>
+            <ion-row *ngFor="let dateTime of data.planning" class="line">
+              <ion-col size="2">{{ dateTime.split(" ")[0] }}</ion-col>
+              <ion-col size="4">{{ dateTime.split(" ")[1] }}</ion-col>
+              <ion-col size="6">{{
+                dateTime.split(" ")[3] +
+                  dateTime.split(" ")[4] +
+                  dateTime.split(" ")[5] +
+                  dateTime.split(" ")[6]
+              }}</ion-col>
+            </ion-row>
+          </ion-grid>
+        </ion-row>
+
+        <ion-row>
+          <ion-col size="6">
+            <ion-button fill="clear" (click)="close()"
+              >Aufgeben<ion-icon slot="start" name="arrow-back"></ion-icon
+            ></ion-button>
+          </ion-col>
+          <ion-col size="6">
+            <ion-button fill="clear" (click)="presentModal()"
+              >Fortsetzen <ion-icon slot="end" name="arrow-forward"></ion-icon
+            ></ion-button>
+          </ion-col>
+        </ion-row>
+      </ion-grid>
+    </div>
+  </div>
+</ion-content>

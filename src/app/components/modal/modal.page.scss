@@ -8,3 +8,13 @@ ion-select,ion-input{
 .error-message{
     color: rgb(174, 61, 61) !important;
 }
+ion-hrader,ion-toolbar{
+    --background:#4a7e97;
+    color: white;
+}
+
+div,ion-grid{
+    height: 100%;
+
+}
+

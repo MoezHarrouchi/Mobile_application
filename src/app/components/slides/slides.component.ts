@@ -1,86 +1,18 @@
 import { Component, OnInit } from '@angular/core';
-import { Validators, FormGroup, FormBuilder } from '@angular/forms';
-import { ModalController,NavParams } from '@ionic/angular';
-import '../../../assets/js/SMTP.js';
-import { WordpressService } from '../../services/wordpress.service';
-import { Planning } from '../../models/planning';
+import {ActivatedRoute } from '@angular/router';
+import { NavParams } from '@ionic/angular';
+import { ModalController } from '@ionic/angular';
+import { Planning } from '../../models/planning'
+import { ModalPage } from '../modal/modal.page'
+import { WordpressService } from '../../services/wordpress.service'
+
+
 @Component({
-  selector: 'app-modal',
-  templateUrl: './modal.page.html',
-  styleUrls: ['./modal.page.scss'],
+  selector: 'app-slides',
+  templateUrl: './slides.component.html',
+  styleUrls: ['./slides.component.scss'],
 })
-export class ModalPage implements OnInit {
-
-  angForm: FormGroup;
-  inputsError = {
-    anrede: [
-      { type: 'Required', message: 'Gender is required'}
-    ],
-    vorname: [
-      { type: 'Required', message: 'Name is required'},
-      { type: 'pattern', message: 'Name should has caractere'},
-    ],
-    name: [
-      { type: 'Required', message: 'Last Name is required'},
-      { type: 'Pattern', message: 'Last Name should has caractere'}
-    ],
-    strasse: [
-      { type: 'Required', message: 'Street is required'}
-    ],
-    plz: [
-      { type: 'Required', message: 'PostCode is required'}
-    ],
-    ort: [
-      { type: 'Required', message: 'Place is required'}
-    ],
-    handy: [
-      { type: 'Required', message: 'Phone is required'}
-    ],
-    telefon: [
-      { type: 'pattern', message: 'MobilePhone shoud a number'}
-    ],
-    email: [
-      { type: 'Required', message: 'Email is required'},
-      { type: 'pattern', message: 'Email is not valid'},
-    ],
-    zahlart: [
-      { type: 'Required', message: 'Payment Method is required'}
-    ],
-    kgeb: [
-      { type: 'Required', message: 'Date of birth is required'},
-      { type: 'pattern', message: 'Date of birth is not valid'},
-    ],
-    bemerkung: [
-    ],
-    zustimmung: [
-      { type: 'Required', message: 'Condition is required'},
-    ],
-    herkunft: [
-      { type: 'Required', message: 'Hear about us is required'},
-    ],
-  };
-  ListOfInputs = [
-    { name : 'anrede', label: 'Anrede', type: 'moreOnecheckbox' , choices: ['Frau', 'Herr'] },
-    { name : 'vorname', label: 'Vorname', type: 'text' },
-    { name : 'name', label: 'Name' , type: 'text' },
-    { name: 'strasse', label: 'Strasse', type: 'text'},
-    { name : 'plz', label: 'PLZ' , type: 'text'},
-    { name : 'ort', label: 'ORT' , type: 'text'},
-    { name : 'telefon', label: 'Telefon' , type: 'tel'},
-    { name : 'handy', label: 'Handy' , type: 'text'},
-    { name : 'email', label: 'Email' , type: 'text'},
-    { name : 'zahlart', label: 'Zahlart' , type: 'moreOnecheckbox', choices: ['EC Cash', 'Bank Transfer']},
-    { name : 'kgeb', label: 'Kgeb' , type: 'date'},
-    { name : 'bemerkung', label: 'Bemerkung' , type: 'textarea'},
-    { name : 'zustimmung', label: 'Zustimmung' , type: 'checkbox'},
-    { name : 'herkunft', label: 'Herkunft' , type: 'moreOnecheckbox', choices: ['Google', 'Freinds']}
-
-  ];
-  planning: Planning;
-  kursNr:String;
-  kursBezID:String;
-  action:String;
-
+export class SlidesComponent implements OnInit {
   slideOpts = {
     slidesPerView: 3,
     coverflowEffect: {
@@ -169,61 +101,50 @@ export class ModalPage implements OnInit {
       }
     }
   }
+  data : Planning;
+  groupeNr: String;
+  kursNr: String;
+  action : String;
+  kursBezID : String;
+  loading:boolean=false;
 
-  constructor(private fb: FormBuilder,private modalController : ModalController,
-    private wordpressService : WordpressService, private navParams:NavParams) {
-  }
 
+  constructor(private route: ActivatedRoute, private modalController : ModalController ,private navParams:NavParams,
+    private wordpressService:WordpressService
+    
+    ) { }
   ngOnInit() {
+    /*this.data = this.route.snapshot.data['planning'];
+    this.groupeNr = this.route.snapshot.data['groupNr'];*/
     this.kursNr = this.navParams.get('kursNr');
-    this.kursBezID = this.navParams.get('kursBezID');
     this.action = this.navParams.get('aktion');
-    this.wordpressService.getPlanning(this.kursNr,this.kursBezID,this.action).subscribe((res:Planning)=>{
-      this.planning = res;
-    });
-    this.createForm();
-  }
+    this.kursBezID = this.navParams.get('kursBezID');
+     this.wordpressService.getPlanning(this.kursNr,this.kursBezID,this.action).subscribe(res=>{
+      this.data= res;
+      this.loading=true;
 
-  get errorCtr(){
-    return this.angForm.controls.name;
+     });
   }
-
-  createForm(){
-    this.angForm = this.fb.group({
-      anrede: ['', Validators.required],
-      vorname: ['', Validators.required],
-      name: ['', Validators.required],
-      strasse: ['', Validators.required],
-      plz: ['', Validators.required],
-      ort: ['', Validators.required],
-      telefon: ['', Validators.compose([
-        Validators.required
-      ])],
-      handy: ['', Validators.required],
-      email: ['', Validators.compose([
-        Validators.required,
-        Validators.pattern('^[a-zA-Z0-9_.+-]+@[a-zA-Z0-9-]+.[a-zA-Z0-9-.]+$')
-      ])],
-      zahlart: ['', Validators.required],
-      kgeb: ['', Validators.required],
-      bemerkung: [''],
-      zustimmung: ['', Validators.required],
-      herkunft: ['', Validators.required]
-    });
-  }
-
+  
   close(){
     this.modalController.dismiss({
       dimissed:true
     })
   }
 
-  onSubmit(){
-    this.wordpressService.subscribeToCourse(this.kursNr,this.action,this.planning.groupeNr,this.angForm.value).
-    subscribe(res=>{
-      console.log("test");
+  async presentModal() {
+    this.close();	
+    const modal = await this.modalController.create({
+      component: ModalPage,
+      cssClass: 'my-custom-class',
+      componentProps:{
+        kursNr:this.kursNr,
+        groupeNr:this.groupeNr,
+        action:this.action 
+      }
+ 
     });
-    this.close();
-    }
-  }
+    return await modal.present();
 
+  }
+}

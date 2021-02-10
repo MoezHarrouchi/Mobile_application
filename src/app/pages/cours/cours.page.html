@@ -53,8 +53,15 @@
         </ion-row>
         <ion-row>
           <ion-col>
-            <ion-button expand="full" (click)="presentModal()"
-              >Kurs buchen</ion-button
+            <!--<ion-button
+              expand="full"
+              (click)="presentModal(cours.button.KursNr,cours.button.KursBezID,cours.button.Aktion)"
+              >{{cours.button.label}}</ion-button
+            >-->
+            <ion-button
+              expand="full"
+              (click)="presentSlide(cours.button.KursNr,cours.button.KursBezID,cours.button.Aktion)"
+              >{{cours.button.label}}</ion-button
             >
           </ion-col>
         </ion-row>

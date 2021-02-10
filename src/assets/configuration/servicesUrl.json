@@ -2,5 +2,7 @@
     "mainService":"http://localhost/wasserschuleNew/wp-content/",
     "imagesService":"http://localhost/wasserschuleNew/wp-json/wl/v1/images/",
     "contentCoursesService":"http://localhost/wasserschuleNew/wp-json/wl/v1/courses/",
-    "freecoursService":"http://localhost/wasserschuleNew/wp-json/wl/v1/coursesById/"
+    "freecoursService":"http://localhost/wasserschuleNew/wp-json/wl/v1/coursesById/",
+    "subscribeToCours":"http://localhost/wasserschuleNew/wp-json/wl/v1/sendForm/",
+    "planningService":"http://localhost/wasserschuleNew/wp-json/wl/v1/planning/"
 }
