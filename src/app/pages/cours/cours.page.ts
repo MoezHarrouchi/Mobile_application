@@ -30,11 +30,17 @@ export class CoursPage implements OnInit {
   async getFreeCourses(){
     this.coursTitle = this.route.snapshot.data.courses.name;
     let courseId = this.route.snapshot.data.courses.id;
-    await this.wordpress.getCoursesDisponible(courseId)
-    .subscribe(res => {    
-       this.availableCours = res
+ 
+    if (courseId!="noid" && courseId){
+      await this.wordpress.getCoursesDisponible(courseId)
+      .subscribe(res => {    
+         this.availableCours = res
+        this.loading=true;
+      }, error => {});
+    }
+    else{
       this.loading=true;
-    }, error => {});
+    }
   }
   getContentCourse(){
     if (this.route.snapshot.data.courses){

@@ -17,8 +17,10 @@ export class WordpressService {
     headers: new HttpHeaders({'Content-type': 'Application/json'})
     };
   consumerKey = 'ck_220197083d36b83637cf08ec2183cd9531d45bf0';
-    consumerSecret = 'cs_ab1e48c6654e86685b0c6a9a781327bde23b6e6c';
-
+  consumerSecret = 'cs_ab1e48c6654e86685b0c6a9a781327bde23b6e6c';
+  httpHeader = {
+    headers: new HttpHeaders({'Content-type': 'Application/json'})
+  };
    id: any;
 
    private errorHandler(error: HttpErrorResponse){
@@ -33,34 +35,36 @@ export class WordpressService {
    }
 
    getHomeData(): Observable<any>{
-     return this.http.get(this.configuration.getUrlServices().imagesService).pipe(
+     return this.http.get(this.configuration.getUrlServices().imagesService,this.httpHeader).pipe(
        map(this.dataExtract),
        catchError(this.errorHandler)
      );
    }
 
    getCoursesDisponible(id): Observable<any>{
-      return this.http.get(this.configuration.getUrlServices().freecoursService+id+'/29').pipe(
-        map(this.dataExtract),
-        catchError((err)=>{
-          return empty();
-        })
-      );
-
+        return this.http.get(this.configuration.getUrlServices().freecoursService+id+'/29',this.httpHeader).pipe(
+          map(this.dataExtract),
+          catchError((err)=>{
+            return empty();
+          })
+        );
+      
   }
   getAllContentCourses(): Observable<any>{
-    return this.http.get(this.configuration.getUrlServices().contentCoursesService).pipe(
+
+    return this.http.get(this.configuration.getUrlServices().contentCoursesService,this.httpHeader).pipe(
       map(this.dataExtract),
-      catchError(this.errorHandler)
+      catchError((error)=>{
+        return empty();
+      })
     );
   }
   getProducts(){
 
-    return this.http.get('https://www.wasserschule.de/index.php/wp-json/wc/v3/products?consumer_key=ck_c1fb88a602719192b5757f9f13b41b97dfcc8af6&consumer_secret=cs_112da8e8939b628ca895f984492a34da323bc16f')
+    return this.http.get('https://www.wasserschule.de/index.php/wp-json/wc/v3/products?consumer_key=ck_c1fb88a602719192b5757f9f13b41b97dfcc8af6&consumer_secret=cs_112da8e8939b628ca895f984492a34da323bc16f',this.httpHeader)
     .pipe(
       map(this.dataExtract),
-      catchError((err)=>{
-        console.log(err);
+      catchError((error)=>{
         return empty();
       })
     );
