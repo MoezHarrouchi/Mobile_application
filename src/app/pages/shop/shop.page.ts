@@ -18,7 +18,7 @@ export class ShopPage implements OnInit {
   @ViewChild('cart',{static: false,read:ElementRef}) fab:ElementRef;
 
   cart = [];
-  products = [];
+  products :any;
   cartItemCount :BehaviorSubject<any>;
   loading:boolean=false;
 
@@ -32,8 +32,8 @@ export class ShopPage implements OnInit {
 
   }
   async get_products(){
-    await this.wordpress.getProducts().then(res => {
-      this.products = JSON.parse(res.toJSON().body);
+    await this.wordpress.getProducts().subscribe(res => {
+      this.products = res;
       this.products.map(el=>el.qtyCommanded=1);
       this.loading = true;
     });

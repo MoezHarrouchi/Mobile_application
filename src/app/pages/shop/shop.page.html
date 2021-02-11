@@ -15,6 +15,11 @@
         </ion-card-header>
         <ion-card-content>
           <ion-row>
+            <ion-col>
+              <ion-img [src]="item.images[0].src"></ion-img>
+            </ion-col>
+          </ion-row>
+          <ion-row>
             <ion-col size="8">
               <ion-label color="secondary">
                 <b>{{ item.price | currency: 'USD' }}</b>

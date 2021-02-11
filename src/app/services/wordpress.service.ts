@@ -3,7 +3,6 @@ import { HttpClient, HttpErrorResponse, HttpHeaders} from '@angular/common/http'
 import { Observable, empty, throwError } from 'rxjs';
 import { catchError  , map} from 'rxjs/operators';
 import { ConfigurationService } from '../services/configuration.service';
-import * as WC from 'woocommerce-api';
 import { Planning } from '../models/planning'
 
 @Injectable({
@@ -41,14 +40,13 @@ export class WordpressService {
    }
 
    getCoursesDisponible(id): Observable<any>{
-    if(id){
       return this.http.get(this.configuration.getUrlServices().freecoursService+id+'/29').pipe(
         map(this.dataExtract),
-        catchError(this.errorHandler)
+        catchError((err)=>{
+          return empty();
+        })
       );
-    }else{
-      return empty();
-    }
+
   }
   getAllContentCourses(): Observable<any>{
     return this.http.get(this.configuration.getUrlServices().contentCoursesService).pipe(
@@ -57,15 +55,15 @@ export class WordpressService {
     );
   }
   getProducts(){
-  this.woocommerce = WC({
-    url:'http://localhost/WasserschuleNew/',
-    consumerKey: this.consumerKey,
-    consumerSecret: this.consumerSecret,
-    wpAPI: true,
-    version: 'wc/v3',
-    queryStringAuth: true
-  });
-    return this.woocommerce.getAsync('products?_fields=id,name,attributes,price,weight,stock_quantity',this.httpHeader);
+
+    return this.http.get('https://www.wasserschule.de/index.php/wp-json/wc/v3/products?consumer_key=ck_c1fb88a602719192b5757f9f13b41b97dfcc8af6&consumer_secret=cs_112da8e8939b628ca895f984492a34da323bc16f')
+    .pipe(
+      map(this.dataExtract),
+      catchError((err)=>{
+        console.log(err);
+        return empty();
+      })
+    );
   }
   subscribeToCourse(kursNr,action,grp,formData){
     return this.http.post(this.configuration.getUrlServices().subscribeToCours+kursNr+'/'+action+'/'+grp,formData)
