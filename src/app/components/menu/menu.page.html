@@ -41,7 +41,7 @@
       <ion-list class="sub-item" *ngIf="page.open">
         <div *ngFor="let child of page.children">
           <ion-item
-            (click)="onSelectCours(page.title,child.title,child.id)"
+            (click)="onSelectCours(child.idPost,child.id)"
             routerDirection="root"
             routerLinkActive="active"
             *ngIf="child.subChildren?.length==null"
@@ -71,7 +71,7 @@
           <ion-list class="sub-item" *ngIf="child.open">
             <ion-item
               *ngFor="let subChild of child.subChildren"
-              (click)="onSelectCours(child.title,subChild.title,subChild.id)"
+              (click)="onSelectCours(subChild.idPost,subChild.id)"
             >
               <ion-icon [name]="subChild.icon" slot="start"> </ion-icon>
               <ion-label> {{subChild.label}} </ion-label>

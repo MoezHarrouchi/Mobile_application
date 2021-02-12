@@ -12,11 +12,10 @@ export class GetContentCoursesResolverService implements Resolve <any>{
 
    }
   resolve(route: ActivatedRouteSnapshot){
+    const idPost=route.paramMap.get('idPost');
     const coursesDetail = {
-      parent: route.paramMap.get('parent'),
-      name: route.paramMap.get('child'),
       id : route.paramMap.get('id'),
-      content: this.wordpressService.getAllContentCourses(),
+      content: this.wordpressService.getAllContentCourses(idPost)
     };
     return coursesDetail;
   }

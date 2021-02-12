@@ -10,11 +10,7 @@ export class ConfigurationService {
   urls: any = (urls as any).default;
 
   constructor(){ }
-
-  getContentCoursByTitle(parent: any, child: any, listMenu: any){
-    return listMenu.find(el => el.name.toUppercase().replace(/\s/g, '') === child.toUppercase().replace(/\s/g, ''));
-  }
-
+   
   getMenuContent(){
     return this.menuContent;
   }

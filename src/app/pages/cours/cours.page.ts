@@ -28,7 +28,6 @@ export class CoursPage implements OnInit {
 
   }
   async getFreeCourses(){
-    this.coursTitle = this.route.snapshot.data.courses.name;
     let courseId = this.route.snapshot.data.courses.id;
  
     if (courseId!="noid" && courseId){
@@ -45,9 +44,11 @@ export class CoursPage implements OnInit {
   getContentCourse(){
     if (this.route.snapshot.data.courses){
       this.route.snapshot.data.courses.content.subscribe(res => {
-       this.bodyCours  = res.filter(el => el.name && el.body)
-       .find(el => el.name.toUpperCase().replace(/\s/g, '') === this.route.snapshot.data.courses.name.toUpperCase().replace(/\s/g, '') && el.parent.toUpperCase().replace(/\s/g, '') === this.route.snapshot.data.courses.parent.toUpperCase().replace(/\s/g, ''))
-       .body;
+       //this.bodyCours  = res.filter(el => el.name && el.body)
+       //.find(el => el.name.toUpperCase().replace(/\s/g, '') === this.route.snapshot.data.courses.name.toUpperCase().replace(/\s/g, '') && el.parent.toUpperCase().replace(/\s/g, '') === this.route.snapshot.data.courses.parent.toUpperCase().replace(/\s/g, ''))
+       //.body;
+       this.coursTitle = res[0].name;
+       this.bodyCours = res[0].body;
        this.bodyCours = this.bodyCours.split('<figure>[advanced_iframe')
        .map(el => el.includes('kurssoftware/anmeldung-online.php') ? el = '' : el).join('');
      });

@@ -20,6 +20,7 @@
 						"title": "Personal Training",
 						"label":"Personal Training",
 						"id":"noid",
+						"idPost":"300",
 						"icon": "",
 						"url": "/cours",
 						"content": {
@@ -42,6 +43,7 @@
 					{
 						"title": "Anfängerschwimmen",
 						"id":"139",
+						"idPost":"315",
 						"label":"Anfängerschwimmen",
 						"icon": "",
 						"url": "/login",
@@ -77,6 +79,7 @@
 					{
 						"title": "Freistil",
 						"id":"151",
+						"idPost":"329",
 						"label":"Freistil",
 						"icon": "",
 						"url": "",
@@ -115,6 +118,7 @@
 					{
 						"title": "OpenWater",
 						"label" : "Open Water",
+						"idPost":"331",
 						"id":"noid", 
 
 						"icon": "",
@@ -146,6 +150,7 @@
 					},
 					{
 						"title": "Aquazirkel",
+						"idPost":"332",
 						"id":"48",
 						"label" : "Aquazirkel",
 
@@ -182,6 +187,7 @@
 					{
 						"title": "Aquacycling",
 						"id":"55",
+						"idPost":"333",
 						"label" : "Aquacycling",
 
 						"content": {
@@ -218,7 +224,7 @@
 						"title": "Aquafitness",
 						"id":"37",		
 						"label" : "Aquafitness",
-
+						"idPost" : "334",
 						"icon": "",
 						"url": "",
 						"content": {
@@ -254,7 +260,7 @@
 						"title": "AquafitnessfürSchwangere",
 						"id":"23",
 						"label" : "Aquafitness für Schwangere",
-
+						"idPost":"335",
 						"content": {
 							"title": "Aquafitness für Schwangere",
 							"desc_title_cours": "Aquafitness für Schwangere – Für Sie und Ihr Ungeborenes",
@@ -288,6 +294,7 @@
 						"title": "Early Morning",
 						"id":"223",
 						"label" : "EarlyMorning",
+						"idPost":"337",
 
 						"content": {
 							"title": "Early Morning",
@@ -322,6 +329,7 @@
 					{
 						"title": "Aquastep",
 						"id":"22",
+						"idPost":"336",
 						"label" : "Aquastep",
 
 						"content": {
@@ -356,6 +364,7 @@
 					{
 						"title": "Aquamix",
 						"id":"101",
+						"idPost":"338",
 						"label" : "Aquamix",
 						"content": {
 							"title": "Aquamix",
@@ -391,7 +400,7 @@
 						"title": "Adiaqua",
 						"id":"103",
 						"label" : "Adiaqua",
-
+						"idPost":"339",
 						"content": {
 							"title": "Adiaqua",
 							"desc_title_cours": "Adiaqua",
@@ -425,7 +434,7 @@
 						"title": "Aquasana",
 						"id":"133",
 						"label" : "Aquasana",
-
+						"idPost":"340", 
 						"content": {
 							"title": "Aquasana",
 							"desc_title_cours": "Aquasana – ein Wassertraining ab 50+",
@@ -459,6 +468,7 @@
 						"title": "Aquafun",
 						"id":"298",
 						"label" : "Aquafun",
+						"idPost":"2847",
 
 						"content": {
 							"title": "Aquafun",
@@ -498,6 +508,7 @@
 						"title": "SUP",
 						"label" : "SUP",
 						"id":"277",
+						"idPost":"1542",
      
 
 						"content": {
@@ -535,6 +546,7 @@
 						"title": "SUPSANA",
 						"label" : "SUP SANA",
                          "id" :"278",
+						 "idPost":"1549",
 						"content": {
 							"title": "SUP SANA",
 							"desc_title_cours": "SUP SANA",
@@ -592,6 +604,7 @@
 						"title": "Mamba mini",
 						"label" : "Mambamini",
 						"id":"7",
+						"idPost":"622",
 
 						"content": {
 							"title": "Mamba mini",
@@ -633,6 +646,7 @@
 					{
 						"title": "Ma&Pamini",
 						"id":"5",
+						"idPost":"623",
 						"label" : "Ma&Pa mini",
 						"content": {
 							"title": "Ma&Pa mini",
@@ -675,6 +689,7 @@
 						"title": "Mambaminimax",
 						"label" : "Mamba minimax",
 						"id":"21",
+						"idPost":"625",
 
 						"content": {
 							"title": "Mamba minimax",
@@ -716,7 +731,7 @@
 						"title": "Ma&Paminimax",
 						"id":"8",
 						"label" : "Ma&Pa minimax",
-
+						"idPost":"626",
 						"content": {
 							"title": "Ma&Pa minimax",
 							"beforeList" :[
@@ -756,7 +771,7 @@
 						"title": "Mambamaxi",
 						"id":"2",
 						"label" : "Mamba maxi",
-
+						"idPost":"627",
 						"content": {
 							"title": "Mamba maxi",
 							"desc_title_cours": "Mamba maxi – Mama oder Papa & Baby",
@@ -798,7 +813,7 @@
 						"title": "Ma&Pamaxi",
 						"id":"6",
 						"label" : "Ma&Pa maxi",
-
+						"idPost":"628",
 						"content": {
 							"title": "Ma&Pa maxi",
 
@@ -841,6 +856,7 @@
 						"title": "Ma&Pafamily",
 						"id":"73",
 						"label" : "Ma&Pa family",
+						"idPost":"629",
 
 						"content": {
 							"title": "Ma&Pa family",
@@ -883,6 +899,7 @@
 						"title": "Anne&Floh",
 						"id":"140",
 						"label" : "Anne&Floh",
+						"idPost":"630",
 
 						"content": {
 							"title": "Anne&Floh",
@@ -931,7 +948,7 @@
 						"title": "aquakids",
 						"id":"4",
 						"label" : "aquakids",
-
+						"idPost":"63",
 						"content": {
 							"title": "aquakids",
 							"beforeList" :[
@@ -971,7 +988,7 @@
 						"title": "Ma&PaAquakids",
 						"id":"16",
 						"label" : "Ma&Pa Aquakids",
-
+						"idPost":"419",
 						"content": {
 							"title": "Ma&Pa Aquakids",
 							"beforeList" :[
@@ -1011,6 +1028,7 @@
 						"title": "2+",
 						"id":"142",
 						"label" : "2+",
+						"idPost":"420",
 
 						"content": {
 							"title": "2+",
@@ -1050,6 +1068,7 @@
 					{
 						"title": "Ma&Pa2+",
 						"id":"52",
+						"idPost":"421",
 						"label" : "Ma&Pa 2+",
 						"content": {
 							"title": "Ma&Pa 2+",
@@ -1089,6 +1108,7 @@
 					{
 						"title": "Aquamaxis",
 						"id":"9",
+						"idPost":"422",
 						"label" : "Aquamaxis",
 						"url": "",
 						"content": {
@@ -1139,6 +1159,7 @@
 						"title": "Wasserratten",
 						"id":"46",
 						"label" : "Wasserratten",
+						"idPost":"2804",
 
 						"content": {
 							"title": "Wasserratten",
@@ -1191,7 +1212,7 @@
 						"title": "Wasserrattenmini",
 						"id":"10",
 						"label" : "Wasserratten mini",
-
+						"idPost":"424",
 						"content": {
 							"title": "Wasserratten mini",
 							"beforeList" :[
@@ -1241,7 +1262,7 @@
 						"title": "Wasserrattenminimax",
 						"id":"11",
 						"label" : "Wasserratten minimax",
-
+						"idPost":"425",
 						"content": {
 							"title": "Wasserratten minimax",
 							"beforeList" :[
@@ -1291,7 +1312,7 @@
 						"title": "Wasserrattenmaxi",
 						"id":"12",
 						"label" : "Wasserratten maxi",
-
+						"idPost":"426",
 						"content": {
 							"title": "Wasserratten maxi",
 							"beforeList" :[
@@ -1344,7 +1365,7 @@
 						"title": "Triximini",
 						"id":"160",
 						"label" : "Trixi mini",
-
+						"idPost":"430",
 						"content": {
 							"title": "Trixi mini",
 							"beforeList" :[
@@ -1385,7 +1406,7 @@
 						"title": "TrixiMaxi",
 						"id":"162",
 						"label" : "Trixi Maxi",
-
+						"idPost":"431",
 							"content": {
 								"title": "Trixi Maxi",
 								"beforeList" :[
@@ -1434,7 +1455,7 @@
 						"title": "Freistil",
 						"id":"129",
 						"label" : "Freistil",
-
+						"idPost":"432",
 						"content": {
 							"title": "Freistil",
 							"beforeList" :[
@@ -1477,7 +1498,7 @@
 						"title": "WasserrattenKiga/Kita",
 						"id":"0",
 						"label" : "Wasserratten Kiga-Kita",
-
+						"idPost":"427",
 						"content": {
 							"title": "Wasserratten Kiga-Kita",
 							"beforeList" :[
@@ -1518,7 +1539,7 @@
 						"title": "Ferienkurs-Anfänger",
 						"id":"56",
 						"label" : "Ferienkurs – Anfänger",
-
+						"idPost":"429",
 						"content": {
 							"title": "Ferienkurs – Anfänger",						
 							"beforeList" :[
@@ -1575,14 +1596,14 @@
 						"title": "Ferienkurs-Kinderkraul",
 						"id":"282",
 						"label" : "Ferienkurs – Kinderkraul",
-
+						"idPost":"428",
 						"url": ""
 					},
 					{
 						"title": "Ferienkurs-Trixi",
 						"id":"164",
 						"label" : "Ferienkurs – Trixi",
-
+						"idPost":"442",
 						"url": ""
 					}
 				]
@@ -1597,36 +1618,37 @@
 			{
 				"title": "UnsereingetragenesZeichen",
 				"label": "Unser eingetragenes Zeichen",
-				"id":"noid"
+				"id":"noid",
+			    "idPost":"1575"
 			},
 			{
 				"title": "DeineVorteile",
 				"label": "Deine Vorteile",
+				"idPost":"1586",
 				"id":"noid"
 			},
 			{
 				"title": "Unsere Ausbildungsinhalte",
 				"label": "Unsere Ausbildungsinhalte",
+				"idPost":"1590",
 				"id":"noid"
 			},
 			{
 				"title": "Seminarkosten",
 				"label": "Seminarkosten",
+				"idPost":"1593",
 				"id":"noid"
 			},
 			{
 				"title": "UnsereAusbildungstermine",
 				"label": "Unsere Ausbildungstermine",
+				"idPost":"1597",
 				"id":"noid"
 			},
 			{
 				"title": "Bewerbung",
 				"label": "Bewerbung",
-				"id":"noid"
-			},
-			{
-				"title": "Ausbildungsbuch",
-				"label": "Ausbildungsbuch",
+				"idPost":"1612",
 				"id":"noid"
 			}
 		]
@@ -1638,19 +1660,25 @@
 		"children": [
 			{
 				"title": "AboutGeschäftsinhaberin",
-				"label": "About Geschäftsinhaberin"
+				"label": "About Geschäftsinhaberin",
+				"idPost":"1166",
+				"id":"noid"
+
 			},
 			{
 				"title": "DerFotoservice",
-				"label": "Der Fotoservice"
+				"label": "Der Fotoservice",
+				"idPost":"2116",
+				"id":"noid"
+
 			},
 			{
 				"title": "Presse",
-				"label": "Presse"
-			},
-			{
-				"title": "aboutus",
-				"label": "OUR TEAM"
+				"label": "Presse",
+				"idPost":"2865",
+				"id":"noid"
+
+
 			}
 		]
 	},
@@ -1658,6 +1686,9 @@
 		"title": "Shop",
 		"label": "Shop",
 		"icon": "basket",
-		"url":"/shop"
+		"url":"/shop",
+		"idPost":"shop",
+		"id":"noid"
+
 	}
 ]

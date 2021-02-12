@@ -18,8 +18,8 @@ export class MenuPage implements OnInit {
   sideMenu() {
     this.navigate = this.configurationService.getMenuContent();
   }
-  onSelectCours(parent, child, id){
-    parent ==="Shop" ? this.router.navigateByUrl('/shop'):this.router.navigateByUrl('/cours/' + parent + '/' + child + '/' + id);
+  onSelectCours(postId, id){
+    postId ==="shop" ? this.router.navigateByUrl('/shop'):this.router.navigateByUrl('/cours/'+ postId+'/' + id);
 
   }
 

@@ -10,7 +10,7 @@ import { Planning } from '../models/planning'
 })
 
 export class WordpressService {
-  woocommerce: any;
+  
   constructor( private http: HttpClient , private configuration: ConfigurationService) { };
 
   httpHeader = {
@@ -50,9 +50,8 @@ export class WordpressService {
         );
       
   }
-  getAllContentCourses(): Observable<any>{
-
-    return this.http.get(this.configuration.getUrlServices().contentCoursesService,this.httpHeader).pipe(
+  getAllContentCourses(idPost): Observable<any>{
+    return this.http.get(this.configuration.getUrlServices().contentCoursesService+idPost,this.httpHeader).pipe(
       map(this.dataExtract),
       catchError((error)=>{
         return empty();
