@@ -1,12 +1,5 @@
 <app-header></app-header>
 <ion-content>
-  <div class="container-loading" *ngIf="loading == false">
-    <ion-spinner
-      name="lines"
-      position="stacked"
-      *ngIf="loading == false"
-    ></ion-spinner>
-  </div>
   <ion-list>
     <ion-card *ngFor="let item of products">
       <div *ngIf="item.name">

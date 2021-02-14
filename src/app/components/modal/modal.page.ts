@@ -1,17 +1,20 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit ,Input} from '@angular/core';
 import { Validators, FormGroup, FormBuilder } from '@angular/forms';
 import { ModalController,NavParams } from '@ionic/angular';
 import '../../../assets/js/SMTP.js';
 import { WordpressService } from '../../services/wordpress.service';
-import { Planning } from '../../models/planning';
 @Component({
   selector: 'app-modal',
   templateUrl: './modal.page.html',
   styleUrls: ['./modal.page.scss'],
 })
 export class ModalPage implements OnInit {
-
+  @Input("kursNr") kursNr;
+  @Input("action") action ;
+  @Input("groupeNr") groupeNr;
+  @Input("price") price;
   angForm: FormGroup;
+  mailSentMessage: String;
   inputsError = {
     anrede: [
       { type: 'Required', message: 'Gender is required'}
@@ -76,10 +79,6 @@ export class ModalPage implements OnInit {
     { name : 'herkunft', label: 'Herkunft' , type: 'moreOnecheckbox', choices: ['Google', 'Freinds']}
 
   ];
-  planning: Planning;
-  kursNr:String;
-  kursBezID:String;
-  action:String;
 
   slideOpts = {
     slidesPerView: 3,
@@ -175,17 +174,7 @@ export class ModalPage implements OnInit {
   }
 
   ngOnInit() {
-    this.kursNr = this.navParams.get('kursNr');
-    this.kursBezID = this.navParams.get('kursBezID');
-    this.action = this.navParams.get('aktion');
-    this.wordpressService.getPlanning(this.kursNr,this.kursBezID,this.action).subscribe((res:Planning)=>{
-      this.planning = res;
-    });
     this.createForm();
-  }
-
-  get errorCtr(){
-    return this.angForm.controls.name;
   }
 
   createForm(){
@@ -219,9 +208,9 @@ export class ModalPage implements OnInit {
   }
 
   onSubmit(){
-    this.wordpressService.subscribeToCourse(this.kursNr,this.action,this.planning.groupeNr,this.angForm.value).
+    this.wordpressService.subscribeToCourse(this.kursNr,this.action,this.groupeNr,this.price,this.angForm.value).
     subscribe(res=>{
-      console.log("test");
+      this.wordpressService.setSubscribeMsg(res.mailOK);
     });
     this.close();
     }

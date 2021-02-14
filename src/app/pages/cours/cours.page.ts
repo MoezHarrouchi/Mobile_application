@@ -1,5 +1,5 @@
 import { Component, ElementRef, OnInit, ViewChild } from '@angular/core';
-import { ActivatedRoute, Router } from '@angular/router';
+import { ActivatedRoute, ActivatedRouteSnapshot} from '@angular/router';
 import { WordpressService } from '../../services/wordpress.service';
 import { ModalController } from '@ionic/angular';
 import { SlidesComponent } from '../../components/slides/slides.component'
@@ -14,26 +14,33 @@ export class CoursPage implements OnInit {
   availableCours: any;
   coursTitle: any; 
   loading:boolean=false;
+  notFound:String;
+  subscribeMsg : String;
 
   constructor(private route: ActivatedRoute, private wordpress: WordpressService, 
-    private modalController: ModalController,
-    private router:Router
+    private modalController: ModalController
     ) {
   }
 
   ngOnInit() {
-
+    this.wordpress.setSubscribeMsg("");
     this.getContentCourse();
     this.getFreeCourses();
+  }
 
+  ngDoCheck(){
+    this.wordpress.getSubscribeMsg().subscribe(msg=>{
+      this.subscribeMsg = msg;
+    })
+    
   }
   async getFreeCourses(){
     let courseId = this.route.snapshot.data.courses.id;
- 
-    if (courseId!="noid" && courseId){
-      await this.wordpress.getCoursesDisponible(courseId)
+     if (courseId!="noid" && courseId){
+      await this.route.snapshot.data.courses.freeCourses
       .subscribe(res => {    
-         this.availableCours = res
+         this.availableCours = res;
+         this.notFound = res.NotFound;
         this.loading=true;
       }, error => {});
     }
@@ -44,9 +51,6 @@ export class CoursPage implements OnInit {
   getContentCourse(){
     if (this.route.snapshot.data.courses){
       this.route.snapshot.data.courses.content.subscribe(res => {
-       //this.bodyCours  = res.filter(el => el.name && el.body)
-       //.find(el => el.name.toUpperCase().replace(/\s/g, '') === this.route.snapshot.data.courses.name.toUpperCase().replace(/\s/g, '') && el.parent.toUpperCase().replace(/\s/g, '') === this.route.snapshot.data.courses.parent.toUpperCase().replace(/\s/g, ''))
-       //.body;
        this.coursTitle = res[0].name;
        this.bodyCours = res[0].body;
        this.bodyCours = this.bodyCours.split('<figure>[advanced_iframe')
@@ -55,13 +59,13 @@ export class CoursPage implements OnInit {
    }
   }
 
-  async presentSlide(kursNr,KursBezID,action) {
+  async presentSlide(kursNr,kursBezID,action) {
     const modal = await this.modalController.create({
       component: SlidesComponent,
       cssClass: 'my-custom-class',
       componentProps:{
         kursNr,
-        KursBezID,
+        kursBezID,
         action
       }
     });

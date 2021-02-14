@@ -1,4 +1,7 @@
 <ion-app>
   <app-menu></app-menu>
+  <div class="container-loading" *ngIf="isLoader == false">
+    <ion-spinner name="lines" position="stacked"></ion-spinner>
+  </div>
   <ion-router-outlet id="main"></ion-router-outlet>
 </ion-app>

@@ -1,6 +1,6 @@
 import { Injectable } from '@angular/core';
 import { HttpClient, HttpErrorResponse, HttpHeaders} from '@angular/common/http';
-import { Observable, empty, throwError } from 'rxjs';
+import { Observable, empty, throwError,BehaviorSubject } from 'rxjs';
 import { catchError  , map} from 'rxjs/operators';
 import { ConfigurationService } from '../services/configuration.service';
 import { Planning } from '../models/planning'
@@ -16,6 +16,7 @@ export class WordpressService {
   httpHeader = {
     headers: new HttpHeaders({'Content-type': 'Application/json'})
     };
+  subscribeSentMsg = new BehaviorSubject<string>("");
   consumerKey = 'ck_220197083d36b83637cf08ec2183cd9531d45bf0';
   consumerSecret = 'cs_ab1e48c6654e86685b0c6a9a781327bde23b6e6c';
   httpHeader = {
@@ -58,7 +59,7 @@ export class WordpressService {
       })
     );
   }
-  getProducts(){
+  getProducts():Observable<any>{
 
     return this.http.get('https://www.wasserschule.de/index.php/wp-json/wc/v3/products?consumer_key=ck_c1fb88a602719192b5757f9f13b41b97dfcc8af6&consumer_secret=cs_112da8e8939b628ca895f984492a34da323bc16f',this.httpHeader)
     .pipe(
@@ -68,11 +69,13 @@ export class WordpressService {
       })
     );
   }
-  subscribeToCourse(kursNr,action,grp,formData){
-    return this.http.post(this.configuration.getUrlServices().subscribeToCours+kursNr+'/'+action+'/'+grp,formData)
+  subscribeToCourse(kursNr,action,grp,price,formData):Observable<any>{
+    return this.http.post(this.configuration.getUrlServices().subscribeToCours+kursNr+'/'+price+'/'+action+'/'+grp,formData)
     .pipe(
       map(this.dataExtract),
-      catchError(this.errorHandler)
+      catchError((error)=>{
+        return empty();
+      })
     );    
   }
   getPlanning(kursNr,KursBezID,Aktion):Observable<Planning>{
@@ -83,7 +86,12 @@ export class WordpressService {
       })
     );
   }
-
+   getSubscribeMsg(){
+    return this.subscribeSentMsg;
+  }
+  setSubscribeMsg(msg){
+    this.subscribeSentMsg.next(msg);
+  }
   private dataExtract( res: Response){
      const body = res;
      return body || {};

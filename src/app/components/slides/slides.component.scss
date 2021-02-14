@@ -3,7 +3,6 @@
         background-color: #0a5173 !important;
         color: white;
         border-bottom:0.5px solid white ;
-
     }
 
 }
@@ -21,6 +20,16 @@ div,ion-grid{
 
 }
 
-ion-col{
+.buttons ion-col, .plannigArray ion-col {
 text-align: center;
+}
+.price-date{
+ text-align: left !important;
+}
+.sub-title{
+    font-weight: 700;
+
+}
+.price{
+    text-align: center !important;
 }

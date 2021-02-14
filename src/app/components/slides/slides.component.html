@@ -19,8 +19,15 @@
         <ion-row>
           <ion-col [innerHtml]="data.coursEmplacement"></ion-col>
         </ion-row>
-
-        <ion-col>Kurstermine:</ion-col>
+        <ion-row>
+          <ion-col class="sub-title"> Kursgebühr : </ion-col>
+        </ion-row>
+        <ion-row>
+          <ion-col class="price" size="12">{{ data.price }}</ion-col>
+        </ion-row>
+        <ion-row>
+          <ion-col class="sub-title">Kurstermine:</ion-col>
+        </ion-row>
         <ion-row>
           <ion-grid class="plannigArray">
             <ion-row class="title-cours">
@@ -41,7 +48,7 @@
           </ion-grid>
         </ion-row>
 
-        <ion-row>
+        <ion-row class="buttons">
           <ion-col size="6">
             <ion-button fill="clear" (click)="close()"
               >Aufgeben<ion-icon slot="start" name="arrow-back"></ion-icon

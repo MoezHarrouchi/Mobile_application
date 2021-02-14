@@ -1,19 +1,12 @@
 <app-header></app-header>
 
 <ion-content *ngIf="bodyCours">
-  <div class="container-loading" *ngIf="loading == false">
-    <ion-spinner
-      name="lines"
-      position="stacked"
-      *ngIf="loading == false"
-    ></ion-spinner>
-  </div>
-  <div class="cours-header-content" *ngIf="loading == true">
+  <div class="cours-header-content">
     <div class="cours-title-principal-container">
       <h1 class="cours-principal-title">{{coursTitle}}</h1>
     </div>
   </div>
-  <ion-grid *ngIf="loading == true">
+  <ion-grid>
     <ion-row>
       <ion-col>
         <p class="image-container">
@@ -28,7 +21,10 @@
         <div [innerHtml]="bodyCours"></div>
       </ion-col>
     </ion-row>
-    <div *ngIf="availableCours">
+    <ion-row *ngIf="notFound">
+      <div class="not-found" [innerHTML]="notFound"></div>
+    </ion-row>
+    <div *ngIf="availableCours && subscribeMsg.length <= 0 ">
       <p>{{availableCours.coursEmplacement}}</p>
       <div class="coursesList" *ngFor="let cours of availableCours.Courses">
         <ion-row>
@@ -68,7 +64,10 @@
       </div>
       <p *ngIf="availableCours" [innerHTML]="availableCours.note"></p>
     </div>
+    <ion-row>
+      <ion-col class="not-found" [innerHtml]="subscribeMsg"> </ion-col>
+    </ion-row>
   </ion-grid>
 
-  <app-footer *ngIf="loading == true"></app-footer>
+  <app-footer></app-footer>
 </ion-content>

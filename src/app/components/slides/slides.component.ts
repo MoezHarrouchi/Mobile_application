@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit,Input } from '@angular/core';
 import {ActivatedRoute } from '@angular/router';
 import { NavParams } from '@ionic/angular';
 import { ModalController } from '@ionic/angular';
@@ -13,6 +13,13 @@ import { WordpressService } from '../../services/wordpress.service'
   styleUrls: ['./slides.component.scss'],
 })
 export class SlidesComponent implements OnInit {
+  
+  @Input("action") action;
+  @Input("kursBezID") kursBezID;
+  @Input("kursNr") kursNr;
+  data : Planning;
+  groupeNr: String;
+  loading:boolean=false;
   slideOpts = {
     slidesPerView: 3,
     coverflowEffect: {
@@ -101,26 +108,14 @@ export class SlidesComponent implements OnInit {
       }
     }
   }
-  data : Planning;
-  groupeNr: String;
-  kursNr: String;
-  action : String;
-  kursBezID : String;
-  loading:boolean=false;
-
 
   constructor(private route: ActivatedRoute, private modalController : ModalController ,private navParams:NavParams,
     private wordpressService:WordpressService
-    
     ) { }
   ngOnInit() {
-    /*this.data = this.route.snapshot.data['planning'];
-    this.groupeNr = this.route.snapshot.data['groupNr'];*/
-    this.kursNr = this.navParams.get('kursNr');
-    this.action = this.navParams.get('aktion');
-    this.kursBezID = this.navParams.get('kursBezID');
      this.wordpressService.getPlanning(this.kursNr,this.kursBezID,this.action).subscribe(res=>{
       this.data= res;
+      this.groupeNr = res.groupNr;
       this.loading=true;
 
      });
@@ -140,7 +135,8 @@ export class SlidesComponent implements OnInit {
       componentProps:{
         kursNr:this.kursNr,
         groupeNr:this.groupeNr,
-        action:this.action 
+        action:this.action,
+        price:this.data.price 
       }
  
     });
