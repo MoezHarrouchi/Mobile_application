@@ -4,6 +4,8 @@ import { BehaviorSubject } from 'rxjs';
 import { CartViewPage } from '../cart-view/cart-view.page';
 import { CartService } from '../../services/cart.service';
 import { WordpressService } from '../../services/wordpress.service';
+import { PopoverComponent } from '../../components/popover/popover.component';
+import { PopoverController } from '@ionic/angular';
 
 
 
@@ -23,7 +25,7 @@ export class ShopPage implements OnInit {
   loading:boolean=false;
 
 
-  constructor(private cartService : CartService,private wordpress: WordpressService) { }
+  constructor(private cartService : CartService,private wordpress: WordpressService, private popoverController:PopoverController) { }
 
   ngOnInit() {
     this.get_products();
@@ -53,5 +55,17 @@ export class ShopPage implements OnInit {
       node.removeEventListener('animationend',handleAnimationEnd);
     }
     node.addEventListener('animationend',handleAnimationEnd);
+  }
+  async presentPopover(ev: any,description){
+    const popover = await this.popoverController.create({
+      component:PopoverComponent,
+      cssClass:'my-custom-class',
+      event:ev,
+      translucent: true,
+      componentProps: {
+        description
+      }
+    });
+    return await popover.present();
   }
 }

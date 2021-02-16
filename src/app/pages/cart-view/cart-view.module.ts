@@ -7,13 +7,16 @@ import { IonicModule } from '@ionic/angular';
 import { CartViewPageRoutingModule } from './cart-view-routing.module';
 
 import { CartViewPage } from './cart-view.page';
+import { NgxPayPalModule } from 'ngx-paypal';
+
 
 @NgModule({
   imports: [
     CommonModule,
     FormsModule,
     IonicModule,
-    CartViewPageRoutingModule
+    CartViewPageRoutingModule,
+    NgxPayPalModule
   ],
   declarations: [CartViewPage]
 })

@@ -1,11 +1,23 @@
 <app-header></app-header>
 <ion-content>
+  <div class="container-loading" *ngIf="loading == false">
+    <ion-spinner
+      name="lines"
+      position="stacked"
+      *ngIf="loading == false"
+    ></ion-spinner>
+  </div>
   <ion-list>
     <ion-card *ngFor="let item of products">
       <div *ngIf="item.name">
-        <ion-card-header>
-          <ion-card-title>{{item.name}}</ion-card-title>
-        </ion-card-header>
+        <ion-item (click)="presentPopover($event,item.description)">
+          <ion-icon
+            name="information-circle-outline"
+            slot="start"
+            color="favorite2"
+          ></ion-icon>
+          <ion-label color="favorite2">{{item.name}} </ion-label>
+        </ion-item>
         <ion-card-content>
           <ion-row>
             <ion-col>
@@ -14,7 +26,7 @@
           </ion-row>
           <ion-row>
             <ion-col size="8">
-              <ion-label color="secondary">
+              <ion-label color="favorite">
                 <b>{{ item.price | currency: 'USD' }}</b>
               </ion-label>
             </ion-col>

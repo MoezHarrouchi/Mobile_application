@@ -37,4 +37,7 @@ export class HomePage implements OnInit {
     }, error => {
     });
 }
+iconLink(){
+  console.log("Hi");
+}
 }

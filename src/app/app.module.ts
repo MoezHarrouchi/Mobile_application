@@ -17,6 +17,7 @@ import { Stripe } from '@ionic-native/stripe/ngx'
 import { SlidesComponent } from './components/slides/slides.component';
 
 import { MenuPage } from './components/menu/menu.page';
+import { NgxPayPalModule } from 'ngx-paypal';
 
 @NgModule({
   declarations: [AppComponent,MenuPage,SlidesComponent],
@@ -25,7 +26,8 @@ import { MenuPage } from './components/menu/menu.page';
   AngularFireModule.initializeApp(environment.firebase),
   AngularFireAuthModule,
   HttpClientModule,
-  ReactiveFormsModule
+  ReactiveFormsModule,
+  NgxPayPalModule
 ],
   providers: [
     StatusBar,

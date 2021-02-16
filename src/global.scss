@@ -47,3 +47,8 @@ ul li{
     height: 100%;
     width: 100%;
   }
+
+  .my-custom-class {
+    --width:80%;
+    --backdrop-opacity:0.7;
+  }

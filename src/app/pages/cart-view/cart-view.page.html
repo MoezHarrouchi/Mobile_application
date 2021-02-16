@@ -65,8 +65,10 @@
         </ion-grid>
       </ion-item>
     </ion-list>
-    <ion-button expand="full" color="dark" (click)="carddetail()">
+    <ngx-paypal [config]="payPalConfig"></ngx-paypal>
+
+    <!-- <ion-button expand="full" color="dark" (click)="carddetail()">
       Pay Now
-    </ion-button>
+    </ion-button> -->
   </div>
 </ion-content>

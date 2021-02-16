@@ -4,3 +4,24 @@ ion-card-title{
 ion-list{
     background-color: #d7d8da;
 }
+
+
+  .ion-color-favorite {
+    --ion-color-base:#007aff ;
+    --ion-color-base-rgb: 0,102,0;
+    --ion-color-contrast: #ffffff;
+    --ion-color-contrast-rgb: 255,255,255;
+    --ion-color-shade: #c7ced3;
+    --ion-color-tint: #caced1 ;
+  }
+  .ion-color-favorite2 {
+    --ion-color-base: #346fb0;
+    --ion-color-base-rgb: 0,102,0;
+    --ion-color-contrast: #ffffff;
+    --ion-color-contrast-rgb: 255,255,255;
+    --ion-color-shade:  #346fb0;
+    --ion-color-tint:  #346fb0 ;
+  }
+ion-item{
+    color: #646464;
+  }

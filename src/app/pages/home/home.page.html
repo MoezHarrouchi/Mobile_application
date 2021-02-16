@@ -1,5 +1,13 @@
 <app-header></app-header>
+
 <ion-content [fullscreen]="true">
+  <div class="container-loading" *ngIf="loading == false">
+    <ion-spinner
+      name="lines"
+      position="stacked"
+      *ngIf="loading == false"
+    ></ion-spinner>
+  </div>
   <ion-slides pager="true" [options]="slideOpts">
     <ion-slide *ngFor="let slide of slides;">
       <ion-img *ngIf="slide" src="{{slide}}"></ion-img>
@@ -30,8 +38,12 @@
       </ion-row>
       <ion-row>
         <ion-col disabled="true">
-          <ion-icon name="gift" size="large"></ion-icon>
-          <h2>Gutscheine</h2>
+          <a
+            href="https://www.wasserschule.de/wp-content/uploads/2019/11/Gutscheinnew.pdf"
+          >
+            <ion-icon name="gift"></ion-icon>
+            <h2>Gutscheine</h2>
+          </a>
           <p>
             Online Ausfüllen und per email an info@wasserschule.de oder per
             Telefon 09131/9703864
@@ -40,28 +52,28 @@
       </ion-row>
       <ion-row>
         <ion-col>
-          <ion-icon name="help-buoy" size="large"></ion-icon>
+          <ion-icon name="help-buoy"></ion-icon>
           <h2>Open Water plan</h2>
           <p>Hier geht es zum aktuellen Plan!</p>
         </ion-col>
       </ion-row>
       <ion-row>
         <ion-col>
-          <ion-icon name="people" size="large"></ion-icon>
+          <ion-icon name="people"></ion-icon>
           <h2>Job Gefällig?</h2>
           <p>Anklicken und stöbern!</p>
         </ion-col>
       </ion-row>
       <ion-row>
         <ion-col disabled="true">
-          <ion-icon name="information-circle-outline" size="large"></ion-icon>
+          <ion-icon name="information-circle-outline"></ion-icon>
           <h2>ALLGEMEINE INFORMATION</h2>
           <p>Alle Kurse finden im 32°C warmen Wasser statt!</p>
         </ion-col>
       </ion-row>
       <ion-row>
         <ion-col disabled="true">
-          <ion-icon name="call" size="large"></ion-icon>
+          <ion-icon name="call"></ion-icon>
           <h2>BÜRO : TELEFONNUMMER</h2>
           <p>09131/9703864</p>
         </ion-col>
