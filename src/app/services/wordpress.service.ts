@@ -4,6 +4,7 @@ import { Observable, empty, throwError,BehaviorSubject } from 'rxjs';
 import { catchError  , map} from 'rxjs/operators';
 import { ConfigurationService } from '../services/configuration.service';
 import { Planning } from '../models/planning'
+import {Shop} from '../models/shop'
 
 @Injectable({
   providedIn: 'root'
@@ -17,13 +18,6 @@ export class WordpressService {
     headers: new HttpHeaders({'Content-type': 'Application/json'})
     };
   subscribeSentMsg = new BehaviorSubject<string>("");
-  consumerKey = 'ck_220197083d36b83637cf08ec2183cd9531d45bf0';
-  consumerSecret = 'cs_ab1e48c6654e86685b0c6a9a781327bde23b6e6c';
-  httpHeader = {
-    headers: new HttpHeaders({'Content-type': 'Application/json'})
-  };
-   id: any;
-
    private errorHandler(error: HttpErrorResponse){
      if (error.error instanceof ErrorEvent){
        console.error('error Message', error.message);
@@ -95,5 +89,19 @@ export class WordpressService {
   private dataExtract( res: Response){
      const body = res;
      return body || {};
+   }
+   shop(isDelivery,purchaseUnits,total,paymentMethod,formData):Observable<any>{
+     let shop= new Shop() ;
+     shop.isDelivery  = isDelivery;
+     shop.products=purchaseUnits;
+     shop.paymentMethod   =paymentMethod;
+     shop.totalPayment= total;
+     shop.clientInformations=formData
+     return this.http.post(this.configuration.getUrlServices().shop,shop).pipe(
+       map(this.dataExtract),
+       catchError((error)=>{
+         return empty();
+       })
+     )
    }
 } 

@@ -4,5 +4,6 @@
     "contentCoursesService":"http://localhost/wasserschuleNew/wp-json/wl/v1/courses/",
     "freecoursService":"http://localhost/wasserschuleNew/wp-json/wl/v1/coursesById/",
     "subscribeToCours":"http://localhost/wasserschuleNew/wp-json/wl/v1/sendForm/",
-    "planningService":"http://localhost/wasserschuleNew/wp-json/wl/v1/planning/"
+    "planningService":"http://localhost/wasserschuleNew/wp-json/wl/v1/planning/",
+    "shop":"http://localhost/wasserschuleNew/wp-json/wl/v1/shop/"
 }

@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit} from '@angular/core';
 import { ModalController } from '@ionic/angular';
 import { Router } from '@angular/router';
 import { CartService } from '../../services/cart.service'
@@ -16,13 +16,27 @@ import {
 })
 export class CartViewPage implements OnInit {
   cart : Product[] =[];
+  purchaseUnits :paypalProduct[]=[];
+  paymentMethod:string="";
+  total;
 
   constructor(private modalCtrl : ModalController, private cartService : CartService,
     private wordPService : WordpressService,private route: Router) { }
 
   ngOnInit() {
     this.cart = this.cartService.getCart();
-    this.initConfig();
+    this.cart.forEach(el=>{
+      let product= {
+        name : el['name'].toString(),
+        quantity: el['qtyCommanded'].toString(),
+        category: 'DIGITAL_GOODS',
+        unit_amount: {
+          currency_code: 'EUR',
+          value: el['price'].toString()
+        }
+      }
+      this.purchaseUnits.push(product);
+    });
 
   }
   decreaseCartItem(product){
@@ -35,7 +49,8 @@ export class CartViewPage implements OnInit {
     this.cartService.removeProduct(product);
   }
   getTotale(){
-    return this.cart.reduce((acc,current)=>acc+current.price*current.qtyCommanded,0)
+    this.total = this.cart.reduce((acc,current)=>acc+current.price*current.qtyCommanded,0);
+    return this.total;
   }
   close(){
     this.modalCtrl.dismiss();
@@ -46,65 +61,17 @@ export class CartViewPage implements OnInit {
   }
   public payPalConfig ? : IPayPalConfig;
 
-  private initConfig(): void {
-    this.payPalConfig = {
-        currency: 'USD',
-        clientId: 'ASsKjrKdoMD62GM1k3ZMhHRCLmTtznXTq-rqxHxZUSMKvLQa7I3TjXPAlMx2rJdRdzLdemxqxTjUDbSC',
-        createOrderOnClient: (data) => <ICreateOrderRequest> {
-            intent: 'CAPTURE',
-            purchase_units: [{
-                amount: {
-                    currency_code: 'USD',
-                    value: '5.00',
-                    breakdown: {
-                        item_total: {
-                            currency_code: 'USD',
-                            value: '5.00'
-                        }
-                    }
-                },
-                items: [{
-                    name: 'Wasserschule',
-                    quantity: '1',
-                    category: 'DIGITAL_GOODS',
-                    unit_amount: {
-                        currency_code: 'USD',
-                        value: '5.00',
-                    },
-                }]
-            }]
-        },
-        advanced: {
-            commit: 'true'
-        },
-        style: {
-            label: 'paypal',
-            layout: 'vertical',
-            size:"small",
-            color:"blue",
-            shape:"rect"
-        },
-        onApprove: (data, actions) => {
-            console.log('onApprove - transaction was approved, but not authorized', data, actions);
-            actions.order.get().then(details => {
-                console.log('onApprove - you can get full order details inside onApprove: ', details);
-            });
-
-        },
-        onClientAuthorization: (data) => {
-            console.log('onClientAuthorization - you should probably inform your server about completed transaction at this point', data);
-        },
-        onCancel: (data, actions) => {
-            console.log('OnCancel', data, actions);
-
-        },
-        onError: err => {
-            console.log('OnError', err);
-        },
-        onClick: (data, actions) => {
-            console.log('onClick', data, actions);
-        },
-    };
+  selectCheckBox(paymentMethod){
+    this.paymentMethod = paymentMethod;
+  }
 }
 
+interface paypalProduct{
+  name: String;
+  quantity: String,
+  category: string,
+  unit_amount: {
+    currency_code: string,
+    value: string
+  }
 }

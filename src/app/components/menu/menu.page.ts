@@ -22,7 +22,13 @@ export class MenuPage implements OnInit {
     this.navigate = this.configurationService.getMenuContent();
   }
   onSelectCours(postId, id){
-    postId ==="shop" ? this.router.navigateByUrl('/shop'):this.router.navigateByUrl('/cours/'+ postId+'/' + id);
+    if (postId === "home"){
+      this.router.navigateByUrl("");
+    }else if (postId === "shop"){
+      this.router.navigateByUrl('/shop');
+    }else{
+      this.router.navigateByUrl('/cours/'+ postId+'/' + id);
+    }
     this.menu.close("main-menu");
 
   }

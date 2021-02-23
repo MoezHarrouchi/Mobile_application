@@ -9,11 +9,11 @@
 
 <ion-content>
   <div class="ion-padding">
-    <ion-list>
+    <ion-list class="list">
       <ion-item *ngFor="let p of cart" class="ion-text-wrap">
         <ion-grid>
           <ion-row class="ion-align-items-center">
-            <ion-col size="2" class="ion-align-self-center">
+            <ion-col size="2" class="ion-text-center">
               <ion-button
                 color="medium"
                 fill="clear"
@@ -22,10 +22,10 @@
                 <ion-icon name="remove-circle" slot="icon-only"></ion-icon>
               </ion-button>
             </ion-col>
-            <ion-col size="1" class="ion-align-self-center">
+            <ion-col size="2" class="ion-text-center">
               {{p.qtyCommanded}}
             </ion-col>
-            <ion-col size="2" class="ion-align-self-center">
+            <ion-col size="1" class="ion-text-center">
               <ion-button
                 color="medium"
                 fill="clear"
@@ -34,7 +34,7 @@
                 <ion-icon name="add-circle" slot="icon-only"> </ion-icon>
               </ion-button>
             </ion-col>
-            <ion-col size="2" offset="5">
+            <ion-col size="1" offset="5">
               <ion-button
                 color="medium"
                 fill="clear"
@@ -64,11 +64,43 @@
           </ion-row>
         </ion-grid>
       </ion-item>
-    </ion-list>
-    <ngx-paypal [config]="payPalConfig"></ngx-paypal>
+      <ion-item>
+        <ion-grid>
+          <ion-row *ngIf="cart.length>0">
+            <ion-col size="10">
+              <ion-list>
+                <ion-radio-group>
+                  <ion-list-header>
+                    <ion-label>Zahlungsart : </ion-label>
+                  </ion-list-header>
 
-    <!-- <ion-button expand="full" color="dark" (click)="carddetail()">
-      Pay Now
-    </ion-button> -->
+                  <ion-item>
+                    <ion-label>Paypal</ion-label>
+                    <ion-radio
+                      slot="start"
+                      (click)="selectCheckBox('paypal')"
+                    ></ion-radio>
+                  </ion-item>
+                  <ion-item>
+                    <ion-label>Weiter zur kasse</ion-label>
+                    <ion-radio
+                      slot="start"
+                      (click)="selectCheckBox('transfertBank')"
+                    ></ion-radio>
+                  </ion-item>
+                </ion-radio-group>
+              </ion-list>
+            </ion-col>
+          </ion-row>
+        </ion-grid>
+      </ion-item>
+    </ion-list>
+
+    <app-payment-form
+      *ngIf="cart.length>0"
+      [paymentMethod]="paymentMethod"
+      [total]="total"
+      [purchaseUnits]="purchaseUnits"
+    ></app-payment-form>
   </div>
 </ion-content>

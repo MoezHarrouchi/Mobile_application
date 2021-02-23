@@ -2,7 +2,6 @@
     display: flex;
     justify-content: center;
     align-items: center;
-    background: var(--dark-color);
     padding: 2em 0;
     min-height: 200px;
     .logo-section__wrapper{
@@ -31,6 +30,22 @@
     font-weight:500;
 }
 .sub-item{
-    padding-left: 20px;
+    padding-left: 10%;
     font-size: small;
 }
+.icon-container{
+    height: 85%;
+    width: 20%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: #dfe1e652;
+    border-radius: 16%;
+    margin-left: 30px;
+    margin:5%;
+}
+ion-icon{
+ color:#1d70b8;
+}
+
+

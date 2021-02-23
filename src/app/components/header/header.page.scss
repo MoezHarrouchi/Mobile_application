@@ -10,12 +10,12 @@ ion-header {
     font-weight: 400;
   }
 }
-
-
-
+ion-icon{
+  margin-right: -7px;
+  font-size: 20px;
+}
 .product-count{
   margin-bottom: 9px;
   color: white;
-  height: 18px;
-  width: 15px;
+  border-radius: 100%;
 }

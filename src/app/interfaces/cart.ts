@@ -5,6 +5,12 @@ export interface Product {
     stock_quantity,
     qtyCommanded
 }
-export interface cv{
-
-}
+export interface PaypalProduct{
+    name: String;
+    quantity: String,
+    category: string,
+    unit_amount: {
+      currency_code: string,
+      value: string
+    }
+  }

@@ -35,8 +35,10 @@ export class CartService {
     for(let [index,p]of this.cart.entries()){
       if (p.id === product.id){
         p.qtyCommanded -= 1;
-        if(p.qtyCommanded == 0)
-        this.cart.splice(index,1);
+        if (p.qtyCommanded == 0){
+          this.cart.splice(index,1);
+          product.qtyCommanded = 1;
+        }
       }
     }
     this.cartItemCount.next(this.cartItemCount.value -1 );
@@ -45,6 +47,7 @@ export class CartService {
     for(let [index,p]of this.cart.entries()){
         if(p.id == product.id){
           this.cartItemCount.next(this.cartItemCount.value - p.qtyCommanded);
+          product.qtyCommanded=1;
           this.cart.splice(index,1);
         }
     }

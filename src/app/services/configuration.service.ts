@@ -25,5 +25,6 @@ interface urlService{
   contentCoursesService,
   freecoursService,
   subscribeToCours,
-  planningService
+  planningService,
+  shop
 }

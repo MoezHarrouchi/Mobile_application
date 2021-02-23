@@ -1,0 +1,96 @@
+<div *ngIf="paymentMethod == 'paypal'" class="paypal-container">
+  <ngx-paypal [config]="payPalConfig"></ngx-paypal>
+</div>
+<div *ngIf="paymentMethod == 'transfertBank'" class="container-form">
+  <form
+    [formGroup]="angForm"
+    (ngSubmit)="onSubmit()"
+    *ngIf="serverResponse.length == 0"
+    novalidate
+  >
+    <ion-grid>
+      <div *ngFor="let input of ListOfInputs">
+        <ion-row class="ion-margin" ngFor="let error of inputError">
+          <ion-col>
+            <ion-label>{{ input.label }}</ion-label>
+            <ion-item
+              *ngIf="
+                  input.type != 'checkbox' && input.type != 'moreOnecheckbox'
+                "
+              class="inputs-item"
+            >
+              <ion-input
+                *ngIf="
+                    input.type == 'text' ||
+                    input.type == 'date' ||
+                    input.type == 'tel'
+                  "
+                class="form-control"
+                formControlName="{{ input.name }}"
+                type="{{ input.type }}"
+                position="stacked"
+                clearInput="false"
+              ></ion-input>
+              <ion-textarea *ngIf="input.type == 'textarea'"> </ion-textarea>
+            </ion-item>
+            <ion-list *ngIf="input.type == 'moreOnecheckbox'">
+              <ion-radio-group formControlName="{{input.name}}">
+                <ion-item *ngFor="let choice of input.choices">
+                  <ion-label>{{choice}}</ion-label>
+                  <ion-radio
+                    allow-empty-selection="false"
+                    value="{{choice}}"
+                    slot="start"
+                  ></ion-radio>
+                </ion-item>
+              </ion-radio-group>
+            </ion-list>
+
+            <div
+              *ngIf="
+                  angForm.controls[input.name].invalid &&
+                  (angForm.controls[input.name].dirty ||
+                    angForm.controls[input.name].touched)
+                "
+              class="validation-errors"
+            >
+              <div
+                *ngIf="angForm.controls[input.name].errors.required"
+                class="error-message sc"
+              >
+                {{ inputsError[input.name][0]["message"] }}
+              </div>
+              <div
+                *ngIf="angForm.controls[input.name].errors.pattern"
+                class="error-message"
+              >
+                {{ inputsError[input.name][1]["message"] }}
+              </div>
+            </div>
+          </ion-col>
+          <ion-col *ngIf="input.type == 'checkbox'">
+            <ion-checkbox
+              formControlName="{{ input.name }}"
+              color="secondary"
+              checked="false"
+            ></ion-checkbox>
+          </ion-col>
+        </ion-row>
+      </div>
+      <ion-row>
+        <ion-col>
+          <ion-button
+            type="submit"
+            [disabled]="angForm.pristine || angForm.invalid"
+            class="btn btn-success"
+            expand="block"
+            size="large"
+          >
+            Weiter
+          </ion-button>
+        </ion-col>
+      </ion-row>
+    </ion-grid>
+  </form>
+  <p *ngIf="serverResponse.length>0">{{serverResponse}}</p>
+</div>

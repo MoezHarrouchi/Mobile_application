@@ -2,7 +2,7 @@ import { NgModule } from '@angular/core';
 import { PreloadAllModules, RouterModule, Routes } from '@angular/router';
 import { GetContentCoursesResolverService } from './resolvers/getContentCourses-resolver.service';
 import { SlidesComponent } from './components/slides/slides.component'
-import { GetPlanningResolverService }from './resolvers/get-planning-resolver.service'
+import { TabsPage } from './pages/tabs/tabs.page';
 
 const routes: Routes = [
   {
@@ -55,6 +55,14 @@ const routes: Routes = [
     /*resolve:{
       planning :GetPlanningResolverService
     }*/
+  },{
+    path:'',
+    loadChildren : () => import('./pages/tabs/tabs.module').then(m=>m.TabsPageModule),
+    component:TabsPage
+  },
+  {
+    path: 'payment-form',
+    loadChildren: () => import('./pages/payment-form/payment-form.module').then( m => m.PaymentFormPageModule)
   }
 
 
