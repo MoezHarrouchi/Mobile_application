@@ -19,6 +19,8 @@ export class CartViewPage implements OnInit {
   purchaseUnits :paypalProduct[]=[];
   paymentMethod:string="";
   total;
+  loading:boolean;
+  hiddenForm=false;
 
   constructor(private modalCtrl : ModalController, private cartService : CartService,
     private wordPService : WordpressService,private route: Router) { }
@@ -37,6 +39,12 @@ export class CartViewPage implements OnInit {
       }
       this.purchaseUnits.push(product);
     });
+    this.cartService.gethiddenForm().subscribe(res=>{
+      this.hiddenForm=res;
+    })
+    this.cartService.getIsloader().subscribe(res=>{
+      this.loading = res;
+    });
 
   }
   decreaseCartItem(product){
@@ -54,6 +62,7 @@ export class CartViewPage implements OnInit {
   }
   close(){
     this.modalCtrl.dismiss();
+    this.cartService.sethiddenForm(false);
   }
   carddetails(){
     this.close();

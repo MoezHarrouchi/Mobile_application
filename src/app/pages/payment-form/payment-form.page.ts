@@ -1,11 +1,12 @@
-import { Component, OnInit,Input } from '@angular/core';
-import { Form, FormBuilder,FormGroup,Validators} from '@angular/forms';
+import { Component, OnInit,Input,EventEmitter,Output } from '@angular/core';
+import { FormBuilder,FormGroup,Validators} from '@angular/forms';
 import {
   IPayPalConfig,
   ICreateOrderRequest 
 } from 'ngx-paypal';
 import { WordpressService } from '../../services/wordpress.service'
 import { PaypalProduct } from '../../interfaces/cart'
+import { CartService } from 'src/app/services/cart.service';
 
 @Component({
   selector: 'app-payment-form',
@@ -20,6 +21,8 @@ export class PaymentFormPage implements OnInit {
   angForm : FormGroup;
   isDelivery='false';
   serverResponse:String="";
+  isLoader :boolean;
+  hiddenForm:boolean=false;
   public payPalConfig ? : IPayPalConfig;
 
   ListOfInputs = [
@@ -65,14 +68,17 @@ export class PaymentFormPage implements OnInit {
   };
 
 
-  constructor( private fB:FormBuilder,private wordPressSercice:WordpressService) { }
-  ngOnChanges(){
-   this.serverResponse;
-  }
+  constructor( private fB:FormBuilder,private wordPressSercice:WordpressService, private cartService:CartService) { }
+
   ngOnInit() {
     this.createForm();
     this.initConfig();
 
+  }
+  ngDoCheck(){
+    this.cartService.gethiddenForm().subscribe(res=>{
+      this.hiddenForm = res;
+    })
   }
 
   createForm(){
@@ -149,8 +155,13 @@ export class PaymentFormPage implements OnInit {
     };
 }
   onSubmit(){
-    this.wordPressSercice.shop("false",this.purchaseUnits,this.total,this.paymentMethod,this.angForm.value).subscribe(res=>{
+    this.cartService.sethiddenForm(true);
+    this.cartService.setLoader(true);
+    this.wordPressSercice.shop(this.angForm.value.isDelivery,this.purchaseUnits,this.total,this.paymentMethod,this.angForm.value).subscribe(res=>{
       this.serverResponse = res;
+      this.cartService.setLoader(false);
+
+
     })
   }
 }

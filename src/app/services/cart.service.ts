@@ -8,9 +8,23 @@ import { Product } from '../interfaces/cart';
 export class CartService {
   private cart =[];
   private cartItemCount = new BehaviorSubject(0);
+  private isLoader = new BehaviorSubject<boolean>(false);
+  private hiddenForm = new BehaviorSubject<boolean>(false);
 
   constructor() { }
+  sethiddenForm(value){
+    this.hiddenForm.next(value);
+  }
+  gethiddenForm(){
+    return this.hiddenForm;
+  }
 
+  setLoader(value){
+    this.isLoader.next(value);
+  }
+  getIsloader(){
+    return this.isLoader;
+  }
   getCart(){
     return this.cart;
   }

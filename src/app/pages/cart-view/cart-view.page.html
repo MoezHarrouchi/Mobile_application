@@ -8,8 +8,18 @@
 </ion-header>
 
 <ion-content>
-  <div class="ion-padding">
+  <div
+    class="container-loading"
+    *ngIf="loading == true"
+    style="height: 100%; background-color: white"
+  >
+    <ion-spinner name="lines" position="stacked"></ion-spinner>
+  </div>
+  <div *ngIf="loading == false" class="ion-padding">
     <ion-list class="list">
+      <ion-toolbar>
+        <ion-title size="large" class="ion-text-center"> Warenkorb </ion-title>
+      </ion-toolbar>
       <ion-item *ngFor="let p of cart" class="ion-text-wrap">
         <ion-grid>
           <ion-row class="ion-align-items-center">
@@ -95,12 +105,11 @@
         </ion-grid>
       </ion-item>
     </ion-list>
-
-    <app-payment-form
-      *ngIf="cart.length>0"
-      [paymentMethod]="paymentMethod"
-      [total]="total"
-      [purchaseUnits]="purchaseUnits"
-    ></app-payment-form>
   </div>
+  <app-payment-form
+    *ngIf="cart.length>0"
+    [paymentMethod]="paymentMethod"
+    [total]="total"
+    [purchaseUnits]="purchaseUnits"
+  ></app-payment-form>
 </ion-content>

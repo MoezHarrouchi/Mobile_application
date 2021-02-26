@@ -1,17 +1,27 @@
 <div *ngIf="paymentMethod == 'paypal'" class="paypal-container">
   <ngx-paypal [config]="payPalConfig"></ngx-paypal>
 </div>
+
 <div *ngIf="paymentMethod == 'transfertBank'" class="container-form">
   <form
     [formGroup]="angForm"
     (ngSubmit)="onSubmit()"
-    *ngIf="serverResponse.length == 0"
+    *ngIf="hiddenForm == false"
     novalidate
   >
     <ion-grid>
+      <ion-row>
+        <ion-col>
+          <ion-toolbar>
+            <ion-title size="large" class="ion-text-center">
+              Rechnungsdetails
+            </ion-title>
+          </ion-toolbar>
+        </ion-col>
+      </ion-row>
       <div *ngFor="let input of ListOfInputs">
         <ion-row class="ion-margin" ngFor="let error of inputError">
-          <ion-col>
+          <ion-col size="12">
             <ion-label>{{ input.label }}</ion-label>
             <ion-item
               *ngIf="
@@ -36,7 +46,7 @@
             <ion-list *ngIf="input.type == 'moreOnecheckbox'">
               <ion-radio-group formControlName="{{input.name}}">
                 <ion-item *ngFor="let choice of input.choices">
-                  <ion-label>{{choice}}</ion-label>
+                  <ion-label class="ion-text-wrap">{{choice}}</ion-label>
                   <ion-radio
                     allow-empty-selection="false"
                     value="{{choice}}"
@@ -68,23 +78,16 @@
               </div>
             </div>
           </ion-col>
-          <ion-col *ngIf="input.type == 'checkbox'">
-            <ion-checkbox
-              formControlName="{{ input.name }}"
-              color="secondary"
-              checked="false"
-            ></ion-checkbox>
-          </ion-col>
         </ion-row>
       </div>
       <ion-row>
-        <ion-col>
+        <ion-col class="ok-container">
           <ion-button
             type="submit"
             [disabled]="angForm.pristine || angForm.invalid"
             class="btn btn-success"
             expand="block"
-            size="large"
+            size="small"
           >
             Weiter
           </ion-button>
@@ -92,5 +95,14 @@
       </ion-row>
     </ion-grid>
   </form>
-  <p *ngIf="serverResponse.length>0">{{serverResponse}}</p>
+  <ion-grid>
+    <ion-row>
+      <ion-col
+        class="payment-response ion-padding"
+        *ngIf="serverResponse.length>0"
+      >
+        <b> {{serverResponse}}</b>
+      </ion-col>
+    </ion-row>
+  </ion-grid>
 </div>
