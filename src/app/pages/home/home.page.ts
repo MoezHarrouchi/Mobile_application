@@ -29,10 +29,8 @@ export class HomePage implements OnInit {
   async getData() {
     await this.wordpress.getHomeData()
     .subscribe(res => {
-      this.slides = res.filter(item => item.url.includes('header'))
-      .map(el => this.configuration.urls.mainService.concat(el.url.slice(el.url.indexOf('uploads'), el.url.length)));
-      this.shops = res.filter(item => item.url.includes('blue'))
-      .map(el => this.configuration.urls.mainService.concat(el.url.slice(el.url.indexOf('uploads'), el.url.length)));
+      this.slides = ["https://www.wasserschule.de/wp-content/uploads/2020/01/Shop-header4-1.jpg","https://www.wasserschule.de/wp-content/uploads/2019/10/cropped-erwachsenenkurse-1.jpg"];
+      this.shops = ["https://www.wasserschule.de/wp-content/uploads/2019/12/rot_weiß_800.jpg","https://www.wasserschule.de/wp-content/uploads/2019/12/white-blue-girl-800.jpg","https://www.wasserschule.de/wp-content/uploads/2019/12/oil3-800.jpg","https://www.wasserschule.de/wp-content/uploads/2019/12/red-boy2-800.jpg"];
       this.loading = true;
     }, error => {
     });

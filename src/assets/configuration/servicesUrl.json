@@ -1,9 +1,9 @@
 {
-    "mainService":"http://localhost/wasserschuleNew/wp-content/",
-    "imagesService":"http://localhost/wasserschuleNew/wp-json/wl/v1/images/",
-    "contentCoursesService":"http://localhost/wasserschuleNew/wp-json/wl/v1/courses/",
-    "freecoursService":"http://localhost/wasserschuleNew/wp-json/wl/v1/coursesById/",
-    "subscribeToCours":"http://localhost/wasserschuleNew/wp-json/wl/v1/sendForm/",
-    "planningService":"http://localhost/wasserschuleNew/wp-json/wl/v1/planning/",
-    "shop":"http://localhost/wasserschuleNew/wp-json/wl/v1/shop/"
+    "mainService":"https://www.wasserschule.de/index.php/wp-content/",
+    "imagesService":"https://www.wasserschule.de/index.php/wp-json/wl/v1/images/",
+    "contentCoursesService":"https://www.wasserschule.de/index.php/wp-json/wl/v1/courses/",
+    "freecoursService":"https://www.wasserschule.de/index.php/wp-json/wl/v1/coursesById/",
+    "subscribeToCours":"https://www.wasserschule.de/index.php/wp-json/wl/v1/sendForm/",
+    "planningService":"https://www.wasserschule.de/index.php/wp-json/wl/v1/planning/",
+    "shop":"https://www.wasserschule.de/index.php/wp-json/wl/v1/shop/"
 }

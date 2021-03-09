@@ -18,9 +18,11 @@ export class CartViewPage implements OnInit {
   cart : Product[] =[];
   purchaseUnits :paypalProduct[]=[];
   paymentMethod:string="";
+  totalWithDeliv;
   total;
   loading:boolean;
   hiddenForm=false;
+  isDelivery:boolean=true;
 
   constructor(private modalCtrl : ModalController, private cartService : CartService,
     private wordPService : WordpressService,private route: Router) { }
@@ -45,6 +47,7 @@ export class CartViewPage implements OnInit {
     this.cartService.getIsloader().subscribe(res=>{
       this.loading = res;
     });
+    this.initConfig();
 
   }
   decreaseCartItem(product){
@@ -55,6 +58,15 @@ export class CartViewPage implements OnInit {
   }
   removeCartItem(product){
     this.cartService.removeProduct(product);
+  }
+  getLastTotale(){
+    if (this.isDelivery){
+      this.totalWithDeliv = this.cart.reduce((acc,current)=>acc+current.price*current.qtyCommanded,0) + 4.7;
+      return this.totalWithDeliv;
+    }else{
+      return this.total;
+    }
+
   }
   getTotale(){
     this.total = this.cart.reduce((acc,current)=>acc+current.price*current.qtyCommanded,0);
@@ -73,6 +85,65 @@ export class CartViewPage implements OnInit {
   selectCheckBox(paymentMethod){
     this.paymentMethod = paymentMethod;
   }
+  setDelivery(value){
+    this.isDelivery= value;
+  }
+
+  private initConfig(): void {
+    this.payPalConfig = {
+        currency: 'EUR',
+        clientId: 'AVmo547lzLlL5m2w9PzsuIEpGruiQNvO2EmVUafKcZMVRiU-WEC-UzWoWBiZZl2AMXy2LDaoLCvw8D5-',
+        createOrderOnClient: (data) => <ICreateOrderRequest> {
+            intent: 'CAPTURE',
+            purchase_units: [{
+                amount: {
+                    currency_code: 'EUR',
+                    value:  this.total.toString(),
+                    breakdown: {
+                        item_total: {
+                            currency_code: 'EUR',
+                            value: this.total.toString()
+                        }
+                    }
+                },
+                items: this.purchaseUnits
+            }]
+        },
+        advanced: {
+            commit: 'false'
+        },
+        style: {
+            label: 'paypal',
+            layout: 'vertical',
+            size:"small",
+            color:"blue",
+            shape:"rect"
+        },
+        onApprove: (data, actions) => {
+          
+            console.log('onApprove - transaction was approved, but not authorized', data, actions);
+            actions.order.get().then(details => {
+                console.log('onApprove - you can get full order details inside onApprove: ', details);
+            });
+
+        },
+        onClientAuthorization: (data) => {
+            console.log('onClientAuthorization - you should probably inform your server about completed transaction at this point', data);
+        },
+        onCancel: (data, actions) => {
+            console.log('OnCancel', data, actions);
+
+        },
+        onError: err => {
+            console.log('OnError', err);
+        },
+        onClick: (data, actions) => {       
+          console.log('onClick', data, actions);
+        },
+    };
+}
+
+
 }
 
 interface paypalProduct{
