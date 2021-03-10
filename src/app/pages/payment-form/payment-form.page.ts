@@ -7,6 +7,7 @@ import {
 import { WordpressService } from '../../services/wordpress.service'
 import { PaypalProduct } from '../../interfaces/cart'
 import { CartService } from 'src/app/services/cart.service';
+import { ModalController } from '@ionic/angular';
 
 @Component({
   selector: 'app-payment-form',
@@ -14,10 +15,9 @@ import { CartService } from 'src/app/services/cart.service';
   styleUrls: ['./payment-form.page.scss'],
 })
 export class PaymentFormPage implements OnInit {
-
-  @Input() paymentMethod;
-  @Input() purchaseUnits:PaypalProduct[];
-  @Input() total;
+  @Input("paymentMethod") paymentMethod;
+  @Input("purchaseUnits") purchaseUnits;
+  @Input("total") total;
   angForm : FormGroup;
   isDelivery='false';
   serverResponse:String="";
@@ -68,12 +68,10 @@ export class PaymentFormPage implements OnInit {
   };
 
 
-  constructor( private fB:FormBuilder,private wordPressSercice:WordpressService, private cartService:CartService) { }
+  constructor( private fB:FormBuilder, private modalController : ModalController ,private wordPressSercice:WordpressService, private cartService:CartService) { }
 
   ngOnInit() {
     this.createForm();
-    this.initConfig();
-
   }
   ngDoCheck(){
     this.cartService.gethiddenForm().subscribe(res=>{
@@ -100,60 +98,12 @@ export class PaymentFormPage implements OnInit {
       isDelivery:['',Validators.required],
     });
   }
+  close(){
+    this.modalController.dismiss({
+      dimissed:true
+    })
+  }
 
-  private initConfig(): void {
-    this.payPalConfig = {
-        currency: 'EUR',
-        clientId: 'AVmo547lzLlL5m2w9PzsuIEpGruiQNvO2EmVUafKcZMVRiU-WEC-UzWoWBiZZl2AMXy2LDaoLCvw8D5-',
-        createOrderOnClient: (data) => <ICreateOrderRequest> {
-            intent: 'CAPTURE',
-            purchase_units: [{
-                amount: {
-                    currency_code: 'EUR',
-                    value: this.total.toString(),
-                    breakdown: {
-                        item_total: {
-                            currency_code: 'EUR',
-                            value: this.total.toString()
-                        }
-                    }
-                },
-                items: this.purchaseUnits
-            }]
-        },
-        advanced: {
-            commit: 'false'
-        },
-        style: {
-            label: 'paypal',
-            layout: 'vertical',
-            size:"small",
-            color:"blue",
-            shape:"rect"
-        },
-        onApprove: (data, actions) => {
-          
-            console.log('onApprove - transaction was approved, but not authorized', data, actions);
-            actions.order.get().then(details => {
-                console.log('onApprove - you can get full order details inside onApprove: ', details);
-            });
-
-        },
-        onClientAuthorization: (data) => {
-            console.log('onClientAuthorization - you should probably inform your server about completed transaction at this point', data);
-        },
-        onCancel: (data, actions) => {
-            console.log('OnCancel', data, actions);
-
-        },
-        onError: err => {
-            console.log('OnError', err);
-        },
-        onClick: (data, actions) => {       
-          console.log('onClick', data, actions);
-        },
-    };
-}
   onSubmit(){
     this.cartService.sethiddenForm(true);
     this.cartService.setLoader(true);

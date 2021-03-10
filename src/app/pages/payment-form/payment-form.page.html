@@ -1,7 +1,3 @@
-<div *ngIf="paymentMethod == 'paypal'" class="paypal-container">
-  <ngx-paypal [config]="payPalConfig"></ngx-paypal>
-</div>
-
 <div *ngIf="paymentMethod == 'transfertBank'" class="container-form">
   <form
     [formGroup]="angForm"

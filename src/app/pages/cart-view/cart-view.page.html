@@ -59,7 +59,7 @@
               <b>{{p.name}}</b>
             </ion-col>
             <ion-col size="3" class="ion-text-end">
-              {{p.qtyCommanded * p.price | currency:'USD'}}
+              {{p.qtyCommanded * p.price | currency:'EUR'}}
             </ion-col>
           </ion-row>
         </ion-grid>
@@ -69,7 +69,7 @@
           <ion-row>
             <ion-col size="9"> Totale : </ion-col>
             <ion-col size="3" class="ion-text-end">
-              {{ getTotale() | currency:'USD' }}
+              {{ getTotale() | currency:'EUR' }}
             </ion-col>
           </ion-row>
         </ion-grid>
@@ -135,7 +135,7 @@
         <ion-row>
           <ion-col class="title-cours ion-padding" size="6">Preis</ion-col>
           <ion-col size="6" class="ion-text-center ion-padding"
-            >{{p.price | currency:'USD'}}</ion-col
+            >{{p.price | currency:'EUR'}}</ion-col
           >
         </ion-row>
         <ion-row>
@@ -163,7 +163,7 @@
             >Zwischensumme</ion-col
           >
           <ion-col size="6" class="ion-text-center ion-text-wrap ion-padding"
-            >{{p.qtyCommanded * p.price | currency:'USD'}}
+            >{{p.qtyCommanded * p.price | currency:'EUR'}}
           </ion-col>
         </ion-row>
       </div>
@@ -178,7 +178,7 @@
             Zwischensumme</ion-col
           >
           <ion-col class="ion-text-center ion-padding title-cours" size="7">
-            {{ getTotale() | currency:'USD' }}
+            {{ getTotale() | currency:'EUR' }}
           </ion-col>
         </ion-row>
         <ion-row>
@@ -212,7 +212,7 @@
             >Gesamtsumme</ion-col
           >
           <ion-col class="ion-text-center title-cours ion-padding" size="7">
-            <span> {{getLastTotale() | currency:'USD'}} </span>
+            <span> {{getLastTotale() | currency:'EUR'}} </span>
           </ion-col>
         </ion-row>
       </div>
@@ -220,7 +220,9 @@
   </div>
   <div class="paypal-container">
     <div>
-      <ion-button color="dark" expand="block"> Weiter zur Kasse</ion-button>
+      <ion-button color="dark" expand="block" (click)="presentSlide()">
+        Weiter zur Kasse</ion-button
+      >
     </div>
     <div class="divider ion-padding">
       <span>— OR — </span>
@@ -229,10 +231,4 @@
       <ngx-paypal [config]="payPalConfig"></ngx-paypal>
     </div>
   </div>
-  <app-payment-form
-    *ngIf="cart.length>0"
-    [paymentMethod]="paymentMethod"
-    [total]="total"
-    [purchaseUnits]="purchaseUnits"
-  ></app-payment-form>
 </ion-content>

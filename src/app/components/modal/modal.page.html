@@ -13,7 +13,7 @@
       <div *ngFor="let input of ListOfInputs">
         <ion-row class="ion-margin" ngFor="let error of inputError">
           <ion-col>
-            <ion-label>{{input.label}}</ion-label>
+            <ion-label [innerHtml]="input.label">{{input.label}}</ion-label>
             <ion-item
               *ngIf="input.type != 'checkbox' && input.type != 'moreOnecheckbox'"
               class="inputs-item"
@@ -41,7 +41,7 @@
               </ion-radio-group>
             </ion-list>
             <div
-              *ngIf="angForm.controls[input.name].invalid && (angForm.controls[input.name].dirty || angForm.controls[input.name].touched || angForm.controls[input.name].untouched)"
+              *ngIf="angForm.controls[input.name].invalid && (angForm.controls[input.name].dirty || angForm.controls[input.name].touched )"
               class="validation-errors"
             >
               <div
@@ -59,11 +59,7 @@
             </div>
           </ion-col>
           <ion-col *ngIf="input.type == 'checkbox'">
-            <ion-checkbox
-              formControlName="{{input.name}}"
-              color="secondary"
-              checked="false"
-            ></ion-checkbox>
+            <ion-checkbox formControlName="zustimmung"></ion-checkbox>
           </ion-col>
         </ion-row>
       </div>

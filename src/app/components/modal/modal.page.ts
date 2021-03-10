@@ -75,7 +75,7 @@ export class ModalPage implements OnInit {
     { name : 'zahlart', label: 'Zahlart' , type: 'moreOnecheckbox', choices: ['EC Cash', 'Bank Transfer']},
     { name : 'kgeb', label: 'Kgeb' , type: 'date'},
     { name : 'bemerkung', label: 'Bemerkung' , type: 'textarea'},
-    { name : 'zustimmung', label: 'Zustimmung' , type: 'checkbox'},
+    { name : 'zustimmung', label: '<a target="_blank" href="https://www.wasserschule.de/index.php/agb/">AGB</a> und <a target="_blank" href="https://www.wasserschule.de/index.php/privacy-policy/">Datenschutz</a> gelesen und zugestimmt:*' , type: 'checkbox'},
     { name : 'herkunft', label: 'Herkunft' , type: 'moreOnecheckbox', choices: ['Google', 'Freinds']}
 
   ];

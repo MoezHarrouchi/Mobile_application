@@ -4,6 +4,7 @@ import { Router } from '@angular/router';
 import { CartService } from '../../services/cart.service'
 import { WordpressService } from '../../services/wordpress.service';
 import { Product } from '../../interfaces/cart';
+import { PaymentFormPage } from '../payment-form/payment-form.page'
 import {
   IPayPalConfig,
   ICreateOrderRequest 
@@ -98,11 +99,11 @@ export class CartViewPage implements OnInit {
             purchase_units: [{
                 amount: {
                     currency_code: 'EUR',
-                    value:  this.total.toString(),
+                    value: this.isDelivery ? this.totalWithDeliv.toString() : this.total.toString ,
                     breakdown: {
                         item_total: {
                             currency_code: 'EUR',
-                            value: this.total.toString()
+                            value: this.getTotale.toString()
                         }
                     }
                 },
@@ -144,6 +145,18 @@ export class CartViewPage implements OnInit {
 }
 
 
+async presentSlide() {
+  const modal = await this.modalCtrl.create({
+    component:'PaymentFormPage' ,
+    cssClass: 'my-custom-class',
+    componentProps:{
+      purchaseUnits:this.purchaseUnits,
+      paymentMethod:'CASH',
+      total:this.total
+    }
+  });
+  return await modal.present();
+}
 }
 
 interface paypalProduct{

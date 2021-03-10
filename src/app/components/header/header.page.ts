@@ -1,5 +1,6 @@
 import { Component,  ElementRef, OnInit, ViewChild  } from '@angular/core';
 import { ModalController } from '@ionic/angular';
+import { Router } from '@angular/router';
 import { BehaviorSubject } from 'rxjs';
 import { CartService } from '../../services/cart.service';
 import { WordpressService } from '../../services/wordpress.service';
@@ -15,7 +16,7 @@ export class HeaderPage implements OnInit {
   @ViewChild('cart',{static: false,read:ElementRef}) fab:ElementRef;
   cartItemCount :BehaviorSubject<any>;
 
-  constructor(private modalController:ModalController,private cartService:CartService) { }
+  constructor(private modalController:ModalController,private cartService:CartService,private router:Router) { }
 
   ngOnInit() {
     this.cartItemCount = this.cartService.getCartItemCount();
@@ -45,5 +46,8 @@ export class HeaderPage implements OnInit {
     modal.present();
 
   }
+  goToHome(){
+   this.router.navigate([""]);
+}
 
 }
