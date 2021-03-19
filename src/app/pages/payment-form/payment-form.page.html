@@ -1,8 +1,8 @@
-<div *ngIf="paymentMethod == 'transfertBank'" class="container-form">
+<ion-content>
   <form
     [formGroup]="angForm"
     (ngSubmit)="onSubmit()"
-    *ngIf="hiddenForm == false"
+    *ngIf="hiddenForm == false && paymentMethod == 'transfertBank'"
     novalidate
   >
     <ion-grid>
@@ -101,4 +101,4 @@
       </ion-col>
     </ion-row>
   </ion-grid>
-</div>
+</ion-content>

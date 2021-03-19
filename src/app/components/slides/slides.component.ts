@@ -131,7 +131,7 @@ export class SlidesComponent implements OnInit {
     this.close();	
     const modal = await this.modalController.create({
       component: ModalPage,
-      cssClass: 'my-custom-class',
+      cssClass: 'modal',
       componentProps:{
         kursNr:this.kursNr,
         groupeNr:this.groupeNr,

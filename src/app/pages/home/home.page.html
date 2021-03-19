@@ -9,8 +9,46 @@
     ></ion-spinner>
   </div>
   <ion-slides pager="true" [options]="slideOpts">
-    <ion-slide *ngFor="let slide of slides;">
-      <ion-img *ngIf="slide" src="{{slide}}"></ion-img>
+    <ion-slide
+      style="
+        background: url('https://www.wasserschule.de/wp-content/uploads/2019/12/Shop-header4.jpg')
+          center no-repeat;
+        background-size: 100% 100%;
+
+        height: 100%;
+      "
+    >
+      <ion-button routerLink="/shop">SHOP NOW</ion-button>
+    </ion-slide>
+    <ion-slide
+      style="
+        background: url('https://www.wasserschule.de/wp-content/uploads/2020/01/Shop-header5.jpg')
+          center no-repeat;
+        background-size: 100% 100%;
+        height: 100%;
+      "
+    >
+      <ion-text> WILLKOMMEN </ion-text>
+    </ion-slide>
+    <ion-slide
+      style="
+        background: url('https://www.wasserschule.de/wp-content/uploads/2020/01/Shop-header-team-2-1.jpg')
+          center no-repeat;
+        background-size: 100% 100%;
+        height: 100%;
+      "
+    >
+      <ion-button>Werde Babyschwimmlehrer</ion-button>
+    </ion-slide>
+    <ion-slide
+      style="
+        background: url('https://www.wasserschule.de/wp-content/uploads/2020/11/Aquafun-header.png')
+          center no-repeat;
+        background-size: 100% 100%;
+        height: 100%;
+      "
+    >
+      <ion-button routerLink="cours/2847/298">AQUAFUN </ion-button>
     </ion-slide>
   </ion-slides>
   <div style="background-color: #d6d6d6" *ngIf="loading == true">
@@ -19,11 +57,6 @@
       style="background-color: #d6d6d6"
       class="body-header"
     >
-      <ion-row>
-        <ion-col>
-          <h2>SHOP PRODUKTE</h2>
-        </ion-col>
-      </ion-row>
       <div *ngFor="let shop of shops;">
         <ion-row>
           <ion-col>
@@ -52,15 +85,23 @@
       </ion-row>
       <ion-row>
         <ion-col>
-          <ion-icon name="help-buoy"></ion-icon>
-          <h2>Open Water plan</h2>
+          <a
+            href="https://www.wasserschule.de/wp-content/uploads/2020/10/openwater.pdf"
+          >
+            <ion-icon name="help-buoy"></ion-icon>
+            <h2>Open Water plan</h2>
+          </a>
+
           <p>Hier geht es zum aktuellen Plan!</p>
         </ion-col>
       </ion-row>
       <ion-row>
         <ion-col>
-          <ion-icon name="people"></ion-icon>
-          <h2>Job Gefällig?</h2>
+          <a href="https://www.wasserschule.de/index.php/jobseite/">
+            <ion-icon name="people"></ion-icon>
+            <h2>Job Gefällig?</h2>
+          </a>
+
           <p>Anklicken und stöbern!</p>
         </ion-col>
       </ion-row>
@@ -80,5 +121,4 @@
       </ion-row>
     </ion-grid>
   </div>
-  <app-footer *ngIf="loading == true"></app-footer>
 </ion-content>

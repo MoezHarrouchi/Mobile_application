@@ -27,10 +27,14 @@ export class HomePage implements OnInit {
 
   }
   async getData() {
+    this.slides = ["https://www.wasserschule.de/wp-content/uploads/2019/12/Shop-header-Team.jpg"];
+    this.shops = ["https://www.wasserschule.de/wp-content/uploads/2019/12/rot_weiß_800.jpg","https://www.wasserschule.de/wp-content/uploads/2019/12/white-blue-girl-800.jpg","https://www.wasserschule.de/wp-content/uploads/2019/12/oil3-800.jpg","https://www.wasserschule.de/wp-content/uploads/2019/12/red-boy2-800.jpg"];
+    this.loading = true;
+
     await this.wordpress.getHomeData()
     .subscribe(res => {
-      this.slides = ["https://www.wasserschule.de/wp-content/uploads/2020/01/Shop-header4-1.jpg","https://www.wasserschule.de/wp-content/uploads/2019/10/cropped-erwachsenenkurse-1.jpg"];
-      this.shops = ["https://www.wasserschule.de/wp-content/uploads/2019/12/rot_weiß_800.jpg","https://www.wasserschule.de/wp-content/uploads/2019/12/white-blue-girl-800.jpg","https://www.wasserschule.de/wp-content/uploads/2019/12/oil3-800.jpg","https://www.wasserschule.de/wp-content/uploads/2019/12/red-boy2-800.jpg"];
+      this.slides = ["https://www.wasserschule.de/wp-content/uploads/2019/12/Shop-header4.jpg"];
+      this.shops = [];
       this.loading = true;
     }, error => {
     });

@@ -1,5 +1,5 @@
-<ion-header>
-  <ion-toolbar color="warning">
+<ion-header color="favorite">
+  <ion-toolbar color="favorite">
     <ion-title>Shop</ion-title>
     <ion-button color="clear" size="small" slot="end" (click)="close()">
       <ion-icon name="close"></ion-icon>
@@ -114,9 +114,7 @@
       </ion-toolbar>
       <div class="productList" *ngFor="let p of cart">
         <ion-row>
-          <ion-col class="title-cours ion-padding" size="6"
-            >Produkt image</ion-col
-          >
+          <ion-col class="title-cours ion-padding" size="6">Produkt</ion-col>
           <ion-col size="6" class="ion-padding product-name"
             ><ion-img [src]="p.images[0].src"></ion-img>
             <ion-button color="medium" fill="clear" (click)="removeCartItem(p)">
@@ -198,6 +196,15 @@
                 </ion-item>
                 <ion-item>
                   <ion-label class="ion-text-wrap">Abholung vor Ort </ion-label>
+                  <ion-radio
+                    slot="start"
+                    (click)="setDelivery(false)"
+                  ></ion-radio>
+                </ion-item>
+                <ion-item>
+                  <ion-label class="ion-text-wrap"
+                    >online kostenlos nach bezahlen
+                  </ion-label>
                   <ion-radio
                     slot="start"
                     (click)="setDelivery(false)"

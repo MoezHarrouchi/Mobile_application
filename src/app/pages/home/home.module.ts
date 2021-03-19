@@ -5,8 +5,6 @@ import { FormsModule } from '@angular/forms';
 import { HomePage } from './home.page';
 import { HeaderPage } from '../../components/header/header.page';
 import { HomePageRoutingModule } from './home-routing.module';
-import {FooterPage } from '../../components/footer/footer.page';
-
 
 @NgModule({
   imports: [
@@ -15,6 +13,6 @@ import {FooterPage } from '../../components/footer/footer.page';
     IonicModule,
     HomePageRoutingModule
   ],
-  declarations: [HomePage, HeaderPage, FooterPage]
+  declarations: [HomePage, HeaderPage]
 })
 export class HomePageModule {}

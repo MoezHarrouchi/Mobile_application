@@ -8,8 +8,6 @@ import { CoursPageRoutingModule } from './cours-routing.module';
 
 import { CoursPage } from './cours.page';
 import { HeaderPage } from '../../components/header/header.page';
-import { FooterPage } from '../../components/footer/footer.page';
-
 @NgModule({
   imports: [
     CommonModule,
@@ -17,6 +15,6 @@ import { FooterPage } from '../../components/footer/footer.page';
     IonicModule,
     CoursPageRoutingModule
   ],
-  declarations: [CoursPage, HeaderPage, FooterPage]
+  declarations: [CoursPage, HeaderPage]
 })
 export class CoursPageModule {}

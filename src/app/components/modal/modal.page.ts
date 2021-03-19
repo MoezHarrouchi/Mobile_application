@@ -36,10 +36,7 @@ export class ModalPage implements OnInit {
     ort: [
       { type: 'Required', message: 'Place is required'}
     ],
-    handy: [
-      { type: 'Required', message: 'Phone is required'}
-    ],
-    telefon: [
+    Telefon_Handfon: [
       { type: 'pattern', message: 'MobilePhone shoud a number'}
     ],
     email: [
@@ -53,14 +50,10 @@ export class ModalPage implements OnInit {
       { type: 'Required', message: 'Date of birth is required'},
       { type: 'pattern', message: 'Date of birth is not valid'},
     ],
-    bemerkung: [
-    ],
     zustimmung: [
       { type: 'Required', message: 'Condition is required'},
     ],
-    herkunft: [
-      { type: 'Required', message: 'Hear about us is required'},
-    ],
+   
   };
   ListOfInputs = [
     { name : 'anrede', label: 'Anrede', type: 'moreOnecheckbox' , choices: ['Frau', 'Herr'] },
@@ -69,14 +62,11 @@ export class ModalPage implements OnInit {
     { name: 'strasse', label: 'Strasse', type: 'text'},
     { name : 'plz', label: 'PLZ' , type: 'text'},
     { name : 'ort', label: 'ORT' , type: 'text'},
-    { name : 'telefon', label: 'Telefon' , type: 'tel'},
-    { name : 'handy', label: 'Handy' , type: 'text'},
+    { name : 'Telefon_Handfon', label: 'Telefon' , type: 'tel'},
     { name : 'email', label: 'Email' , type: 'text'},
     { name : 'zahlart', label: 'Zahlart' , type: 'moreOnecheckbox', choices: ['EC Cash', 'Bank Transfer']},
     { name : 'kgeb', label: 'Kgeb' , type: 'date'},
-    { name : 'bemerkung', label: 'Bemerkung' , type: 'textarea'},
-    { name : 'zustimmung', label: '<a target="_blank" href="https://www.wasserschule.de/index.php/agb/">AGB</a> und <a target="_blank" href="https://www.wasserschule.de/index.php/privacy-policy/">Datenschutz</a> gelesen und zugestimmt:*' , type: 'checkbox'},
-    { name : 'herkunft', label: 'Herkunft' , type: 'moreOnecheckbox', choices: ['Google', 'Freinds']}
+    { name : 'zustimmung', label: '<a target="_blank" href="https://www.wasserschule.de/index.php/agb/">AGB</a> und <a target="_blank" href="https://www.wasserschule.de/index.php/privacy-policy/">Datenschutz</a> gelesen und zugestimmt:*' , type: 'checkbox'}
 
   ];
 
@@ -185,19 +175,16 @@ export class ModalPage implements OnInit {
       strasse: ['', Validators.required],
       plz: ['', Validators.required],
       ort: ['', Validators.required],
-      telefon: ['', Validators.compose([
+      Telefon_Handfon: ['', Validators.compose([
         Validators.required
       ])],
-      handy: ['', Validators.required],
       email: ['', Validators.compose([
         Validators.required,
         Validators.pattern('^[a-zA-Z0-9_.+-]+@[a-zA-Z0-9-]+.[a-zA-Z0-9-.]+$')
       ])],
       zahlart: ['', Validators.required],
       kgeb: ['', Validators.required],
-      bemerkung: [''],
-      zustimmung: ['', Validators.required],
-      herkunft: ['', Validators.required]
+      zustimmung: ['', Validators.required]
     });
   }
 

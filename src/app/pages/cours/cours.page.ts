@@ -62,7 +62,7 @@ export class CoursPage implements OnInit {
   async presentSlide(kursNr,kursBezID,action) {
     const modal = await this.modalController.create({
       component: SlidesComponent,
-      cssClass: 'my-custom-class',
+      cssClass: 'modal',
       componentProps:{
         kursNr,
         kursBezID,
