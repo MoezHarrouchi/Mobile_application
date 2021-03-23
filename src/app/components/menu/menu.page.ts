@@ -26,6 +26,11 @@ export class MenuPage implements OnInit {
       this.router.navigateByUrl("");
     }else if (postId === "shop"){
       this.router.navigateByUrl('/shop');
+    }else if (postId == "zumwasserplan"){
+      window.location.href = "https://www.wasser-plan.de/";
+    }else if (postId=="ausbildung"){
+      this.router.navigateByUrl("/formation")
+
     }else{
       this.router.navigateByUrl('/cours/'+ postId+'/' + id);
     }

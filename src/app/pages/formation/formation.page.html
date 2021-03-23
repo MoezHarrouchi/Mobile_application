@@ -1,0 +1,42 @@
+<app-header></app-header>
+
+<ion-content>
+  <div class="container-loading" *ngIf="loading == false">
+    <ion-spinner
+      name="lines"
+      position="stacked"
+      *ngIf="loading == false"
+    ></ion-spinner>
+  </div>
+
+  <ion-card>
+    <ion-item (click)="presentPopover(ev)">
+      <ion-icon
+        name="information-circle-outline"
+        slot="start"
+        color="favorite2"
+      ></ion-icon>
+      <ion-label color="dark" class="ion-text-wrap">{{productName}} </ion-label>
+    </ion-item>
+    <ion-slides pager="true" [options]="slideOpts">
+      <ion-slide *ngFor="let image of productImages">
+        <ion-img src="{{image.src}}"></ion-img>
+      </ion-slide>
+    </ion-slides>
+
+    <ion-card-content>
+      <ion-item>
+        <ion-button
+          slot="end"
+          (click)="increaseCartItem(product)"
+          color="warning"
+          size="small"
+          >In den Warenkorb</ion-button
+        >
+        <ion-label slot="start" color="favorite"
+          >{{productPrice | currency:'EUR'}}</ion-label
+        >
+      </ion-item>
+    </ion-card-content>
+  </ion-card>
+</ion-content>

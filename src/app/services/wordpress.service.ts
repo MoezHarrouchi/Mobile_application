@@ -63,8 +63,17 @@ export class WordpressService {
       })
     );
   }
-  subscribeToCourse(kursNr,action,grp,price,formData):Observable<any>{
-    return this.http.post(this.configuration.getUrlServices().subscribeToCours+kursNr+'/'+price+'/'+action+'/'+grp,formData)
+  
+  getProductByID(id):Observable<any>{
+    return this.http.get('https://www.wasserschule.de/index.php/wp-json/wc/v3/products/'+id+'?consumer_key=ck_c1fb88a602719192b5757f9f13b41b97dfcc8af6&consumer_secret=cs_112da8e8939b628ca895f984492a34da323bc16f',this.httpHeader)
+    .pipe(map(this.dataExtract),
+    catchError((error)=>{
+      return empty();
+    })
+    )
+  }
+  subscribeToCourse(kursNr,aktion,grp,price,formData):Observable<any>{
+    return this.http.post(this.configuration.getUrlServices().subscribeToCours+kursNr+'/'+price+'/'+aktion+'/'+grp,formData)
     .pipe(
       map(this.dataExtract),
       catchError((error)=>{

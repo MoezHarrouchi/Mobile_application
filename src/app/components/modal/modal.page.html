@@ -13,13 +13,13 @@
       <div *ngFor="let input of ListOfInputs">
         <ion-row class="ion-margin" ngFor="let error of inputError">
           <ion-col>
-            <ion-label [innerHtml]="input.label">{{input.label}}</ion-label>
+            <ion-label class="ion-text-wrap">{{input.label}}</ion-label>
             <ion-item
               *ngIf="input.type != 'checkbox' && input.type != 'moreOnecheckbox'"
               class="inputs-item"
             >
               <ion-input
-                *ngIf="input.type == 'text' || input.type == 'date' || input.type == 'tel'"
+                *ngIf="input.type == 'text' || input.type == 'date' || input.type == 'tel' || input.type == 'number'"
                 class="form-control"
                 formControlName="{{input.name}}"
                 type="{{input.type}}"
@@ -28,13 +28,35 @@
               ></ion-input>
               <ion-textarea *ngIf="input.type == 'textarea'"> </ion-textarea>
             </ion-item>
-            <ion-list *ngIf="input.type == 'moreOnecheckbox'">
+            <ion-list
+              *ngIf="input.type == 'moreOnecheckbox' && input.name != 'zustimmung'"
+            >
               <ion-radio-group formControlName="{{input.name}}">
                 <ion-item *ngFor="let choice of input.choices">
-                  <ion-label>{{choice}}</ion-label>
+                  <ion-label
+                    [innerHtml]="choice"
+                    class="ion-text-wrap"
+                  ></ion-label>
                   <ion-radio
                     allow-empty-selection="true"
                     value="{{choice}}"
+                    slot="start"
+                  ></ion-radio>
+                </ion-item>
+              </ion-radio-group>
+            </ion-list>
+
+            <ion-list
+              *ngIf="input.type == 'moreOnecheckbox' && input.name == 'zustimmung'"
+            >
+              <ion-radio-group formControlName="{{input.name}}">
+                <ion-item *ngFor="let choice of input.choices">
+                  <ion-label
+                    [innerHtml]="choice"
+                    class="ion-text-wrap"
+                  ></ion-label>
+                  <ion-radio
+                    allow-empty-selection="true"
                     slot="start"
                   ></ion-radio>
                 </ion-item>
@@ -57,9 +79,6 @@
                 {{inputsError[input.name][1]["message"]}}
               </div>
             </div>
-          </ion-col>
-          <ion-col *ngIf="input.type == 'checkbox'">
-            <ion-checkbox formControlName="zustimmung"></ion-checkbox>
           </ion-col>
         </ion-row>
       </div>

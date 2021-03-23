@@ -116,7 +116,19 @@
 					"idPost": "1549"
 				}
 			]
-		}, {
+		},
+		
+		{
+			"title": "ZumWasserplan",
+			"label": "Zum Wasserplan",
+			"idPost":"zumwasserplan",
+
+			"url": "https://www.wasser-plan.de/"
+		},
+		
+		
+		
+		{
 			"title": "ZumWasserplan",
 			"label": "Zum Wasserplan",
 			"icon": "book-outline",
@@ -312,6 +324,12 @@
 			"label": "Bewerbung",
 			"idPost": "1612",
 			"id": "noid"
+		},
+		{
+			"title": "Ausbildung",
+			"label": "Ausbildung",
+			"id": "noid",
+			"idPost": "ausbildung"
 		}
 	]
 }, {
