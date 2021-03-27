@@ -106,7 +106,7 @@
       </ion-item>
     </ion-list>-->
 
-    <div>
+    <div *ngIf=" cart.length > 0">
       <ion-toolbar>
         <ion-title size="large" class="ion-text-center title-section">
           Warenkorb
@@ -225,7 +225,7 @@
       </div>
     </div>
   </div>
-  <div class="paypal-container">
+  <div class="paypal-container" *ngIf=" cart.length > 0">
     <div>
       <ion-button color="dark" expand="block" (click)="presentSlide()">
         Weiter zur Kasse</ion-button
@@ -238,4 +238,23 @@
       <ngx-paypal [config]="payPalConfig"></ngx-paypal>
     </div>
   </div>
+  <ion-grid>
+    <ion-row>
+      <ion-col>
+        <h2 size="large" class="ion-text-center">Warenkorb</h2>
+      </ion-col>
+    </ion-row>
+    <ion-row>
+      <ion-col>
+        <p class="ion-text-center">Dein Warenkorb ist gegenwärtig leer.</p>
+      </ion-col>
+    </ion-row>
+    <ion-row>
+      <ion-col class="ion-text-center">
+        <ion-button routerLink="/shop" (click)="close()">
+          Zurück zum Shop
+        </ion-button>
+      </ion-col>
+    </ion-row>
+  </ion-grid>
 </ion-content>

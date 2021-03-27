@@ -19,6 +19,8 @@ export class CoursPage implements OnInit {
   subscribeMsg : String;
   angForm: FormGroup;
   serverResponse:String ="";
+  firstBewerbung:String ="";
+  secondBewerbung:String ="";
 
 
   ListOfInputs = [
@@ -80,6 +82,7 @@ export class CoursPage implements OnInit {
     }
   }
   getContentCourse(){
+   
     if (this.route.snapshot.data.courses){
       this.route.snapshot.data.courses.content.subscribe(res => {
        this.coursTitle = res[0].name;
@@ -87,14 +90,15 @@ export class CoursPage implements OnInit {
        this.bodyCours = res[0].body;
        this.bodyCours = this.bodyCours.split('<figure>[advanced_iframe')
        .map(el => el.includes('kurssoftware/anmeldung-online.php') ? el = '' : el).join('');
+       if (this.coursTitle === 'Bewerbung'){
+        this.firstBewerbung = this.bodyCours.slice(0,this.bodyCours.indexOf('[wpforms'));
+        this.secondBewerbung = this.bodyCours.slice(this.bodyCours.indexOf('description="false"]')+20,this.bodyCours.length);
+        }
      });
-     if (this.bodyCours){
 
-  
-      this.bodyCours = this.bodyCours.replace('[wpforms id="2085" title="false" description="false"]','hj')
-
-     }    
- 
+    
+    
+    
    }
 
   }

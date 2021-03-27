@@ -16,12 +16,16 @@
       </ion-col>
     </ion-row>
 
-    <ion-row>
+    <ion-row *ngIf=" coursTitle != 'Bewerbung'">
       <ion-col>
         <div [innerHtml]="bodyCours"></div>
       </ion-col>
     </ion-row>
-
+    <ion-row *ngIf=" coursTitle == 'Bewerbung'">
+      <ion-col>
+        <div [innerHtml]="firstBewerbung"></div>
+      </ion-col>
+    </ion-row>
     <ion-row *ngIf="coursTitle == 'Bewerbung'">
       <form
         [formGroup]="angForm"
@@ -78,11 +82,16 @@
               class="btn btn-success"
               expand="block"
             >
-              Weiter
+              Absenden
             </ion-button>
           </ion-col>
         </ion-row>
       </form>
+    </ion-row>
+    <ion-row *ngIf=" coursTitle == 'Bewerbung'">
+      <ion-col>
+        <div [innerHtml]="secondBewerbung"></div>
+      </ion-col>
     </ion-row>
     <ion-row>
       <ion-col *ngIf="serverResponse.length > 0">

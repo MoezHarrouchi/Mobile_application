@@ -55,7 +55,17 @@
             [class.active-parent]="child.open"
             detail="false"
           >
-            <ion-icon [name]="" slot="start" size="small"></ion-icon>
+            <ion-icon
+              name="arrow-forward"
+              slot="start"
+              *ngIf="!child.open"
+            ></ion-icon>
+            <ion-icon
+              name="arrow-down"
+              slot="start"
+              *ngIf="child.open"
+            ></ion-icon>
+
             <ion-label>{{child.label}}</ion-label>
           </ion-item>
           <ion-list class="sub-item" *ngIf="child.open">
