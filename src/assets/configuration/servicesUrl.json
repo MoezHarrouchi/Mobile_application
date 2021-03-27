@@ -5,5 +5,6 @@
     "freecoursService":"https://www.wasserschule.de/index.php/wp-json/wl/v1/coursesById/",
     "subscribeToCours":"https://www.wasserschule.de/index.php/wp-json/wl/v1/sendForm/",
     "planningService":"https://www.wasserschule.de/index.php/wp-json/wl/v1/planning/",
-    "shop":"https://www.wasserschule.de/index.php/wp-json/wl/v1/shop/"
+    "shop":"https://www.wasserschule.de/index.php/wp-json/wl/v1/shop/",
+    "candidature":"https://www.wasserschule.de/index.php/wp-json/wl/v1/candidature/"
 }

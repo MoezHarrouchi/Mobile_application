@@ -26,5 +26,6 @@ interface urlService{
   freecoursService,
   subscribeToCours,
   planningService,
-  shop
+  shop,
+  candidature
 }

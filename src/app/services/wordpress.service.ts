@@ -89,6 +89,15 @@ export class WordpressService {
       })
     );
   }
+  instructorCandidature(formData):Observable<any>{
+    return this.http.post(this.configuration.getUrlServices().candidature,formData,this.httpHeader).
+    pipe(map(this.dataExtract),
+    catchError((error)=>{
+      return empty();
+    })
+    );
+
+  }
    getSubscribeMsg(){
     return this.subscribeSentMsg;
   }

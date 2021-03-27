@@ -10,7 +10,7 @@
   </div>
 
   <ion-card>
-    <ion-item (click)="presentPopover(ev)">
+    <ion-item>
       <ion-icon
         name="information-circle-outline"
         slot="start"
@@ -37,6 +37,7 @@
           >{{productPrice | currency:'EUR'}}</ion-label
         >
       </ion-item>
+      <p class="ion-text-wrap" innerHtml="{{productDescription}}"></p>
     </ion-card-content>
   </ion-card>
 </ion-content>

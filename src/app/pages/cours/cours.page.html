@@ -21,6 +21,74 @@
         <div [innerHtml]="bodyCours"></div>
       </ion-col>
     </ion-row>
+
+    <ion-row *ngIf="coursTitle == 'Bewerbung'">
+      <form
+        [formGroup]="angForm"
+        (ngSubmit)="onSubmit()"
+        novalidate
+        class="ion-padding"
+        *ngIf="serverResponse.length == 0"
+      >
+        <div *ngFor="let input of ListOfInputs">
+          <ion-col size="6">
+            <ion-label class="ion-text-wrap">{{input.label}}</ion-label>
+
+            <ion-item>
+              <ion-input
+                *ngIf="input.type != 'textarea'"
+                class="form-control"
+                type="{{input.type}}"
+                position="stacked"
+                clearInput="false"
+                placeholder="Enter Your {{input.name}}"
+                formControlName="{{input.name}}"
+              ></ion-input>
+              <ion-textarea
+                *ngIf="input.type == 'textarea'"
+                formControlName="{{input.name}}"
+                clearInput="false"
+                placeholder="Enter more information here..."
+              ></ion-textarea>
+            </ion-item>
+            <div
+              *ngIf="angForm.controls[input.name].invalid && (angForm.controls[input.name].dirty || angForm.controls[input.name].touched )"
+              class="validation-errors"
+            >
+              <div
+                *ngIf="angForm.controls[input.name].errors.required"
+                class="error-message sc"
+              >
+                {{inputsError[input.name][0]["message"]}}
+              </div>
+              <div
+                *ngIf="angForm.controls[input.name].errors.pattern"
+                class="error-message"
+              >
+                {{inputsError[input.name][1]["message"]}}
+              </div>
+            </div>
+          </ion-col>
+        </div>
+        <ion-row>
+          <ion-col>
+            <ion-button
+              type="submit"
+              [disabled]="angForm.pristine || angForm.invalid"
+              class="btn btn-success"
+              expand="block"
+            >
+              Weiter
+            </ion-button>
+          </ion-col>
+        </ion-row>
+      </form>
+    </ion-row>
+    <ion-row>
+      <ion-col *ngIf="serverResponse.length > 0">
+        <ion-text><b>{{serverResponse}}</b></ion-text>
+      </ion-col>
+    </ion-row>
     <ion-row *ngIf="notFound">
       <div class="not-found" [innerHTML]="notFound"></div>
     </ion-row>

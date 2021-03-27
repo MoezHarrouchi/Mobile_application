@@ -2,6 +2,7 @@ import { Component, ElementRef, OnInit, ViewChild } from '@angular/core';
 import { ActivatedRoute, ActivatedRouteSnapshot} from '@angular/router';
 import { WordpressService } from '../../services/wordpress.service';
 import { ModalController } from '@ionic/angular';
+import {Validators ,FormBuilder, FormGroup } from '@angular/forms';
 import { SlidesComponent } from '../../components/slides/slides.component'
 
 @Component({
@@ -16,9 +17,36 @@ export class CoursPage implements OnInit {
   loading:boolean=false;
   notFound:String;
   subscribeMsg : String;
+  angForm: FormGroup;
+  serverResponse:String ="";
+
+
+  ListOfInputs = [
+    { name : 'vorname', label: 'Vorname *', type: 'text' },
+    { name : 'name', label: 'Nachname *' , type: 'text' },
+    { name:'email', label:'E-mail *',type:'text'},
+    { name:"kommentar",label:"Kommentar oder Nachricht *",type:"textarea"}
+  
+  ];
+
+  inputsError = {
+    vorname: [
+      { type: 'Required', message: 'Name is required'},
+      { type: 'pattern', message: 'Name should has caractere'},
+    ],
+    name: [
+      { type: 'Required', message: 'Last Name is required'},
+      { type: 'Pattern', message: 'Last Name should has caractere'}
+    ],
+    email: [
+      { type: 'Required', message: 'Email is required'},
+      { type: 'pattern', message: 'Email is not valid'},
+    ]
+   
+  };
 
   constructor(private route: ActivatedRoute, private wordpress: WordpressService, 
-    private modalController: ModalController
+    private modalController: ModalController, private fb:FormBuilder
     ) {
   }
 
@@ -26,6 +54,9 @@ export class CoursPage implements OnInit {
     this.wordpress.setSubscribeMsg("");
     this.getContentCourse();
     this.getFreeCourses();
+    this.createForm();
+    this.serverResponse="";
+
   }
 
   ngDoCheck(){
@@ -52,11 +83,25 @@ export class CoursPage implements OnInit {
     if (this.route.snapshot.data.courses){
       this.route.snapshot.data.courses.content.subscribe(res => {
        this.coursTitle = res[0].name;
+     
        this.bodyCours = res[0].body;
        this.bodyCours = this.bodyCours.split('<figure>[advanced_iframe')
        .map(el => el.includes('kurssoftware/anmeldung-online.php') ? el = '' : el).join('');
      });
+     if (this.bodyCours){
+
+  
+      this.bodyCours = this.bodyCours.replace('[wpforms id="2085" title="false" description="false"]','hj')
+
+     }    
+ 
    }
+
+  }
+  onSubmit(){
+    this.wordpress.instructorCandidature(this.angForm.value).subscribe(res=>{
+      this.serverResponse = res;
+    })
   }
 
   async presentSlide(kursNr,kursBezID,action) {
@@ -70,5 +115,18 @@ export class CoursPage implements OnInit {
       }
     });
     return await modal.present();
+  }
+
+
+  createForm(){
+    this.angForm = this.fb.group({
+      vorname: ['', Validators.required],
+      name: ['', Validators.required],
+      kommentar:['',Validators.required],
+      email: ['', Validators.compose([
+        Validators.required,
+        Validators.pattern('^[a-zA-Z0-9_.+-]+@[a-zA-Z0-9-]+.[a-zA-Z0-9-.]+$')
+      ])],
+    });
   }
 }

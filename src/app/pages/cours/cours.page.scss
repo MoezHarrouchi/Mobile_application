@@ -60,4 +60,15 @@ ion-content  {
     height: 30px !important;
     border :  solide red;
 }
-
+.error-message{
+    color: rgb(174, 61, 61) !important;
+}
+form{
+    width: 100%;
+}
+ion-label{
+    color: #545454;
+}
+ion-textarea{
+    height: 120px;
+}
