@@ -1,21 +1,23 @@
-ion-header {
-
-  ion-toolbar, ion-item {
-    --background: #f1f5f8;
-    background: #f1f5f8;
-    padding: 0 10px;
-    letter-spacing: 2px;
-    font-family: 'ShadowsIntoLight-Regular'!important;
-    font-size: 17px;
-    font-weight: 400;
-  }
-}
-ion-icon{
-  margin-right: -7px;
-  font-size: 20px;
-}
-.product-count{
-  margin-bottom: 9px;
-  color: white;
-  border-radius: 100%;
-}
+            ion-header {
+                ion-toolbar,
+                ion-item {
+                    --background: #f1f5f8;
+                    background: #f1f5f8;
+                    padding: 0 10px;
+                    letter-spacing: 2px;
+                    font-family: 'ShadowsIntoLight-Regular'!important;
+                    font-size: 17px;
+                    font-weight: 400;
+                }
+            }
+            
+            ion-icon {
+                margin-right: -7px;
+                font-size: 20px;
+            }
+            
+            .product-count {
+                margin-bottom: 9px;
+                color: white;
+                border-radius: 100%;
+            }

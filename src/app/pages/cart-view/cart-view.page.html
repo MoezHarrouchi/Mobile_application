@@ -1,22 +1,18 @@
 <ion-header color="favorite">
-  <ion-toolbar color="favorite">
-    <ion-title>Shop</ion-title>
-    <ion-button color="clear" size="small" slot="end" (click)="close()">
-      <ion-icon name="close"></ion-icon>
-    </ion-button>
-  </ion-toolbar>
+    <ion-toolbar color="favorite">
+        <ion-title>Shop</ion-title>
+        <ion-button color="clear" size="small" slot="end" (click)="close()">
+            <ion-icon name="close"></ion-icon>
+        </ion-button>
+    </ion-toolbar>
 </ion-header>
 
 <ion-content>
-  <div
-    class="container-loading"
-    *ngIf="loading == true"
-    style="height: 100%; background-color: white"
-  >
-    <ion-spinner name="lines" position="stacked"></ion-spinner>
-  </div>
-  <div *ngIf="loading == false" class="ion-padding">
-    <!-- <ion-list class="list">
+    <div class="container-loading" *ngIf="loading == true" style="height: 100%; background-color: white">
+        <ion-spinner name="lines" position="stacked"></ion-spinner>
+    </div>
+    <div *ngIf="loading == false" class="ion-padding">
+        <!-- <ion-list class="list">
       <ion-toolbar>
         <ion-title size="large" class="ion-text-center"> Warenkorb </ion-title>
       </ion-toolbar>
@@ -106,155 +102,122 @@
       </ion-item>
     </ion-list>-->
 
-    <div *ngIf=" cart.length > 0">
-      <ion-toolbar>
-        <ion-title size="large" class="ion-text-center title-section">
-          Warenkorb
-        </ion-title>
-      </ion-toolbar>
-      <div class="productList" *ngFor="let p of cart">
-        <ion-row>
-          <ion-col class="title-cours ion-padding" size="6">Produkt</ion-col>
-          <ion-col size="6" class="ion-padding product-name"
-            ><ion-img [src]="p.images[0].src"></ion-img>
-            <ion-button color="medium" fill="clear" (click)="removeCartItem(p)">
-              <ion-icon name="close-circle" slot="icon-only"></ion-icon>
-            </ion-button>
-          </ion-col>
-        </ion-row>
-        <ion-row>
-          <ion-col class="title-cours ion-padding" size="6"
-            >Produkt Name</ion-col
-          >
-          <ion-col class="ion-text-wrap ion-text-center ion-padding" size="6"
-            >{{p.name}}</ion-col
-          >
-        </ion-row>
-        <ion-row>
-          <ion-col class="title-cours ion-padding" size="6">Preis</ion-col>
-          <ion-col size="6" class="ion-text-center ion-padding"
-            >{{p.price | currency:'EUR'}}</ion-col
-          >
-        </ion-row>
-        <ion-row>
-          <ion-col class="title-cours ion-padding" size="6">Anzahl</ion-col>
-          <ion-col size="6" class="ion-text-center ion-padding">
-            <ion-button
-              color="medium"
-              fill="clear"
-              (click)="decreaseCartItem(p)"
-            >
-              <ion-icon name="remove-circle" slot="icon-only"></ion-icon>
-            </ion-button>
-            <span>{{p.qtyCommanded}}</span>
-            <ion-button
-              color="medium"
-              fill="clear"
-              (click)="increaseCartItem(p)"
-            >
-              <ion-icon name="add-circle" slot="icon-only"> </ion-icon>
-            </ion-button>
-          </ion-col>
-        </ion-row>
-        <ion-row>
-          <ion-col class="title-cours ion-padding" size="6"
-            >Zwischensumme</ion-col
-          >
-          <ion-col size="6" class="ion-text-center ion-text-wrap ion-padding"
-            >{{p.qtyCommanded * p.price | currency:'EUR'}}
-          </ion-col>
-        </ion-row>
-      </div>
-      <ion-toolbar>
-        <ion-title size="large" class="ion-text-center title-section">
-          WARENKORB-SUMME
-        </ion-title>
-      </ion-toolbar>
-      <div class="productList">
-        <ion-row>
-          <ion-col class="title-cours ion-padding" size="5">
-            Zwischensumme</ion-col
-          >
-          <ion-col class="ion-text-center ion-padding title-cours" size="7">
-            {{ getTotale() | currency:'EUR' }}
-          </ion-col>
-        </ion-row>
-        <ion-row>
-          <ion-col class="title-cours ion-padding" size="5">Versand</ion-col>
-          <ion-col size="7" class="ion-text-center">
-            <ion-list>
-              <ion-radio-group value="Versandkostenpauschale">
-                <ion-item>
-                  <ion-label class="ion-text-wrap"
-                    >Versandkostenpauschale: €4,75
-                  </ion-label>
-                  <ion-radio
-                    slot="start"
-                    (click)="setDelivery(true)"
-                    value="Versandkostenpauschale"
-                  ></ion-radio>
-                </ion-item>
-                <ion-item>
-                  <ion-label class="ion-text-wrap">Abholung vor Ort </ion-label>
-                  <ion-radio
-                    slot="start"
-                    (click)="setDelivery(false)"
-                  ></ion-radio>
-                </ion-item>
-                <ion-item>
-                  <ion-label class="ion-text-wrap"
-                    >online kostenlos nach bezahlen
-                  </ion-label>
-                  <ion-radio
-                    slot="start"
-                    (click)="setDelivery(false)"
-                  ></ion-radio>
-                </ion-item>
-              </ion-radio-group>
-            </ion-list>
-          </ion-col>
-        </ion-row>
-        <ion-row>
-          <ion-col class="title-cours ion-padding" size="5"
-            >Gesamtsumme</ion-col
-          >
-          <ion-col class="ion-text-center title-cours ion-padding" size="7">
-            <span> {{getLastTotale() | currency:'EUR'}} </span>
-          </ion-col>
-        </ion-row>
-      </div>
+        <div *ngIf=" cart.length > 0">
+            <ion-toolbar>
+                <ion-title size="large" class="ion-text-center title-section">
+                    Warenkorb
+                </ion-title>
+            </ion-toolbar>
+            <div class="productList" *ngFor="let p of cart">
+                <ion-row>
+                    <ion-col class="title-cours ion-padding" size="6">Produkt</ion-col>
+                    <ion-col size="6" class="ion-padding product-name">
+                        <ion-img [src]="p.images[0].src"></ion-img>
+                        <ion-button color="medium" fill="clear" (click)="removeCartItem(p)">
+                            <ion-icon name="close-circle" slot="icon-only"></ion-icon>
+                        </ion-button>
+                    </ion-col>
+                </ion-row>
+                <ion-row>
+                    <ion-col class="title-cours ion-padding" size="6">Produkt Name</ion-col>
+                    <ion-col class="ion-text-wrap ion-text-center ion-padding" size="6">{{p.name}}</ion-col>
+                </ion-row>
+                <ion-row>
+                    <ion-col class="title-cours ion-padding" size="6">Preis</ion-col>
+                    <ion-col size="6" class="ion-text-center ion-padding">{{p.price | currency:'EUR'}}</ion-col>
+                </ion-row>
+                <ion-row>
+                    <ion-col class="title-cours ion-padding" size="6">Anzahl</ion-col>
+                    <ion-col size="6" class="ion-text-center ion-padding">
+                        <ion-button color="medium" fill="clear" (click)="decreaseCartItem(p)">
+                            <ion-icon name="remove-circle" slot="icon-only"></ion-icon>
+                        </ion-button>
+                        <span>{{p.qtyCommanded}}</span>
+                        <ion-button color="medium" fill="clear" (click)="increaseCartItem(p)">
+                            <ion-icon name="add-circle" slot="icon-only"> </ion-icon>
+                        </ion-button>
+                    </ion-col>
+                </ion-row>
+                <ion-row>
+                    <ion-col class="title-cours ion-padding" size="6">Zwischensumme</ion-col>
+                    <ion-col size="6" class="ion-text-center ion-text-wrap ion-padding">{{p.qtyCommanded * p.price | currency:'EUR'}}
+                    </ion-col>
+                </ion-row>
+            </div>
+            <ion-toolbar>
+                <ion-title size="large" class="ion-text-center title-section">
+                    WARENKORB-SUMME
+                </ion-title>
+            </ion-toolbar>
+            <div class="productList">
+                <ion-row>
+                    <ion-col class="title-cours ion-padding" size="5">
+                        Zwischensumme</ion-col>
+                    <ion-col class="ion-text-center ion-padding title-cours" size="7">
+                        {{ getTotale() | currency:'EUR' }}
+                    </ion-col>
+                </ion-row>
+                <ion-row>
+                    <ion-col class="title-cours ion-padding" size="5">Versand</ion-col>
+                    <ion-col size="7" class="ion-text-center">
+                        <ion-list>
+                            <ion-radio-group value="Versandkostenpauschale">
+                                <ion-item>
+                                    <ion-label class="ion-text-wrap">Versandkostenpauschale: €4,75
+                                    </ion-label>
+                                    <ion-radio slot="start" (click)="setDelivery(true)" value="Versandkostenpauschale"></ion-radio>
+                                </ion-item>
+                                <ion-item>
+                                    <ion-label class="ion-text-wrap">Abholung vor Ort </ion-label>
+                                    <ion-radio slot="start" (click)="setDelivery(false)"></ion-radio>
+                                </ion-item>
+                                <ion-item>
+                                    <ion-label class="ion-text-wrap">online kostenlos nach bezahlen
+                                    </ion-label>
+                                    <ion-radio slot="start" (click)="setDelivery(false)"></ion-radio>
+                                </ion-item>
+                            </ion-radio-group>
+                        </ion-list>
+                    </ion-col>
+                </ion-row>
+                <ion-row>
+                    <ion-col class="title-cours ion-padding" size="5">Gesamtsumme</ion-col>
+                    <ion-col class="ion-text-center title-cours ion-padding" size="7">
+                        <span> {{getLastTotale() | currency:'EUR'}} </span>
+                    </ion-col>
+                </ion-row>
+            </div>
+        </div>
     </div>
-  </div>
-  <div class="paypal-container" *ngIf=" cart.length > 0">
-    <div>
-      <ion-button color="dark" expand="block" (click)="presentSlide()">
-        Weiter zur Kasse</ion-button
-      >
+    <div class="paypal-container" *ngIf=" cart.length > 0">
+        <div>
+            <ion-button color="dark" expand="block" (click)="presentSlide()">
+                Weiter zur Kasse</ion-button>
+        </div>
+        <div class="divider ion-padding">
+            <span>— OR — </span>
+        </div>
+        <div>
+            <ngx-paypal [config]="payPalConfig"></ngx-paypal>
+        </div>
     </div>
-    <div class="divider ion-padding">
-      <span>— OR — </span>
-    </div>
-    <div>
-      <ngx-paypal [config]="payPalConfig"></ngx-paypal>
-    </div>
-  </div>
-  <ion-grid>
-    <ion-row>
-      <ion-col>
-        <h2 size="large" class="ion-text-center">Warenkorb</h2>
-      </ion-col>
-    </ion-row>
-    <ion-row>
-      <ion-col>
-        <p class="ion-text-center">Dein Warenkorb ist gegenwärtig leer.</p>
-      </ion-col>
-    </ion-row>
-    <ion-row>
-      <ion-col class="ion-text-center">
-        <ion-button routerLink="/shop" (click)="close()">
-          Zurück zum Shop
-        </ion-button>
-      </ion-col>
-    </ion-row>
-  </ion-grid>
+    <ion-grid *ngIf=" cart.length ==0">
+        <ion-row>
+            <ion-col>
+                <h2 size="large" class="ion-text-center">Warenkorb</h2>
+            </ion-col>
+        </ion-row>
+        <ion-row>
+            <ion-col>
+                <p class="ion-text-center">Dein Warenkorb ist gegenwärtig leer.</p>
+            </ion-col>
+        </ion-row>
+        <ion-row>
+            <ion-col class="ion-text-center">
+                <ion-button routerLink="/shop" (click)="close()">
+                    Zurück zum Shop
+                </ion-button>
+            </ion-col>
+        </ion-row>
+    </ion-grid>
 </ion-content>

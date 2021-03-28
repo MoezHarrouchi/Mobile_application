@@ -56,16 +56,16 @@ export class ModalPage implements OnInit {
    
   };
   ListOfInputs = [
-    { name : 'anrede', label: 'Anrede', type: 'moreOnecheckbox' , choices: ['Frau', 'Herr'] },
-    { name : 'vorname', label: 'Vorname', type: 'text' },
-    { name : 'name', label: 'Name' , type: 'text' },
-    { name: 'strasse', label: 'Strasse', type: 'text'},
-    { name : 'plz', label: 'PLZ' , type: 'number'},
-    { name : 'ort', label: 'ORT' , type: 'text'},
-    { name : 'Telefon_Handfon', label: 'Telefon' , type: 'tel'},
-    { name : 'email', label: 'Email' , type: 'text'},
-    { name : 'zahlart', label: 'Zahlart' , type: 'moreOnecheckbox', choices: ['EC-Cash', 'Bank Transfer']},
-    { name : 'kgeb', label: 'Kgeb' , type: 'date'},
+    { name : 'anrede', label: 'Anrede:*', type: 'moreOnecheckbox' , choices: ['Frau', 'Herr'] },
+    { name : 'vorname', label: 'Vorname:*', type: 'text' },
+    { name : 'name', label: 'Nachname:*' , type: 'text' },
+    { name: 'strasse', label: 'Strasse:*', type: 'text'},
+    { name : 'plz', label: 'PLZ:*' , type: 'number'},
+    { name : 'ort', label: 'ORT:*' , type: 'text'},
+    { name : 'Telefon_Handfon', label: 'Telefon_Handy:*' , type: 'tel'},
+    { name : 'email', label: 'E-Mail-Adresse:*' , type: 'text'},
+    { name : 'zahlart', label: 'Zahlart:*' , type: 'moreOnecheckbox', choices: ['EC-Cash', 'Bank Transfer']},
+    { name : 'kgeb', label: 'Geburtsdatum des Teilnehmers:*' , type: 'date'},
     { name : 'zustimmung', label: '' ,type: 'moreOnecheckbox', choices: ['<a target="_blank" href="https://www.wasserschule.de/index.php/agb/">AGB</a> und <a target="_blank" href="https://www.wasserschule.de/index.php/privacy-policy/">Datenschutz</a> gelesen und zugestimmt:*']}
 
   ];

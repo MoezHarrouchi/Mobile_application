@@ -1,19 +1,18 @@
 <ion-header class="ion-no-border">
-  <ion-toolbar>
-    <ion-buttons slot="start">
-      <ion-button>
-        <ion-menu-button menu="main-menu"
-          ><ion-icon name="apps"></ion-icon
-        ></ion-menu-button>
-      </ion-button>
-    </ion-buttons>
-    <ion-item lines="none" (click)="goToHome()"> "Wasserschule"</ion-item>
-    <div slot="end" (click)="openCart()" class="parent-notification" #cart>
-      <ion-icon name="cart"></ion-icon>
+    <ion-toolbar>
+        <ion-buttons slot="start">
+            <ion-button>
+                <ion-menu-button menu="main-menu">
+                    <ion-icon name="apps"></ion-icon>
+                </ion-menu-button>
+            </ion-button>
+        </ion-buttons>
+        <ion-item lines="none" (click)="goToHome()">"WASSERSCHULE"</ion-item>
+        <div slot="end" (click)="openCart()" class="parent-notification" #cart>
+            <ion-icon name="cart"></ion-icon>
 
-      <ion-badge color="warning" class="product-count" size="small"
-        >{{ cartItemCount | async }}
-      </ion-badge>
-    </div>
-  </ion-toolbar>
+            <ion-badge color="warning" class="product-count" size="small">{{ cartItemCount | async }}
+            </ion-badge>
+        </div>
+    </ion-toolbar>
 </ion-header>

@@ -1,368 +1,361 @@
 [{
-	"title": "Home",
-	"label": "Home",
-	"idPost":"home",
-	"icon": "home"
+    "title": "Home",
+    "label": "Home",
+    "idPost": "home",
+    "icon": "home"
 }, {
-	"title": "FürErwachsene",
-	"label": "Für Erwachsene",
-	"url": "/login",
-	"icon":"book",
-	"children": [{
-			"title": "Erwachsenenkurse",
-			"label": "Erwachsenenkurse",
-			"icon":"book",
-			"subChildren": [{
-					"title": "Personal Training",
-					"label": "Personal Training",
-					"id": "noid",
-					"idPost": "300",
-					"icon": "",
-					"url": "/cours"
+    "title": "FürErwachsene",
+    "label": "Für Erwachsene",
+    "url": "/login",
+    "icon": "book",
+    "children": [{
+            "title": "Erwachsenenkurse",
+            "label": "Erwachsenenkurse",
+            "icon": "book",
+            "subChildren": [{
+                "title": "Personal Training",
+                "label": "Personal Training",
+                "id": "noid",
+                "idPost": "300",
+                "icon": "",
+                "url": "/cours"
 
-				}, {
-					"title": "Anfängerschwimmen",
-					"id": "139",
-					"idPost": "315",
-					"label": "Anfängerschwimmen",
-					"icon": "",
-					"url": "/login"
-				}, {
-					"title": "Freistil",
-					"id": "151",
-					"idPost": "329",
-					"label": "Freistil",
-					"icon": "",
-					"url": ""
-				}, {
-					"title": "OpenWater",
-					"label": "Open Water",
-					"idPost": "331",
-					"id": "noid",
+            }, {
+                "title": "Anfängerschwimmen",
+                "id": "139",
+                "idPost": "315",
+                "label": "Anfängerschwimmen",
+                "icon": "",
+                "url": "/login"
+            }, {
+                "title": "Freistil",
+                "id": "151",
+                "idPost": "329",
+                "label": "Freistil",
+                "icon": "",
+                "url": ""
+            }, {
+                "title": "OpenWater",
+                "label": "Open Water",
+                "idPost": "331",
+                "id": "noid",
 
-					"icon": "",
-					"url": ""
-				}, {
-					"title": "Aquazirkel",
-					"idPost": "332",
-					"id": "48",
-					"label": "Aquazirkel"
+                "icon": "",
+                "url": ""
+            }, {
+                "title": "Aquazirkel",
+                "idPost": "332",
+                "id": "48",
+                "label": "Aquazirkel"
 
-				}, {
-					"title": "Aquacycling",
-					"id": "55",
-					"idPost": "333",
-					"label": "Aquacycling"
-				}, {
-					"title": "Aquafitness",
-					"id": "37",
-					"label": "Aquafitness",
-					"idPost": "334",
-					"icon": "",
-					"url": ""
-				}, {
-					"title": "AquafitnessfürSchwangere",
-					"id": "23",
-					"label": "Aquafitness für Schwangere",
-					"idPost": "335"
-				}, {
-					"title": "Early Morning",
-					"id": "223",
-					"label": "EarlyMorning",
-					"idPost": "337"
+            }, {
+                "title": "Aquacycling",
+                "id": "55",
+                "idPost": "333",
+                "label": "Aquacycling"
+            }, {
+                "title": "Aquafitness",
+                "id": "37",
+                "label": "Aquafitness",
+                "idPost": "334",
+                "icon": "",
+                "url": ""
+            }, {
+                "title": "AquafitnessfürSchwangere",
+                "id": "23",
+                "label": "Aquafitness für Schwangere",
+                "idPost": "335"
+            }, {
+                "title": "Early Morning",
+                "id": "223",
+                "label": "Early Morning",
+                "idPost": "337"
 
-				}, {
-					"title": "Aquastep",
-					"id": "22",
-					"idPost": "336",
-					"label": "Aquastep"
-				}, {
-					"title": "Aquamix",
-					"id": "101",
-					"idPost": "338",
-					"label": "Aquamix"
+            }, {
+                "title": "Aquastep",
+                "id": "22",
+                "idPost": "336",
+                "label": "Aquastep"
+            }, {
+                "title": "Aquamix",
+                "id": "101",
+                "idPost": "338",
+                "label": "Aquamix"
 
-				}, {
-					"title": "Adiaqua",
-					"id": "103",
-					"label": "Adiaqua",
-					"idPost": "339"
-				}, {
-					"title": "Aquasana",
-					"id": "133",
-					"label": "Aquasana",
-					"idPost": "340"
-				}, {
-					"title": "Aquafun",
-					"id": "298",
-					"label": "Aquafun",
-					"idPost": "2847"
-				}
-			]
-		}, {
-			"title": "SUPKurse",
-			"label": "SUP Kurse",
+            }, {
+                "title": "Adiaqua",
+                "id": "103",
+                "label": "Adiaqua",
+                "idPost": "339"
+            }, {
+                "title": "Aquasana",
+                "id": "133",
+                "label": "Aquasana",
+                "idPost": "340"
+            }, {
+                "title": "Aquafun",
+                "id": "298",
+                "label": "Aquafun",
+                "idPost": "2847"
+            }]
+        }, {
+            "title": "SUPKurse",
+            "label": "SUP Kurse",
 
-			"url": "/contacts",
-			"subChildren": [{
-					"title": "SUP",
-					"label": "SUP",
-					"id": "277",
-					"idPost": "1542"
-				}, {
-					"title": "SUPSANA",
-					"label": "SUP SANA",
-					"id": "278",
-					"idPost": "1549"
-				}
-			]
-		},
-		
-		{
-			"title": "ZumWasserplan",
-			"label": "Zum Wasserplan",
-			"idPost":"zumwasserplan",
+            "url": "/contacts",
+            "subChildren": [{
+                "title": "SUP",
+                "label": "SUP",
+                "id": "277",
+                "idPost": "1542"
+            }, {
+                "title": "SUPSANA",
+                "label": "SUP SANA",
+                "id": "278",
+                "idPost": "1549"
+            }]
+        },
 
-			"url": "https://www.wasser-plan.de/"
-		},
-		
-		
-		
-		{
-			"title": "ZumWasserplan",
-			"label": "Zum Wasserplan",
-			"icon": "book-outline",
-			"id": "noid",
-			"url": "/contacts",
-			"subChildren": []
-		}
-	]
+        {
+            "title": "ZumWasserplan",
+            "label": "Zum Wasserplan",
+            "idPost": "zumwasserplan",
+
+            "url": "https://www.wasser-plan.de/"
+        },
+
+
+
+        {
+            "title": "ZumWasserplan",
+            "label": "Zum Wasserplan",
+            "icon": "book-outline",
+            "id": "noid",
+            "url": "/contacts",
+            "subChildren": []
+        }
+    ]
 }, {
-	"title": "FürdieKleinen",
-	"label": "Für die Kleinen",
-	"url": "/home",
-	"icon":"bookmarks",
-	"children": [{
-			"title": "Babykurse",
-			"label": "Babykurse",
-			"url": "",
-			"subChildren": [{
-					"title": "Mamba mini",
-					"label": "Mambamini",
-					"id": "7",
-					"idPost": "622"
-				}, {
-					"title": "Ma&Pamini",
-					"id": "5",
-					"idPost": "623",
-					"label": "Ma&Pa mini"
-				}, {
-					"title": "Mambaminimax",
-					"label": "Mamba minimax",
-					"id": "21",
-					"idPost": "625"
-				}, {
-					"title": "Ma&Paminimax",
-					"id": "8",
-					"label": "Ma&Pa minimax",
-					"idPost": "626"
-				}, {
-					"title": "Mambamaxi",
-					"id": "2",
-					"label": "Mamba maxi",
-					"idPost": "627"
-				}, {
-					"title": "Ma&Pamaxi",
-					"id": "6",
-					"label": "Ma&Pa maxi",
-					"idPost": "628"
-				}, {
-					"title": "Ma&Pafamily",
-					"id": "73",
-					"label": "Ma&Pa family",
-					"idPost": "629"
-				}, {
-					"title": "Anne&Floh",
-					"id": "140",
-					"label": "Anne&Floh",
-					"idPost": "630"
-				}
-			]
-		}, {
-			"title": "Kleinkinderkurse",
-			"label": "Kleinkinderkurse",
+    "title": "FürdieKleinen",
+    "label": "Für die Kleinen",
+    "url": "/home",
+    "icon": "bookmarks",
+    "children": [{
+        "title": "Babykurse",
+        "label": "Babykurse",
+        "url": "",
+        "subChildren": [{
+            "title": "Mamba mini",
+            "label": "Mambamini",
+            "id": "7",
+            "idPost": "622"
+        }, {
+            "title": "Ma&Pamini",
+            "id": "5",
+            "idPost": "623",
+            "label": "Ma&Pa mini"
+        }, {
+            "title": "Mambaminimax",
+            "label": "Mamba minimax",
+            "id": "21",
+            "idPost": "625"
+        }, {
+            "title": "Ma&Paminimax",
+            "id": "8",
+            "label": "Ma&Pa minimax",
+            "idPost": "626"
+        }, {
+            "title": "Mambamaxi",
+            "id": "2",
+            "label": "Mamba maxi",
+            "idPost": "627"
+        }, {
+            "title": "Ma&Pamaxi",
+            "id": "6",
+            "label": "Ma&Pa maxi",
+            "idPost": "628"
+        }, {
+            "title": "Ma&Pafamily",
+            "id": "73",
+            "label": "Ma&Pa family",
+            "idPost": "629"
+        }, {
+            "title": "Anne&Floh",
+            "id": "140",
+            "label": "Anne&Floh",
+            "idPost": "630"
+        }]
+    }, {
+        "title": "Kleinkinderkurse",
+        "label": "Kleinkinderkurse",
 
-			"url": "",
-			"subChildren": [{
-					"title": "aquakids",
-					"id": "4",
-					"label": "aquakids",
-					"idPost": "63"
-				}, {
-					"title": "Ma&PaAquakids",
-					"id": "16",
-					"label": "Ma&Pa Aquakids",
-					"idPost": "419"
-				}, {
-					"title": "2+",
-					"id": "142",
-					"label": "2+",
-					"idPost": "420"
-				}, {
-					"title": "Ma&Pa2+",
-					"id": "52",
-					"idPost": "421",
-					"label": "Ma&Pa 2+"
+        "url": "",
+        "subChildren": [{
+                "title": "aquakids",
+                "id": "4",
+                "label": "aquakids",
+                "idPost": "63"
+            }, {
+                "title": "Ma&PaAquakids",
+                "id": "16",
+                "label": "Ma&Pa Aquakids",
+                "idPost": "419"
+            }, {
+                "title": "2+",
+                "id": "142",
+                "label": "2+",
+                "idPost": "420"
+            }, {
+                "title": "Ma&Pa2+",
+                "id": "52",
+                "idPost": "421",
+                "label": "Ma&Pa 2+"
 
-				}, {
-					"title": "Aquamaxis",
-					"id": "9",
-					"idPost": "422",
-					"label": "Aquamaxis",
-					"url": ""
-				}
+            }, {
+                "title": "Aquamaxis",
+                "id": "9",
+                "idPost": "422",
+                "label": "Aquamaxis",
+                "url": ""
+            }
 
-			]
-		}, {
-			"title": "Kinderkurse",
-			"label": "Kinderkurse",
+        ]
+    }, {
+        "title": "Kinderkurse",
+        "label": "Kinderkurse",
 
-			"url": "",
-			"subChildren": [{
-					"title": "Wasserratten",
-					"id": "46",
-					"label": "Wasserratten",
-					"idPost": "2804"
-				}, {
-					"title": "Wasserrattenmini",
-					"id": "10",
-					"label": "Wasserratten mini",
-					"idPost": "424"
-				}, {
-					"title": "Wasserrattenminimax",
-					"id": "11",
-					"label": "Wasserratten minimax",
-					"idPost": "425"
-				}, {
-					"title": "Wasserrattenmaxi",
-					"id": "12",
-					"label": "Wasserratten maxi",
-					"idPost": "426"
-				}, {
-					"title": "Triximini",
-					"id": "160",
-					"label": "Trixi mini",
-					"idPost": "430"
-				}, {
-					"title": "TrixiMaxi",
-					"id": "162",
-					"label": "Trixi Maxi",
-					"idPost": "431"
-				}, {
-					"title": "Freistil",
-					"id": "129",
-					"label": "Freistil",
-					"idPost": "432"
-				}, {
-					"title": "WasserrattenKiga/Kita",
-					"id": "0",
-					"label": "Wasserratten Kiga-Kita",
-					"idPost": "427"
-				}, {
-					"title": "Ferienkurs-Anfänger",
-					"id": "56",
-					"label": "Ferienkurs – Anfänger",
-					"idPost": "429"
-				}, {
-					"title": "Ferienkurs-Kinderkraul",
-					"id": "282",
-					"label": "Ferienkurs – Kinderkraul",
-					"idPost": "428",
-					"url": ""
-				}, {
-					"title": "Ferienkurs-Trixi",
-					"id": "164",
-					"label": "Ferienkurs – Trixi",
-					"idPost": "442",
-					"url": ""
-				}
-			]
-		}
-	]
+        "url": "",
+        "subChildren": [{
+            "title": "Wasserratten",
+            "id": "46",
+            "label": "Wasserratten",
+            "idPost": "2804"
+        }, {
+            "title": "Wasserrattenmini",
+            "id": "10",
+            "label": "Wasserratten mini",
+            "idPost": "424"
+        }, {
+            "title": "Wasserrattenminimax",
+            "id": "11",
+            "label": "Wasserratten minimax",
+            "idPost": "425"
+        }, {
+            "title": "Wasserrattenmaxi",
+            "id": "12",
+            "label": "Wasserratten maxi",
+            "idPost": "426"
+        }, {
+            "title": "Triximini",
+            "id": "160",
+            "label": "Trixi mini",
+            "idPost": "430"
+        }, {
+            "title": "TrixiMaxi",
+            "id": "162",
+            "label": "Trixi Maxi",
+            "idPost": "431"
+        }, {
+            "title": "Freistil",
+            "id": "129",
+            "label": "Freistil",
+            "idPost": "432"
+        }, {
+            "title": "WasserrattenKiga/Kita",
+            "id": "0",
+            "label": "Wasserratten Kiga-Kita",
+            "idPost": "427"
+        }, {
+            "title": "Ferienkurs-Anfänger",
+            "id": "56",
+            "label": "Ferienkurs – Anfänger",
+            "idPost": "429"
+        }, {
+            "title": "Ferienkurs-Kinderkraul",
+            "id": "282",
+            "label": "Ferienkurs – Kinderkraul",
+            "idPost": "428",
+            "url": ""
+        }, {
+            "title": "Ferienkurs-Trixi",
+            "id": "164",
+            "label": "Ferienkurs – Trixi",
+            "idPost": "442",
+            "url": ""
+        }]
+    }]
 }, {
-	"title": "Academy",
-	"label": "Academy",
-	"icon":"school",
-	"url": "",
-	"children": [{
-			"title": "UnsereingetragenesZeichen",
-			"label": "Unser eingetragenes Zeichen",
-			"id": "noid",
-			"idPost": "1575"
-		}, {
-			"title": "DeineVorteile",
-			"label": "Deine Vorteile",
-			"idPost": "1586",
-			"id": "noid"
-		}, {
-			"title": "Unsere Ausbildungsinhalte",
-			"label": "Unsere Ausbildungsinhalte",
-			"idPost": "1590",
-			"id": "noid"
-		}, {
-			"title": "Seminarkosten",
-			"label": "Seminarkosten",
-			"idPost": "1593",
-			"id": "noid"
-		}, {
-			"title": "UnsereAusbildungstermine",
-			"label": "Unsere Ausbildungstermine",
-			"idPost": "1597",
-			"id": "noid"
-		}, {
-			"title": "Bewerbung",
-			"label": "Bewerbung",
-			"idPost": "1612",
-			"id": "noid"
-		},
-		{
-			"title": "Ausbildung",
-			"label": "Ausbildung",
-			"id": "noid",
-			"idPost": "ausbildung"
-		}
-	]
+    "title": "Academy",
+    "label": "Academy",
+    "icon": "school",
+    "url": "",
+    "children": [{
+            "title": "UnsereingetragenesZeichen",
+            "label": "Unser eingetragenes Zeichen",
+            "id": "noid",
+            "idPost": "1575"
+        }, {
+            "title": "DeineVorteile",
+            "label": "Deine Vorteile",
+            "idPost": "1586",
+            "id": "noid"
+        }, {
+            "title": "Unsere Ausbildungsinhalte",
+            "label": "Unsere Ausbildungsinhalte",
+            "idPost": "1590",
+            "id": "noid"
+        }, {
+            "title": "Seminarkosten",
+            "label": "Seminarkosten",
+            "idPost": "1593",
+            "id": "noid"
+        }, {
+            "title": "UnsereAusbildungstermine",
+            "label": "Unsere Ausbildungstermine",
+            "idPost": "1597",
+            "id": "noid"
+        }, {
+            "title": "Bewerbung",
+            "label": "Bewerbung",
+            "idPost": "1612",
+            "id": "noid"
+        },
+        {
+            "title": "Ausbildung",
+            "label": "Ausbildungsbuch",
+            "id": "noid",
+            "idPost": "ausbildung"
+        }
+    ]
 }, {
-	"title": "AboutUS",
-	"label": "About US",
-	"icon": "people",
-	"children": [{
-			"title": "AboutGeschäftsinhaberin",
-			"label": "About Geschäftsinhaberin",
-			"idPost": "1166",
-			"id": "noid"
+    "title": "AboutUS",
+    "label": "About US",
+    "icon": "people",
+    "children": [{
+        "title": "AboutGeschäftsinhaberin",
+        "label": "About Geschäftsinhaberin",
+        "idPost": "1166",
+        "id": "noid"
 
-		}, {
-			"title": "DerFotoservice",
-			"label": "Der Fotoservice",
-			"idPost": "2116",
-			"id": "noid"
+    }, {
+        "title": "DerFotoservice",
+        "label": "Der Fotoservice",
+        "idPost": "2116",
+        "id": "noid"
 
-		}, {
-			"title": "Presse",
-			"label": "Presse",
-			"idPost": "2865",
-			"id": "noid"
+    }, {
+        "title": "Presse",
+        "label": "Presse",
+        "idPost": "2865",
+        "id": "noid"
 
-		}
-	]
+    }]
 }, {
-	"title": "Shop",
-	"label": "Shop",
-	"icon": "basket",
-	"url": "/shop",
-	"idPost": "shop",
-	"id": "noid"
+    "title": "Shop",
+    "label": "Shop",
+    "icon": "basket",
+    "url": "/shop",
+    "idPost": "shop",
+    "id": "noid"
 
-}
-]
+}]
